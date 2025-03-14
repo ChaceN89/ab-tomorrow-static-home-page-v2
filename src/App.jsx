@@ -7,6 +7,17 @@ function App() {
   return (
     <div >
 
+    <div>
+    <div className="icomoon">The Alberta Tomorrow simulator is an educational tool that helps you to understand the process of sustainable planning to balance land-uses such as agriculture, o</div>
+    <div className="icomn">The Alberta Tomorrow simulator is an educational tool that helps you to understand the process of sustainable planning to balance land-uses such as agriculture, o</div>
+    <div className="icomoon-"></div>
+    <div className="icomoon-"></div>
+
+
+    </div>
+
+
+
 <ColorBoxes/>
 
     <div className="flex justify-center items-center h-96  bg-gradient-to-r from-green-400 to-blue-500 gap-2 flex-wrap">
