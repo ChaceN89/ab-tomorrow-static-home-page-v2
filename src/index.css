@@ -1,0 +1,73 @@
+@import "tailwindcss";
+/* No dark mode - constant color scheme */
+
+
+
+/* Tailwind 4 https://tailwindcss.com/blog/tailwindcss-v4*/
+
+/**
+New in tailwind 4
+
+Color rendering functions
+  color-mix() -> mix two colors
+  @property -> By default, CSS does not animate colors defined as CSS variables. The @property rule fixes this by making them animatable.
+  oklch() -> more vivid and accurate colors (Tailwind v4.0 moves from sRGB to OKLCH)
+
+utilities
+
+
+*/
+
+
+@theme {
+  /* ✅ Primary Colors */
+  --color-primary: #2daeb5; 
+  --color-primary-off: #34AEB5; 
+
+  /* ✅ Secondary Colors */
+  --color-secondary: #2A2A2A; 
+  --color-secondary-off: #111111;
+
+  /* ✅ Accent Colors */
+  --color-accent: #E0AC02; 
+  --color-accent-off: #FCE389;
+
+  /* ✅ Background Colors */
+  --color-background: #FFFFFF; 
+  --color-background-dark: #000000; 
+
+  --color-primary2: oklch(0.7 0.2 200); /* Vibrant Cyan */
+  --color-primary2-off: oklch(0.75 0.18 200); /* Lighter Cyan */
+
+  /* 🎨 Secondary Colors */
+  --color-secondary2: oklch(0.2 0.05 270); /* Dark Gray */
+  --color-secondary2-off: oklch(0.1 0.05 270); /* Almost Black */
+
+  /* 🎨 Accent Colors */
+  --color-accent2: oklch(0.8 0.2 90); /* Golden Yellow */
+  --color-accent2-off: oklch(0.9 0.15 90); /* Soft Yellow */
+
+  /* 🎨 Background Colors */
+  --color-background2: oklch(1 0 0); /* Pure White */
+  --color-background2-dark: oklch(0 0 0); /* Pure Black */
+}
+
+@theme {
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-mixed: color-mix(in oklab, var(--color-avocado-400) 50%, var(--color-primary) 50%);
+}
+
+
+@theme {
+  --color-start: oklch(0.8 0.2 240); /* Blue */
+  --color-end: oklch(0.8 0.2 60);  /* Yellow */
+  --tw-bg-color: var(--color-start); /* Default background color */
+}
+
+@layer utilities {
+  .bg-dynamic {
+    background-color: var(--tw-bg-color);
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
