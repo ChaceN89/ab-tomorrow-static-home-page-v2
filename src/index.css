@@ -21,35 +21,21 @@ utilities
 
 @theme {
   /* ✅ Primary Colors */
-  --color-primary: #2daeb5; 
-  --color-primary-off: #34AEB5; 
+  --color-primary: oklch(0.65 0.33 203.64);/* <!-- 34AEB5 - 52, 174 181--> * */
+  --color-primary-alt: oklch(0.50 0.27 204.42);  /* <!-- 34AEB5 - 38 132 138 --> * */ 
 
   /* ✅ Secondary Colors */
   --color-secondary: #2A2A2A; 
-  --color-secondary-off: #111111;
+  --color-secondary-alt: #111111;
 
   /* ✅ Accent Colors */
-  --color-accent: #E0AC02; 
-  --color-accent-off: #FCE389;
+  --color-accent: oklch(0.8 0.2 90); /* <!-- E0AC02 --> * */
+  --color-accent-alt: oklch(0.9 0.15 90); /* <!-- FCE389 --> * */
 
   /* ✅ Background Colors */
   --color-background: #FFFFFF; 
   --color-background-dark: #000000; 
 
-  --color-primary2: oklch(0.7 0.2 200); /* Vibrant Cyan */
-  --color-primary2-off: oklch(0.75 0.18 200); /* Lighter Cyan */
-
-  /* 🎨 Secondary Colors */
-  --color-secondary2: oklch(0.2 0.05 270); /* Dark Gray */
-  --color-secondary2-off: oklch(0.1 0.05 270); /* Almost Black */
-
-  /* 🎨 Accent Colors */
-  --color-accent2: oklch(0.8 0.2 90); /* Golden Yellow */
-  --color-accent2-off: oklch(0.9 0.15 90); /* Soft Yellow */
-
-  /* 🎨 Background Colors */
-  --color-background2: oklch(1 0 0); /* Pure White */
-  --color-background2-dark: oklch(0 0 0); /* Pure Black */
 }
 
 @theme {
