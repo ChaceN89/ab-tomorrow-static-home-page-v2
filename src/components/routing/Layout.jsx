@@ -12,6 +12,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../navigation/NavBar";
 import Footer from "../navigation/Footer";
 import PartnerBanner from "../partners/PartnerBanner";
+import ScrollProgress from "../../utils/ScrollProgress";
 
 export default function Layout() {
   return (
@@ -23,14 +24,18 @@ export default function Layout() {
       <div className="flex flex-1 pt-16">
         
         {/* Static Sidebar (Does not scroll) */}
-        <div className="hidden lg:flex w-48">
+        <div className="hidden lg:flex w-44">
           <PartnerBanner />
         </div>
-
         {/* Scrollable Content Area */}
         <main className="flex-1 overflow-auto p-4 bg-yellow-200 h-[calc(100vh-4rem)]">
           <Outlet />
         </main>
+
+        <div>
+        <ScrollProgress />
+        </div>
+
       </div>
 
       {/* Footer */}

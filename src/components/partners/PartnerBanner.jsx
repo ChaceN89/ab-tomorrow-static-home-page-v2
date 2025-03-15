@@ -12,15 +12,9 @@ import React from "react";
 
 export default function PartnerBanner() {
   return (
-    <div className="w-48 h-[calc(100vh-4rem)] bg-white shadow-md p-4">
-      <h3 className="text-lg font-bold mb-2">Navigation</h3>
+    <div className="w-44  bg-white shadow-md p-4">
       <ul className="space-y-2 p-2">
-        <li className="p-2 bg-gray-200 rounded text-sm">🏠 Home</li>
-        <li className="p-2 bg-gray-200 rounded text-sm">📄 About</li>
-        <li className="p-2 bg-gray-200 rounded text-sm">📞 Contact</li>
-        <li className="p-2 bg-gray-200 rounded text-sm">📆 Events</li>
-        <li className="p-2 bg-gray-200 rounded text-sm">🔍 Search</li>
-        <li className="p-2 bg-gray-200 rounded text-sm">⚙️ Settings</li>
+        <img src="https://via.placeholder.com/150" alt="Partner Logo" className="w-full h-20 object-contain" />
       </ul>
     </div>
   );
