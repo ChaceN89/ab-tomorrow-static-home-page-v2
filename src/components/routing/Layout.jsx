@@ -43,7 +43,7 @@ export default function Layout() {
         {/* Scrollable Main Content Area */}
         <main
           ref={mainScrollRef}
-          className="flex-1 overflow-auto bg-yellow-200 h-[calc(100vh-4rem)] relative flex flex-col pb-24 lg:pb-0" // the pb wil ldepend on the size of the partner banner
+          className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background" // the pb wil ldepend on the size of the partner banner
         >
           {/* Content Wrapper: Ensures Outlet pushes footer down */}
           <div className="flex-1">

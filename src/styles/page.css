@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.outlet-background {
+  @apply bg-gradient-to-b from-gray-100 to-gray-400;
+}
+
+.section{
+  @apply container mx-auto p-4 h-full w-full;
+}

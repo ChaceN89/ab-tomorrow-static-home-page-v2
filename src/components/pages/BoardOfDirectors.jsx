@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BoardOfDirectors() {
   return (
-    <div>
+    <div className='section'>
       BoardOfDirectors
     </div>
   )
