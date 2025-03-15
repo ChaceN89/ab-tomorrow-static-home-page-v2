@@ -24,6 +24,7 @@ export default function NavBar() {
         <NavButton to="/faqs" label="FAQs" />
         <NavButton to="/events" label="Events" />
         <NavButton to="/board-of-directors" label="Board of Directors" />
+        <NavButton to="/partners" label="Partners" />
       </div>
     </nav>
   );

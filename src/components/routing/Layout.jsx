@@ -12,7 +12,7 @@ import { Outlet } from "react-router-dom";
 
 import NavBar from "../navigation/NavBar";
 import Footer from "../navigation/Footer";
-import SponsorBanner from "../partners/SponsorBanner";
+import PartnerBanner from "../partners/PartnerBanner";
 import ScrollProgress from "../../utils/ScrollProgress";
 
 export default function Layout() {
@@ -24,7 +24,7 @@ export default function Layout() {
 
       <div className="flex flex-1 pt-16">
         {/* Sidebar Stays in Place */}
-        <SponsorBanner />
+        <PartnerBanner />
 
         {/* Main Content Moves Right (No Overlap) */}
         <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-44">

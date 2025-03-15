@@ -12,5 +12,19 @@
 
 
 .sponsor-banner{
-  @apply bg-gray-100 p-4;
+  @apply fixed 
+  z-30 
+  lg:right-0 lg:top-16 lg:w-44 
+  lg:h-[calc(100vh-4rem)] lg:overflow-auto lg:shadow-md lg:p-4 lg:bg-white 
+  bottom-0 w-full text-center p-2 shadow-md bg-white;
+}
+
+.sponsor-banner > ul{
+  @apply space-y-4 p-2 flex lg:flex-col flex-row justify-center items-center lg:space-y-4 space-x-2 overflow-auto;
+}
+.sponsor-banner > ul > li{
+  @apply flex justify-center ;
+}
+.sponsor-banner > ul > li > img{
+  @apply lg:w-full lg:h-24 h-20 object-contain;
 }
