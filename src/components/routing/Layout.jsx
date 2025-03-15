@@ -38,24 +38,21 @@ export default function Layout() {
       {/* Main Section (Sidebar + Scrollable Content) */}
       <div className="flex flex-1 pt-16">
         {/* Static Sidebar (Does not scroll) */}
-        <div className="hidden lg:flex w-44">
-          <PartnerBanner />
-        </div>
+        <PartnerBanner />
 
-        {/* Scrollable Main Content Area with `relative` positioning */}
+        {/* Scrollable Main Content Area */}
         <main
           ref={mainScrollRef}
-          className="flex-1 overflow-auto bg-yellow-200 h-[calc(100vh-4rem)] relative flex flex-col"
+          className="flex-1 overflow-auto bg-yellow-200 h-[calc(100vh-4rem)] relative flex flex-col pb-24 lg:pb-0" // the pb wil ldepend on the size of the partner banner
         >
           {/* Content Wrapper: Ensures Outlet pushes footer down */}
           <div className="flex-1">
             <Outlet />
           </div>
 
-          {/* Footer (Stays at the Bottom) */}
+          {/* Footer (Stays above the Sponsor Banner on Mobile) */}
           <Footer />
         </main>
-        
       </div>
     </div>
   );
