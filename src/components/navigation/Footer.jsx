@@ -1,0 +1,9 @@
+import React from 'react'
+
+export default function Footer() {
+  return (
+    <div className='w-full bg-gray-800 text-white p-4 pb-20'>
+      Footer
+    </div>
+  )
+}

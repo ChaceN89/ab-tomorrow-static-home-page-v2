@@ -18,6 +18,8 @@ __Asset Folder__
 src/assets/ → If the asset is part of the app and imported in components.
 Logos, section backgrounds, small icons
 
+logos I want to load faster and arent involved in image searching 
+
 __Public folder__
 public/ → If the asset should be accessible directly (e.g., favicon, SEO images, external references).
 open grpah images, pdfs
