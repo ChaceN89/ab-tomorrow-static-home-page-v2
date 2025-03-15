@@ -26,12 +26,12 @@ const sponsorLogos = [
   "cygnet-energy-logo.png",
 ];
 
-export default function PartnerBanner() {
+export default function SponsorBanner() {
   return (
     <>
       {/* Desktop Sidebar (Always Visible) */}
-      <div className="hidden lg:flex left-0 top-16 w-44 bg-white shadow-md p-4 max-h-[90vh] overflow-auto">
-        <ul className="space-y-4 p-2 w-full left-0 top-16">
+      <div className="hidden fixed right-0 z-30 lg:flex w-44 h-[calc(100vh-4rem)] bg-white shadow-md p-4 overflow-auto">
+        <ul className="space-y-4 p-2 w-full ">
           {sponsorLogos.map((logo, index) => (
             <li key={index} className="flex justify-center">
               <img src={`/partners/${logo}`} alt="Sponsor Logo" className="w-full h-24 object-contain" />
@@ -39,7 +39,6 @@ export default function PartnerBanner() {
           ))}
         </ul>
       </div>
-
 
       {/* Mobile Bottom Banner (Appears on Small Screens) */}
       <div className="lg:hidden fixed bottom-0 w-full bg-white shadow-md p-2 text-center z-30">

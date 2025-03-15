@@ -9,11 +9,10 @@
  */
 
 import { Outlet } from "react-router-dom";
-import { useRef, useEffect, useState } from "react";
 
 import NavBar from "../navigation/NavBar";
 import Footer from "../navigation/Footer";
-import PartnerBanner from "../partners/PartnerBanner";
+import SponsorBanner from "../partners/SponsorBanner";
 import ScrollProgress from "../../utils/ScrollProgress";
 
 export default function Layout() {
@@ -23,10 +22,12 @@ export default function Layout() {
       <NavBar />
       <ScrollProgress/>
 
-      <div className="flex flex-1 pt-16 relative">
-        <PartnerBanner />
+      <div className="flex flex-1 pt-16">
+        {/* Sidebar Stays in Place */}
+        <SponsorBanner />
 
-        <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background">
+        {/* Main Content Moves Right (No Overlap) */}
+        <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-44">
           <div className="flex-1">
             <Outlet />
           </div>

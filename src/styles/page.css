@@ -8,3 +8,9 @@
 .section{
   @apply container mx-auto p-4 h-full w-full;
 }
+
+
+
+.sponsor-banner{
+  @apply bg-gray-100 p-4;
+}

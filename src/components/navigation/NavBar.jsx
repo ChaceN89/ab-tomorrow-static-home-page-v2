@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 shadow-md z-50">
+    <nav className="fixed z-40 top-0 left-0 w-full bg-gray-800 text-white p-4 shadow-md ">
       <div className="flex gap-4">
         <NavButton to="/" label="Home" />
         <NavButton to="/privacy-policy" label="Privacy Policy" />
