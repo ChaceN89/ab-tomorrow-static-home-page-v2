@@ -13,12 +13,10 @@
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
-export default function ScrollProgress({ scrollRef }) {
+export default function ScrollProgress() {
   // Track the scroll progress of the `main` content section
-  const { scrollYProgress } = useScroll({
-    container: scrollRef, // Track the main scrollable section
-    offset: ["start start", "end end"], // Map progress from start to end
-  });
+  
+  const { scrollYProgress } = useScroll();
 
   // Smooth progress animation
   const springScrollYProgress = useSpring(scrollYProgress, {
