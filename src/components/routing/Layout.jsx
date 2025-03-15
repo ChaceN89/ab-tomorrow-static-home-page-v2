@@ -1,10 +1,8 @@
 /**
  * @file Layout.tsx
  * @module Layout
- * @desc Defines the layout with a fixed navbar, dynamic content section, and footer.
+ * @desc Defines the layout with a fixed navbar, a static sidebar, and a scrollable content section.
  *
- * @see {@link https://reactrouter.com/ | React Router Documentation}
- * 
  * @author Chace Nielson
  * @created Mar 14, 2025
  * @updated Mar 14, 2025
@@ -21,16 +19,21 @@ export default function Layout() {
       {/* Fixed Navbar */}
       <NavBar />
 
+      {/* Main Section (Sidebar + Scrollable Content) */}
       <div className="flex flex-1 pt-16">
-        {/* Main Content Area */}
-        <main className="flex-1 bg-yellow-200 relative">
+        
+        {/* Static Sidebar (Does not scroll) */}
+        <div className="hidden lg:flex w-48">
+          <PartnerBanner />
+        </div>
+
+        {/* Scrollable Content Area */}
+        <main className="flex-1 overflow-auto p-4 bg-yellow-200 h-[calc(100vh-4rem)]">
           <Outlet />
         </main>
-
-        {/* Partner Banner (Sidebar on Desktop) */}
-        <PartnerBanner />
       </div>
 
+      {/* Footer */}
       <Footer />
     </div>
   );
