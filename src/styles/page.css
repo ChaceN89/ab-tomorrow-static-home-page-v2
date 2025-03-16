@@ -20,7 +20,7 @@
   @apply fixed 
   border-t-2 border-l-0 md:border-l-2 border-black 
   z-30 
-  lg:right-0 lg:top-16 lg:w-44 
+  lg:right-0 lg:top-16 lg:w-56 
   lg:h-[calc(100vh-4rem)] lg:overflow-auto lg:shadow-md lg:p-4 
   bottom-0 w-full text-center p-2 shadow-md  bg-gray-300;
 }

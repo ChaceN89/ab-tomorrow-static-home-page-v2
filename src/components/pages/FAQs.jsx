@@ -1,5 +1,5 @@
 import React from 'react'
-import QuestionDropdown from '../faq/QuestionDropdown'
+import QuestionDropdown from '../page-components/QuestionDropdown'
 import { faqData } from '../../data/faqData'
 
 export default function FAQs() {

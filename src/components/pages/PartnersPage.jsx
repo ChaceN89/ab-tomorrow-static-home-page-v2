@@ -6,7 +6,8 @@ import {
   supporters,
   pastSponsors,
 } from "../../data/partnerData";
-import PartnersList from "../partners/PartnersList";
+
+import PartnerShowcase from "../partners/PartnersShowcase";
 
 export default function PartnersPage() {
   return (
@@ -37,11 +38,11 @@ export default function PartnersPage() {
 
 
       <div className="mt-12 space-y-12">
-        <PartnersList title="Champions" partners={champions} showDescriptions />
-        <PartnersList title="Ambassadors" partners={ambassadors} showDescriptions />
-        <PartnersList title="Mentors" partners={mentors} />
-        <PartnersList title="Supporters" partners={supporters} />
-        <PartnersList title="Past Sponsors" partners={pastSponsors} />
+        <PartnerShowcase title="Champions" partners={champions} showDescriptions />
+        <PartnerShowcase title="Ambassadors" partners={ambassadors} showDescriptions />
+        <PartnerShowcase title="Mentors" partners={mentors} />
+        <PartnerShowcase title="Supporters" partners={supporters} />
+        <PartnerShowcase title="Past Sponsors" partners={pastSponsors} />
       </div>
     </section>
   );

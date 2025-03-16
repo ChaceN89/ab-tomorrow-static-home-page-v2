@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartnersList({ partners, title, showDescriptions = false }) {
+export default function PartnerShowcase({ partners, title, showDescriptions = false }) {
   if (!partners || partners.length === 0) return null; // Return nothing if no partners exist
 
   return (

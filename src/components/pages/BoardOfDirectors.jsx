@@ -10,7 +10,7 @@
 
 import React from 'react'
 import { boardOfDirectors } from '../../data/boardOfDirectorsData'
-import MemberCard from '../board-of-directors/MemberCard'
+import MemberCard from '../page-components/MemberCard'
 
 export default function BoardOfDirectors() {
   return (

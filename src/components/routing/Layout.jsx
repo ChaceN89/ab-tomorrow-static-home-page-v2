@@ -10,8 +10,8 @@
 
 import { Outlet } from "react-router-dom";
 
-import NavBar from "../navigation/NavBar";
-import Footer from "../navigation/Footer";
+import NavBar from "../navbar/NavBar";
+import Footer from "../footer/Footer";
 import PartnerBanner from "../partners/PartnerBanner";
 import ScrollProgress from "../../utils/ScrollProgress";
 
@@ -27,7 +27,7 @@ export default function Layout() {
         <PartnerBanner />
 
         {/* Main Content Moves Right (No Overlap) */}
-        <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-44">
+        <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-56">
           <div className="flex-1">
             <Outlet />
           </div>
