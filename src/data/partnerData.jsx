@@ -107,7 +107,7 @@ const sponsors = [
   },
   {
     name: "ARC Financial",
-    logo: "arc-financial-group-logo.jpeg",
+    logo: "arc-financial-group-logo.png",
     link: "https://www.arcfinancial.com/",
     category: [category.SUPPORTERS, category.BANNER],
     description: null,
