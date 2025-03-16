@@ -6,14 +6,16 @@ import AnalyticsProvider from "./utils/analytics/AnalyticsProvider"
 import DisplayTesting from "./components/testing/DisplayTesting"
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from "./components/routing/AppRoutes"
+import { Toaster } from "react-hot-toast"
 
 function App() {
 
   return(
     <Router>
+      <Toaster/>
       <DisplayTesting/>
       <AnalyticsProvider>
-        <AppRoutes />
+        <AppRoutes/>
       </AnalyticsProvider>
     </Router>
   )

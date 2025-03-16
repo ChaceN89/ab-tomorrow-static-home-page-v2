@@ -23,6 +23,7 @@ import FAQs from "../pages/FAQs";
 import Events from "../pages/Events";
 import BoardOfDirectors from "../pages/BoardOfDirectors";
 import PartnersPage from "../pages/PartnersPage";
+import NotFound from "../pages/NotFound";
 
 export default function AppRoutes() {
   const location = useLocation();
@@ -40,7 +41,7 @@ export default function AppRoutes() {
             <Route path="faqs" element={<FAQs/>} />
             <Route path="events" element={<Events/>} />
             <Route path="board-of-directors" element={<BoardOfDirectors/>} />
-            <Route path="*" element={<Navigate to="/" replace />} /> 
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </AnimatePresence>
