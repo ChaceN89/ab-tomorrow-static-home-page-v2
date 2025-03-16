@@ -8,7 +8,7 @@ import {
 } from "../../data/partnerData";
 import PartnersList from "../partners/PartnersList";
 
-export default function Partners() {
+export default function PartnersPage() {
   return (
     <section className="section py-12">
       <div className="text-center">
@@ -37,8 +37,8 @@ export default function Partners() {
 
 
       <div className="mt-12 space-y-12">
-        <PartnersList title="Champions" partners={champions} />
-        <PartnersList title="Ambassadors" partners={ambassadors} />
+        <PartnersList title="Champions" partners={champions} showDescriptions />
+        <PartnersList title="Ambassadors" partners={ambassadors} showDescriptions />
         <PartnersList title="Mentors" partners={mentors} />
         <PartnersList title="Supporters" partners={supporters} />
         <PartnersList title="Past Sponsors" partners={pastSponsors} />

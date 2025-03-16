@@ -15,8 +15,30 @@ Color rendering functions
 
 utilities
 
-
 */
+
+
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scroll-element {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+.scroll-element::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+
 
 
 @theme {

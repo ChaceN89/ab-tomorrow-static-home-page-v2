@@ -24,7 +24,7 @@ const sponsors = [
   // champion
   {
     name: "ALCES Landscape & Landuse", 
-    logo: "alces-logo.jpg", 
+    logo: "alces-logo.png", 
     link: "https://www.online.alces.ca/", 
     category: [category.CHAMPIONS, category.BANNER],
     description: "We are an interdisciplinary team of scientists, consultants, and software developers focused on providing a strategic understanding of the consequences of human activities on our planet and societies. Our passion is delivering the knowledge our clients need to make informed decisions.",
@@ -38,7 +38,7 @@ const sponsors = [
   },
   {
     name: "Calgary Foundation", 
-    logo: "calgary-foundation-logo.jpg", 
+    logo: "calgary-foundation-logo.png", 
     link: "https://www.calgaryfoundation.org/", 
     category: [category.CHAMPIONS, category.BANNER],
     description: "The Foundation facilitates collaborative philanthropy by making powerful connections between donors and community organizations for the long-term benefit of Calgary and area. In 2018-19, Calgary Foundation saw $65.2 million in new contributions, had an asset base of $1.1 billion and granted $48.9 million to 981 charitable organizations.",
@@ -61,14 +61,14 @@ const sponsors = [
   // Ambassadors
   {
     name: "Bow River Basin Council",
-    logo: "bow-river-basin-council-logo.jpg",
+    logo: "bow-river-basin-council-logo.png",
     link: "https://brbc.ab.ca/",
     category: [category.AMBASSADORS, category.BANNER],
     description: "The Bow River Basin Council collaboratively works to nurture, share, and protect the waters of the Bow River Basin. Together, through science and inclusion, we promote new solutions and strategies for a healthy watershed.",
   },
   {
     name: "Integral Ecology Group",
-    logo: "integral-ecology-group.jpg",
+    logo: "integral-ecology-group.png",
     link: "http://www.integralecologygroup.com/",
     category: [category.AMBASSADORS, category.BANNER],
     description: "We are dedicated to working at the interface between humans and their environments, and apply innovative approaches to specific challenges in ecosystem and cultural assessment, repair and support, and land-use managment. By bringing together the areas of ecology, ethnoecology, reclamation monitoring and sampling design, cumulative-effects studies, and land-use planning, we work across a variety of technical disciplines to deliver the best in applied ecological and cultural research.",
@@ -84,7 +84,7 @@ const sponsors = [
   },
   {
     name: "Edmonton Community Foundation",
-    logo: "edmonton-community-foundation-logo.jpg",
+    logo: "edmonton-community-foundation-logo.png",
     link: "https://www.ecfoundation.org/",
     category: [category.MENTORS, category.BANNER],
     description: null,
@@ -121,7 +121,7 @@ const sponsors = [
   },
   {
     name: "Corvus Consulting Inc.",
-    logo: "corvus-logo.jpeg",
+    logo: "corvus-logo.png",
     link: "https://www.corvus-consulting.ca/",
     category: [category.SUPPORTERS, category.BANNER],
     description: null,
@@ -137,7 +137,7 @@ const sponsors = [
   },
   {
     name: "Alberta Pacific",
-    logo: "alberta-pacific-logo.jpg",
+    logo: "alberta-pacific-logo.png",
     link: "https://alpac.ca/",
     category: [category.PAST_SPONSORS],
     description: null,
@@ -172,14 +172,14 @@ const sponsors = [
   },
   {
     name: "Stantec",
-    logo: "stantec-logo.jpg",
+    logo: "stantec-logo.png",
     link: "https://www.stantec.com/",
     category: [category.PAST_SPONSORS],
     description: null,
   },
   {
     name: "The Chawkers Foundation",
-    logo: "chawkers-foundation-logo.jpg",
+    logo: "chawkers-foundation-logo.png",
     link: "https://thechawkersfoundation.org/",
     category: [category.PAST_SPONSORS],
     description: null
@@ -200,7 +200,7 @@ const sponsors = [
   },
   {
     name: "ConocoPhillips Canada",
-    logo: "conoco-phillips-logo.jpg",
+    logo: "conoco-phillips-logo.png",
     link: "https://www.conocophillips.ca/",
     category: [category.PAST_SPONSORS],
     description: null,

@@ -13,8 +13,8 @@ import { bannerSponsors } from "../../data/partnerData";
 
 export default function PartnerBanner() {
   return (
-    <div className="sponsor-banner">
-      <ul>
+    <div className="partner-banner scroll-element ">
+      <ul className="">
         {bannerSponsors.map((partner, index) => (
           <li key={index}>
             <a href={partner.link} target="_blank" rel="noopener noreferrer">
