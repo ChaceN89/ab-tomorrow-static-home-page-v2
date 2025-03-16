@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className='section'>
+    <div className='section space-y-4'>
       {/* home page with tons of content */}
       <h1 className='text-3xl'>Home Page</h1>
       <p className='text-lg'>This is the home page</p>

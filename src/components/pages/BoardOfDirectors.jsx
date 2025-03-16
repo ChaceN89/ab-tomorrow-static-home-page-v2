@@ -9,7 +9,7 @@
  */
 
 import React from 'react'
-import { boardOfDirectors } from '../../data/boardOfDirectors'
+import { boardOfDirectors } from '../../data/boardOfDirectorsData'
 import MemberCard from '../board-of-directors/MemberCard'
 
 export default function BoardOfDirectors() {
