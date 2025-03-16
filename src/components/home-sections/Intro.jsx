@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Intro() {
   return (
-    <div>
+    <div className='h-96 bg-primary'> 
       Intro
     </div>
   )

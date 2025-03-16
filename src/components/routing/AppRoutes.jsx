@@ -48,7 +48,7 @@ export default function AppRoutes() {
   const location = useLocation();
 
   return (
-    <div className="min-w-44 overflow-x-hidden">
+    <div className="min-w-44 overflow-x-hidden bg-primary">
       {/* Partner Banner stays in place throughout routing */}
       <PartnerBanner />
       

@@ -6,7 +6,7 @@ import About from '../home-sections/About'
 
 export default function Home() {
   return (
-    <div className='section'>
+    <div className=''>
       <Hero/>
       <Intro/>
       <Education/>

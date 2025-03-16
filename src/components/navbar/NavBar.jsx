@@ -10,13 +10,16 @@
  * @updated Mar 14, 2025
  */
 
+
+// want to have opacity change on scroll
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="fixed z-40 top-0 left-0 w-full bg-gray-800 text-white p-4 shadow-md ">
-      <div className="flex gap-4">
+    <nav className="fixed z-40 top-0 left-0 w-full lg:w-[calc(100%-14rem)] bg-gray-800 text-white p-4 shadow-md opacity-70">
+      <div className="flex gap-4 justify-between">
         <NavButton to="/" label="Home" />
         <NavButton to="/privacy-policy" label="Privacy Policy" />
         <NavButton to="/terms-of-use" label="Terms of Use" />
