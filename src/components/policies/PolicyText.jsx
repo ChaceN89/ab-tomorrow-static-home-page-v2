@@ -11,5 +11,5 @@
 import React from "react";
 
 export default function PolicyText({ children }) {
-  return <p className="text-gray-700 mt-2">{children}</p>;
+  return <div className="text-gray-700 mt-2">{children}</div>;
 }
