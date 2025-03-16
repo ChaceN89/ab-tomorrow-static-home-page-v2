@@ -1,6 +1,6 @@
 /**
- * @file SponsorBanner.tsx
- * @module SponsorBanner
+ * @file PartnerBanner.jsx
+ * @module PartnerBanner
  * @desc A unified sponsor banner that acts as a sidebar on large screens and a bottom banner on small screens.
  *
  * @author Chace Nielson

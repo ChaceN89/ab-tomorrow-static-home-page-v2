@@ -22,18 +22,12 @@ export default function Layout() {
       <NavBar />
       <ScrollProgress/>
 
-      <div className="flex flex-1 pt-16">
-        {/* Sidebar Stays in Place */}
-        <PartnerBanner />
-
-        {/* Main Content Moves Right (No Overlap) */}
-        <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-56">
-          <div className="flex-1">
-            <Outlet />
-          </div>
-          <Footer />
-        </main>
-      </div>
+      <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-56 pt-16">
+        <div className="flex-1">
+          <Outlet />
+        </div>
+        <Footer />
+      </main>
     </div>
   );
 }
