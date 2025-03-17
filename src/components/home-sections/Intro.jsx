@@ -5,7 +5,10 @@ import simClimate from '../../assets/simulator-screenshots/sim-7-new-climate-pla
 
 export default function Intro() {
   return (
-    <div className="bg-primary py-16 px-6 lg:px-20">
+    <div
+      id='intro'
+      className="bg-primary py-16 px-6 lg:px-20"
+    >
       {/* Logo and Title */}
       <div className="max-w-4xl mx-auto text-center">
         <div className='flex items-center'>
