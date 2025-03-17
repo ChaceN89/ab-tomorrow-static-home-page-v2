@@ -10,7 +10,7 @@ export default function WaterRangerKit() {
         alt="Water Rangers Testing Kit"
         className="w-full md:w-1/3 rounded-lg shadow-lg"
       />
-      <div className="max-w-lg text-left text-gray-200">
+      <div className="max-w-lg text-left text-gray-700">
         <h3 className="text-2xl font-bold">Water Rangers Testing Kits</h3>
         <p className="mt-2">
           Do you want to take your students out to test water but don’t have the equipment? No problem!

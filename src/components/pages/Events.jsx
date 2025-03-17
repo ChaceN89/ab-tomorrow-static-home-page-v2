@@ -29,7 +29,7 @@ export default function Events() {
   });
 
   return (
-    <div className="section mt-10">
+    <div className="section mt-20">
       {/* Future Events Section */}
       {futureEvents.length > 0 && (
         <div className="future-events mb-8">

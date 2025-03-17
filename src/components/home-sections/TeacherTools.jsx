@@ -14,8 +14,11 @@ export default function TeacherTools() {
         <p>There are curriculum links to many other grades and subjects. New lesson plans and materials are continually under development.</p>
         <HexList hexList={additionalResources} />
 
-        <a href="https://www.albertatomorrow.ca" target="_blank" rel="noopener noreferrer" className="btn-blue inline-block">
+        <a href="https://simulator.albertatomorrow.ca" target="_blank" rel="noopener noreferrer" className="btn-blue inline-block">
           Sign up
+        </a>
+        <a href=" https://simulator.albertatomorrow.ca/#/dashboard/resources" target="_blank" rel="noopener noreferrer" className="btn-blue inline-block">
+          Lesson Plans
         </a>
 
 

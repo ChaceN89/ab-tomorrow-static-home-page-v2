@@ -8,7 +8,7 @@ import BackgroundWrapper from '../ui-utils/BackgroundWrapper';
 export default function CallToAction() {
   return (
     <BackgroundWrapper background={background} backgroundSm={backgroundSm} className="h-full py-32">
-      <div className="relative z-10 flex justify-center items-center h-full text-center text-white">
+      <div className="relative z-10 flex justify-center items-center h-full text-center text-white drop-shadow">
         <div>
           <img src={alberta} alt="" />
         </div>

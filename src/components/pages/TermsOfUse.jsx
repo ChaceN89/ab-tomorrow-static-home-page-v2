@@ -16,7 +16,7 @@ import PolicyText from "../policies/PolicyText";
 
 export default function TermsOfUse() {
   return (
-    <div className="section">
+    <div className="section mt-20">
       <div className="container mx-auto max-w-4xl p-6">
         <PolicyHeader
           title="Alberta Tomorrow Website Terms of Use License and Services Agreement"
