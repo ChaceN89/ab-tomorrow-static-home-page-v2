@@ -14,7 +14,7 @@
  */
 
 import React, { Component } from 'react';
-import SplashScreen from '../page-components/SplashScreen';
+import SplashScreen from './SplashScreen';
 
 class ErrorBoundary extends Component {
   constructor(props) {

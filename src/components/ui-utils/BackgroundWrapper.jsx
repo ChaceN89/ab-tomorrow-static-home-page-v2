@@ -53,13 +53,3 @@ export default function BackgroundWrapper({background, backgroundSm, children, c
   </div>
   )
 }
-
-
-
-
-
-
-
-
-
-

@@ -36,8 +36,8 @@ import { Toaster } from "react-hot-toast"
 // Custom Components
 import AnalyticsProvider from "./utils/analytics/AnalyticsProvider"
 import DisplayTesting from "./components/testing/DisplayTesting"
-import SplashScreen from './components/page-components/SplashScreen';
-import ErrorBoundary from './components/page-components/ErrorBoundary';
+import SplashScreen from './components/ui-utils/SplashScreen';
+import ErrorBoundary from './components/ui-utils/ErrorBoundary';
 
 // the AppRoutes component is wrapped in a memo to prevent re-renders - and lazy loaded to improve performance and show a splash screen while loading
 const AppRoutes = memo(lazy(() => import("./components/routing/AppRoutes"))); // Memoized Home component

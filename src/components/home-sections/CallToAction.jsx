@@ -24,8 +24,8 @@ export default function CallToAction() {
           <div className='flex' >
 
 
-            <img src={quote} alt="Quote" class="quote" />
-            <blockquote class="testimonial">
+            <img src={quote} alt="Quote" className="quote" />
+            <blockquote className="testimonial">
               "Alberta Tomorrow gives my students real life exposure to real life decisions...all at their fingertips. Thank
               you for enriching my students learning environment."
               - <i>Stephanie Bennett, Biology Teacher</i>
