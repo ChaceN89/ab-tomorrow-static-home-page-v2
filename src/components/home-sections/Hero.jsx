@@ -3,7 +3,7 @@ import heroBanner from '../../assets/ui-elements/abtom-banner.jpg';
 import heroBannerSm from '../../assets/ui-elements/abtom-banner-sm.jpg';
 import award1 from '../../assets/awards/28th-emerald-finalist-logo.png';
 import award2 from '../../assets/awards/30th-emerald-finalist-logo.png';
-// import award3 from '../../assets/awards/31st-emerald-recipient-logo.png';
+import award3 from '../../assets/awards/31st-emerald-recipient-logo.png';
 
 export default function Hero() {
 
@@ -61,9 +61,7 @@ export default function Hero() {
             <img src={award2} alt="Award 2" className="h-44" />
             <img src={award3} alt="Award 3" className="h-44" />
           </div>
-          <a href="#learn-more" className="btn-blue">
-            Launch Simulator
-          </a>
+          <a href="https://www.simulator.albertatomorrow.ca/" className="btn-blue">Launch Simulator</a>
         </div>
       </div>
     </div>

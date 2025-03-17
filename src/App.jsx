@@ -43,9 +43,6 @@ import ErrorBoundary from './components/page-components/ErrorBoundary';
 const AppRoutes = memo(lazy(() => import("./components/routing/AppRoutes"))); // Memoized Home component
 
 
-
-
-
 export default function App() {
   return (
     <ErrorBoundary>
