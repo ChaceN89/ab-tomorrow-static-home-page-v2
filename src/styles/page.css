@@ -39,6 +39,9 @@
   animation: dotAnimation 1.5s infinite steps(1, end);
 }
 
+.btn-blue{
+  @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md
+}
 
 
 

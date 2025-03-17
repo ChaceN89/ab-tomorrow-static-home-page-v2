@@ -41,28 +41,35 @@ import SplashScreen from './components/page-components/SplashScreen';
 // the AppRoutes component is wrapped in a memo to prevent re-renders - and lazy loaded to improve performance and show a splash screen while loading
 const AppRoutes = memo(lazy(() => import("./components/routing/AppRoutes"))); // Memoized Home component
 
+
+// Error Boundary Component for catching and displaying errors globally
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null };
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true }; // Update state to trigger a fallback UI
+    return { hasError: true, error }; // Store the error in state
   }
 
   componentDidCatch(error, info) {
     console.error("Error caught by Error Boundary:", error, info);
   }
 
+  getErrorMessage() {
+    return this.state.error ? this.state.error.toString() : "An unknown error occurred.";
+  }
+
   render() {
     if (this.state.hasError) {
-      return <SplashScreen error={true} />;
+      return <SplashScreen error={true} errorText={this.getErrorMessage()} />;
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
+
 
 export default function App() {
   return (

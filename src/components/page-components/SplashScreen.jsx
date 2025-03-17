@@ -11,7 +11,7 @@
 import React from 'react';
 import splash from '../../assets/site-logos/splash.png';
 
-export default function SplashScreen({ error = false }) {
+export default function SplashScreen({ error = false, errorText="Something went wrong. Please try again later." }) {
   return (
     <div className="flex items-center justify-center min-h-screen bg-primary">
       <div className="flex flex-col items-center">
@@ -22,7 +22,7 @@ export default function SplashScreen({ error = false }) {
         <p className="text-xl text-gray-600 loading-text">
           {error ? (
             // Error message
-            <span>Something went wrong. Please try again later.</span>
+            <span>{errorText}</span>
           ) : (
             // Loading text with pulsing dots
             <> Loading <span className="dots"></span></>
