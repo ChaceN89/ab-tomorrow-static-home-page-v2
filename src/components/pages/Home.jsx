@@ -13,21 +13,29 @@ import Separator from '../ui-utils/Separator'
 export default function Home() {
   return (
     <div className='relative'>
-      <Hero/>
-      <Intro/>
-      <Separator bgColor='bg-primary-alt'/>
-      <CallToAction/>
-      <InteractiveTools/>
-      <Separator bgColor='bg-secondary-alt'/>
+      <section id='hero'>
+        <Hero/>
+      </section>
+      <section id='intro'>
+        <Intro/>
+        <Separator bgColor='bg-primary-alt'/>
+        <CallToAction/>
+      </section>
+      <section id='tools'>
+        <InteractiveTools/>
+        <Separator bgColor='bg-secondary-alt'/>
+      </section>
       <section id='education'>
         <Education/>
+        <Separator bgColor='bg-primary-alt'/>
+        <TeacherTools/>
+        <Separator bgColor='bg-primary-alt'/>
       </section>
-      <Separator bgColor='bg-primary-alt'/>
-      <TeacherTools/>
-      <Separator bgColor='bg-primary-alt'/>
-      <About/>
-      <Separator bgColor='bg-accent-alt'/>
-      <GetInvolved/>
+      <section id='about'>
+        <About/>
+        <Separator bgColor='bg-accent-alt'/>
+        <GetInvolved/>
+      </section>
     </div>
   )
 }
