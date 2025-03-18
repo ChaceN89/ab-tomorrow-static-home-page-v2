@@ -12,37 +12,14 @@
 
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
-import { FaGlobe, FaBolt, FaCalendarAlt, FaTimes } from "react-icons/fa"; // Import icons
-
-/**
- * List of new updates to be displayed in the popup.
- */
-const newsItems = [
-  {
-    icon: <FaGlobe className="text-accent text-xl" />, // Earth icon
-    title: "New Feature: Interactive Maps!",
-    description: "Explore wildlife data with our brand new interactive maps.",
-    link: "https://www.simulator.albertatomorrow.ca/maps",
-  },
-  {
-    icon: <FaBolt className="text-yellow-400 text-xl" />, // Lightning icon
-    title: "Energy Tomorrow Update",
-    description: "Learn about the latest improvements to our energy simulator.",
-    link: "https://www.simulator.albertatomorrow.ca/energy",
-  },
-  {
-    icon: <FaCalendarAlt className="text-black text-xl" />, // Calendar icon
-    title: "Upcoming Events",
-    description: "Join our live webinar on conservation strategies!",
-    link: "https://www.simulator.albertatomorrow.ca/events",
-  },
-];
+import { newsItems } from "../data/newsData";
+import { FaTimes } from "react-icons/fa"; // Import icons
 
 export default function NewsPopup() {
 
   const startDelay = 2500; // Delay before first toast starts 
   const toastDelay = 3500; // Delay between each toast
-  const toastDuration = 8000; // Duration of each toast
+  const toastDuration = 12000; // Duration of each toast
 
 
   useEffect(() => {
@@ -52,9 +29,9 @@ export default function NewsPopup() {
         setTimeout(() => {
           toast(
             (t) => (
-              <div className="flex items-start space-x-3 text-white max-w-xs">
+              <div className="flex items-start space-x-2 text-white max-w-xs ">
                 {/* Icon */}
-                <div>{item.icon}</div>
+                <div >{item.icon}</div>
 
                 {/* Content */}
                 <div className="flex flex-col">
@@ -64,7 +41,7 @@ export default function NewsPopup() {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-300 underline text-sm"
+                    className="text-blue-200 underline text-sm"
                     onClick={() => toast.dismiss(t.id)}
                   >
                     Read More →
