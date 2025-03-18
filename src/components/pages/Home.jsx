@@ -19,7 +19,9 @@ export default function Home() {
       <CallToAction/>
       <InteractiveTools/>
       <Separator bgColor='bg-secondary-alt'/>
-      <Education/>
+      <section id='education'>
+        <Education/>
+      </section>
       <Separator bgColor='bg-primary-alt'/>
       <TeacherTools/>
       <Separator bgColor='bg-primary-alt'/>

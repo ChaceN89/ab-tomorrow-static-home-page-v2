@@ -43,6 +43,7 @@ import Events from '../pages/Events';
 import BoardOfDirectors from '../pages/BoardOfDirectors';
 import PartnersPage from '../pages/PartnersPage';
 import NotFound from '../pages/NotFound';
+import ScrollToTop from "../../utils/ScrollToTop";
 
 export default function AppRoutes() {
   const location = useLocation();
@@ -51,6 +52,7 @@ export default function AppRoutes() {
     <div className="min-w-44 overflow-x-hidden bg-primary">
       {/* Partner Banner stays in place throughout routing */}
       <PartnerBanner />
+      <ScrollToTop/>
       
       {/* AnimatePresence enables animations for route transitions */}
       <AnimatePresence mode="wait" initial={false}>

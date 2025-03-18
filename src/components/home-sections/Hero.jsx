@@ -12,7 +12,8 @@ export default function Hero() {
 
   return (
     <BackgroundWrapper background={heroBanner} backgroundSm={heroBannerSm}>
-      <div className="relative z-10 flex justify-center items-end h-full text-center text-white pb-24">
+      <div id="hero"
+        className="relative z-10 flex justify-center items-end h-full text-center text-white pb-24">
         <div className="space-y-4">
           <div className="flex justify-center items-end gap-32 drop-shadow-2xl">
             <img src={award1} alt="Award 1" className="h-44" />

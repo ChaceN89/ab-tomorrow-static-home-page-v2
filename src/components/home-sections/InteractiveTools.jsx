@@ -6,7 +6,8 @@ import WildlifeTomorrowLogo from '../../assets/tool-logos/energy-tomorrow-logo.p
 
 export default function InteractiveTools() {
   return (
-    <section className="bg-secondary text-white py-16 px-6 lg:px-20">
+    <section  id="tools"
+    className="bg-secondary text-white py-16 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Title */}
         <h2 className="text-3xl lg:text-4xl font-bold uppercase mb-8">
