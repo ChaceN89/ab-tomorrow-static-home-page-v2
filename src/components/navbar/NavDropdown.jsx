@@ -1,91 +1,134 @@
 /**
  * @file NavDropdown.jsx
  * @module NavDropdown
- * @desc A dropdown menu for navigation. Uses Framer Motion animations and supports mouse/keyboard interactions.
+ * @description 
+ *   A dropdown menu component for the navigation bar. Displays a toggleable menu 
+ *   with dynamic items, supporting both navigation links and logout actions. 
+ *   Includes mouse-out boundary detection for closing the dropdown menu.
  *
- * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * @example
+ *   <NavDropdown items={[
+ *     { label: "Profile", icon: <FaUser />, href: "/profile" },
+ *     { label: "Logout", icon: <FaSignOutAlt />, logoutAction: true, action: handleLogout }
+ *   ]} />
  *
  * @author Chace Nielson
- * @created Mar 17, 2025
- * @updated Mar 17, 2025
+ * @created 2025-01-10
+ * @updated 2025-01-11
  */
 
 import React, { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
-import LinkItem from "./LinkItem";
 
-export default function NavDropdown() {
-  const [isOpen, setIsOpen] = useState(false);
-  const btnRef = useRef(null);
-  const dropRef = useRef(null);
 
-  const options = [
-    { label: "Videos", to: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
-    { label: "Simulator", to: "https://www.simulator.albertatomorrow.ca" },
-    { label: "Energy Tomorrow", to: "https://www.simulator.albertatomorrow.ca" },
-    { label: "Wildlife Tomorrow", to: "https://www.simulator.albertatomorrow.ca" },
-  ];
+const NavDropdown = ({ items, title }) => {
+  const [isOpen, setIsOpen] = useState(false); // Tracks dropdown open/close state
+  const btnRef = useRef(null); // Ref for the toggle button
+  const dropRef = useRef(null); // Ref for the dropdown menu
+  const boundaryValue = 100; // Distance to detect if the mouse is out of bounds
 
-  /** Toggles the dropdown */
-  const toggleDropdown = () => setIsOpen((prev) => !prev);
+  /**
+   * Toggles the dropdown menu open or closed.
+   */
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
 
-  /** Closes dropdown when clicking outside */
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropRef.current &&
-        !dropRef.current.contains(event.target) &&
-        btnRef.current &&
-        !btnRef.current.contains(event.target)
-      ) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  /**
+   * Checks if the mouse pointer is outside the bounding rectangle of an element.
+   * @param {DOMRect} rect - The bounding rectangle of the element.
+   * @param {number} mouseX - The current mouse X-coordinate.
+   * @param {number} mouseY - The current mouse Y-coordinate.
+   * @returns {boolean} True if the mouse is outside the boundary, false otherwise.
+   */
+  const isMouseOutOfBounds = (rect, mouseX, mouseY) => {
+    return (
+      mouseX < rect.left - boundaryValue ||
+      mouseX > rect.right + boundaryValue ||
+      mouseY < rect.top - boundaryValue ||
+      mouseY > rect.bottom + boundaryValue
+    );
+  };
 
-  /** Closes dropdown when mouse leaves */
+  /**
+   * Handles mouse movement to close the dropdown if the mouse leaves the 
+   * button and dropdown menu boundaries.
+   * @param {MouseEvent} event - The mousemove event.
+   */
   const handleMouseLeave = (event) => {
-    if (!dropRef.current.contains(event.relatedTarget)) {
+    const btnRect = btnRef.current?.getBoundingClientRect();
+    const dropRect = dropRef.current?.getBoundingClientRect();
+    const { clientX: mouseX, clientY: mouseY } = event;
+
+    if (isMouseOutOfBounds(btnRect, mouseX, mouseY) && isMouseOutOfBounds(dropRect, mouseX, mouseY)) {
       setIsOpen(false);
     }
   };
 
+  // Attach or remove the mousemove event listener based on dropdown state
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousemove", handleMouseLeave);
+    } else {
+      document.removeEventListener("mousemove", handleMouseLeave);
+    }
+    return () => document.removeEventListener("mousemove", handleMouseLeave);
+  }, [isOpen]);
+
   return (
-    <div className="relative">
-      {/* Dropdown Button */}
+    <div className="relative w-full lg:w-auto">
+      {/* Dropdown toggle button */}
       <button
         ref={btnRef}
         onClick={toggleDropdown}
-        className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded text-white"
+        className="nav-button-1 w-full flex gap-0.5 items-center"
       >
-        Tools <FaChevronDown className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <span className="relative z-10 flex gap-1 items-center hover:text-accent hover:cursor-pointer">
+          {title} <FaChevronDown />
+        </span>
       </button>
 
-      {/* Dropdown Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            ref={dropRef}
-            onMouseLeave={handleMouseLeave}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute left-0 mt-2 w-48 bg-gray-900 text-white rounded shadow-md"
-          >
-            {options.map((option) => (
-              <div key={option.label} onClick={() => setIsOpen(false)}>
-                <LinkItem external={option.to}>
-                  {option.label}
-                </LinkItem>
-              </div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Dropdown menu */}
+      {isOpen && (
+        <div
+          ref={dropRef}
+          className="absolute left-0 bg-white dark:bg-secondary border rounded-lg shadow-lg w-full lg:w-fit"
+        >
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className={`dropdown-cell ${
+                index === 0 ? "rounded-t-lg" : ""
+              } ${index === items.length - 1 ? "rounded-b-lg" : ""}`}
+            >
+              {item.logoutAction ? (
+                // Logout action item
+                <a
+                  href="#"
+                  onClick={item.action ? item.action : null}
+                  className="dropdown-item"
+                >
+                  {item.icon}
+                  {item.label}
+                </a>
+              ) : (
+                // External Navigation link item
+                <a
+                  href={item.href}
+                  className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.icon}
+                  {item.label}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default NavDropdown;

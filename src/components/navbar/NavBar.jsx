@@ -17,6 +17,16 @@ import LinkItem from "./LinkItem";
 import NavDropdown from "./NavDropdown";
 import NavLogo from "./NavLogo";
 
+import { FaVideo, FaGlobe, FaBolt, FaPaw, FaBook, FaHandshake, FaEnvelope } from "react-icons/fa";
+
+
+const userDropdownItems = [
+  { label: "Videos", icon: <FaVideo />, href: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
+  { label: "Simulator", icon: <FaGlobe />, href: "https://www.simulator.albertatomorrow.ca" },
+  { label: "Energy Tomorrow", icon: <FaBolt />, href: "https://www.simulator.albertatomorrow.ca" },
+  { label: "Wildlife Tomorrow", icon: <FaPaw />, href: "https://www.simulator.albertatomorrow.ca" },
+  { label: "Lesson Plans", icon: <FaBook />, href: "https://www.simulator.albertatomorrow.ca/#/lesson-plans" },
+];
 
 
 export default function NavBar() {
@@ -45,7 +55,7 @@ export default function NavBar() {
         {/* Left Side: Logo & Navigation */}
         <div className="flex justify-start items-center gap-2">
           <LinkItem router={"/"} scroll={'hero'}><NavLogo/></LinkItem>
-          <NavDropdown > Tools </NavDropdown>
+          <NavDropdown title={"Tools"} items={userDropdownItems} />
         </div>
 
         {/* Right Side: Navigation Links */}

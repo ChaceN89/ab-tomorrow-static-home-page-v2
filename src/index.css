@@ -80,3 +80,17 @@ body::-webkit-scrollbar {
   }
 }
 
+
+
+
+
+/* Dropdown menu cell styling */
+.dropdown-cell {
+  @apply block px-4 py-2 hover:bg-gray-200 hover:dark:text-secondary 
+         cursor-pointer w-full text-secondary dark:text-primary;
+}
+
+/* Dropdown menu item styling */
+.dropdown-item {
+  @apply w-full text-left flex gap-2 items-center whitespace-nowrap text-inherit;
+}
