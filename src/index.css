@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
   --color-primary: oklch(0.65 0.33 203.64);/* <!-- 34AEB5 - 52, 174 181--> * */
   --color-primary-alt: oklch(0.50 0.27 204.42);  /* <!-- 34AEB5 - 38 132 138 --> * */ 
 
-  --color-primary-alt-transparent: color-mix(in oklab, var(--color-primary-alt) 60%, transparent);
+  --color-primary-alt-transparent: color-mix(in oklab, var(--color-primary-alt) 80%, transparent);
 
 
   /* ✅ Secondary Colors */
