@@ -44,6 +44,7 @@ import BoardOfDirectors from '../pages/BoardOfDirectors';
 import PartnersPage from '../pages/PartnersPage';
 import NotFound from '../pages/NotFound';
 import ScrollToTop from "../../utils/ScrollToTop";
+import NewsPopup from "../../utils/NewsPopup";
 
 export default function AppRoutes() {
   const location = useLocation();
@@ -53,6 +54,7 @@ export default function AppRoutes() {
       {/* Partner Banner stays in place throughout routing */}
       <PartnerBanner />
       <ScrollToTop/>
+      <NewsPopup/>
       
       {/* AnimatePresence enables animations for route transitions */}
       <AnimatePresence mode="wait" initial={false}>
