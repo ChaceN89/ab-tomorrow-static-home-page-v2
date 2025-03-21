@@ -24,7 +24,7 @@ import {toolsDropDown, learnMoreDropDown, scrollLinks} from "../../data/navData"
 import { BsHexagonHalf } from "react-icons/bs";
 
 const HexSeparator = () => (
-  <BsHexagonHalf className="text-accent-alt w-2 h-2 opacity-70" />
+  <BsHexagonHalf className="text-accent-alt w-2 h-2 opacity-60 mx-0 translate-y-[1.5px]" />
 );
 
 export default function NavBar() {
@@ -44,33 +44,36 @@ export default function NavBar() {
 
   return (
     <nav
-      className="fixed z-40 top-0 left-0 w-full lg:w-[calc(100%-14rem)] pt-1.5 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10"
+      className="fixed z-40 top-0 left-0 w-full lg:w-[calc(100%-14rem)] py-2 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10"
       style={{
         backgroundColor: `rgba(31, 41, 55, ${isHomePage ? Math.min(0.75, 0.4 + scrollY / 1000) : 0.75})`
       }}
     >
       <div className="flex justify-between items-center page-width ">
         {/* Left Side: Logo & Navigation */}
-        <div className="flex justify-start items-center gap-1.5">
-          <LinkItem  router="/"
-            scrollTo={"hero"}
+        <div className="flex justify-start items-center gap-0">
+          <LinkItem
+            router="/"
+            scrollTo="hero"
             disableActive
-            disableHover
+            className=" text-white border-2 hover:cursor-pointer "
           >
-            <NavLogo/>
+            <NavLogo />
           </LinkItem>
           <HexSeparator/>
           <NavDropdown title={toolsDropDown.title} items={toolsDropDown.list} />
         </div>
 
         {/* Right Side: Navigation Links */}
-        <div className="flex justify-end items-center gap-1.5">
+        <div className="flex justify-end items-center gap-0">
           {scrollLinks.flatMap(({ label, scrollTo, disableActive }, index, arr) => [
             <LinkItem
               key={scrollTo}
               router="/"
               scrollTo={scrollTo}
-              disableActive={disableActive}
+              className="nav-element-default nav-element-default-hover "
+              activeClassName="nav-element-active"
+              // disableHover no longer needed!
             >
               {label}
             </LinkItem>,
@@ -79,7 +82,12 @@ export default function NavBar() {
           <HexSeparator/>
           <NavDropdown title={learnMoreDropDown.title} items={learnMoreDropDown.list} openToLeft={true} />
           <HexSeparator/>
-          <div className=' bg-green-500 hover:bg-green-800 rounded-lg hover:cursor-pointer'>Donate</div>
+          <LinkItem
+            href="https://www.canadahelps.org/en/dn/60256?v2=true"
+            className="ml-nav p-3 py-1.5 rounded-lg bg-primary hover:bg-primary-alt text-white font-semibold transition"
+          >
+            Donate
+          </LinkItem>        
         </div>
       </div>
     </nav>

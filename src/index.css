@@ -68,30 +68,42 @@ body::-webkit-scrollbar {
 
 
 
+/* Nav themes */
+@theme {
+  --spacing-nav: 0.625rem; /* 10px or Tailwind's 2.5 */
+}
+
+/* Active link: bold + accent underline */
 .nav-element-active {
-  @apply  font-semibold border-b-2 border-accent;
+  @apply font-semibold border-b-2 border-accent py-0.5;
 }
 
+/* Base style: white text, padding, rounded corners */
 .nav-element-default {
-  @apply  text-white rounded-md transition-all  hover:cursor-pointer px-2.5 py-1;
+  @apply text-white rounded-md transition-all hover:cursor-pointer px-nav py-1;
 }
 
-.nav-element-default-hover{
-  @apply text-white duration-200 hover:text-black hover:bg-white/70 ;
+/* Hover only: black text + frosted background */
+.nav-element-default-hover {
+  @apply hover:text-black hover:bg-white/50 duration-200;
 }
 
+
+/* Dropdown menu background styling */
+.dropdown-background {
+  @apply mt-2 overflow-hidden bg-primary border rounded-lg shadow-lg w-full lg:w-fit origin-top opacity-100;
+}
 
 /* Dropdown menu cell styling */
 .dropdown-cell {
-  @apply block px-4 py-2 hover:bg-gray-200 hover:dark:text-secondary 
-         cursor-pointer w-full text-secondary dark:text-primary;
+  @apply block px-2 py-1 hover:bg-gray-200 
+         cursor-pointer w-full text-white hover:text-black;
 }
 
-/* Dropdown menu item styling */
+/* Content inside dropdown item */
 .dropdown-item {
   @apply w-full text-left flex gap-2 items-center whitespace-nowrap text-inherit;
 }
-
 
 
 

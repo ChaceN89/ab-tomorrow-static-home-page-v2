@@ -11,13 +11,8 @@ import { FaUsers } from "react-icons/fa";              // Board of Directors
 import { FaHandshake } from "react-icons/fa";          // Partners
 import { FaCalendarAlt } from "react-icons/fa";        // Events
 import { FaEnvelope } from "react-icons/fa";           // Contact
-import { title } from "framer-motion/client";
 
 
-export const leftSideData = {
-  // Logo
- 
-}
 
 export const scrollLinks = [
   { label: "Home", scrollTo: "hero" },

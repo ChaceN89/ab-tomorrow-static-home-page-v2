@@ -8,62 +8,57 @@
  *
  * @author Chace Nielson
  * @created Mar 17, 2025
- * @updated Mar 17, 2025
+ * @updated Mar 21, 2025
  */
 
 import React from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
-export default function LinkItem({ href, scrollTo, router, children, disableActive = false, disableHover=false }) {
+export default function LinkItem({
+  href,
+  scrollTo,
+  router,
+  children,
+  className = "",
+  activeClassName = "",
+  disableActive = false
+}) {
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
-  const defaultClass = `
-    nav-element-default
-    ${disableHover ? "" : " nav-element-default-hover"}
-  `;
-
-  
-
-  // Function to handle both navigation and scrolling
   const handleClick = (e) => {
     e.preventDefault();
 
     if (scrollTo) {
       if (isHomePage) {
-        // If already on the home page, scrollTo immediately
         scroller.scrollTo(scrollTo, {
           smooth: true,
           duration: 600,
-          offset: -120, // Adjust based on navbar height
+          offset: -120,
         });
       } else {
-        // Navigate to home first, then scrollTo after navigation completes
         navigate("/");
 
-        // Wait for navigation to complete and the DOM to fully render before scrolling
         const observer = new MutationObserver(() => {
           const targetElement = document.getElementById(scrollTo);
           if (targetElement) {
-            observer.disconnect(); // Stop observing once the element exists
+            observer.disconnect();
 
-            // Ensure scrollTo happens after DOM layout calculations
             setTimeout(() => {
               scroller.scrollTo(scrollTo, {
                 smooth: true,
                 duration: 1000,
-                offset: -70, // Adjust based on navbar height
+                offset: -70,
               });
-            }, 300); // Delay to ensure rendering is complete
+            }, 300);
           }
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
       }
     } else if (router) {
-      // If it's a normal router link, navigate normally
       navigate(router);
     }
   };
@@ -76,40 +71,40 @@ export default function LinkItem({ href, scrollTo, router, children, disableActi
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${defaultClass} block`}
+          className={className}
         >
           {children}
         </a>
       )}
 
-      {/* Scroll Link (Works on Home Page, Uses react-scrollTo Active State) */}
+      {/* Scroll Link on Home Page */}
       {scrollTo && isHomePage && (
         <ScrollLink
           to={scrollTo}
           smooth={true}
           duration={1000}
           spy={true}
-          offset={-70} // Adjust based on navbar height
-          activeClass={!disableActive ? "nav-element-active" : ""} 
-          className={`${defaultClass} block`}
+          offset={-70}
+          activeClass={!disableActive ? activeClassName : ""}
+          className={className}
         >
           {children}
         </ScrollLink>
       )}
 
-      {/* Scroll Link (Navigates to Home First, Then Scrolls) */}
+      {/* Scroll Link with redirect to Home first */}
       {scrollTo && !isHomePage && (
-        <a href="/" onClick={handleClick} className={`${defaultClass} block`}>
+        <a href="/" onClick={handleClick} className={className}>
           {children}
         </a>
       )}
 
-      {/* Router Link (Uses Active Class for Current Route) */}
+      {/* Router Link */}
       {router && !scrollTo && (
         <NavLink
           to={router}
           className={({ isActive }) =>
-            `${defaultClass} ${isActive && !disableActive ? "nav-element-active" : ""}`
+            `${className} ${isActive && !disableActive ? activeClassName : ""}`
           }
         >
           {children}

@@ -91,12 +91,12 @@ export default function NavDropdown({ items, title, openToLeft = false }){
   }, [isOpen]);
 
   return (
-    <div className="relative w-full lg:w-auto">
+    <div className="relative w-full lg:w-auto  ">
       {/* Toggle Button */}
       <button
         ref={btnRef}
         onClick={toggleDropdown}
-        className="nav-button-1 w-full flex gap-0.5 items-center"
+        className=" w-full flex items-center"
       >
         <span className="relative z-10 flex items-center nav-element-default nav-element-default-hover">
           {title}
@@ -115,8 +115,8 @@ export default function NavDropdown({ items, title, openToLeft = false }){
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className={`absolute ${openToLeft ? "right-0" : "left-0"} mt-2 overflow-hidden bg-primary dark:bg-secondary border rounded-lg shadow-lg w-full lg:w-fit origin-top opacity-100`}
-          >
+            className={`absolute ${openToLeft ? "right-0" : "left-0"} dropdown-background `}
+            >
             {items.map((item, index) => (
               <div
                 key={index}
@@ -128,11 +128,12 @@ export default function NavDropdown({ items, title, openToLeft = false }){
                   href={item.href}
                   router={item.router}
                   scrollTo={item.scrollTo}
-                  disableActive
-                  disableHover
+                  disableActive // no active styles needed in dropdown
+                  className="dropdown-cell" // this applies the hover background etc.
                 >
-                  <div className="dropdown-item flex items-center gap-2">
-                    {item.icon} {item.label}
+                  <div className="dropdown-item">
+                    {item.icon}
+                    {item.label}
                   </div>
                 </LinkItem>
               </div>
