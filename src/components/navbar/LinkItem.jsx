@@ -84,7 +84,7 @@ export default function LinkItem({
           smooth={true}
           duration={1000}
           spy={true}
-          offset={-70}
+          offset={-60}
           activeClass={!disableActive ? activeClassName : ""}
           className={className}
         >

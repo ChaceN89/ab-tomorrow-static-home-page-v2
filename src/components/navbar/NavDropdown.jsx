@@ -91,12 +91,12 @@ export default function NavDropdown({ items, title, openToLeft = false }){
   }, [isOpen]);
 
   return (
-    <div className="relative w-full lg:w-auto  ">
+    <div className="relative w-auto">
       {/* Toggle Button */}
       <button
         ref={btnRef}
         onClick={toggleDropdown}
-        className=" w-full flex items-center"
+        className=" w-full flex items-center whitespace-nowrap"
       >
         <span className="relative z-10 flex items-center nav-element-default nav-element-default-hover">
           {title}
@@ -131,7 +131,7 @@ export default function NavDropdown({ items, title, openToLeft = false }){
                   disableActive // no active styles needed in dropdown
                   className="dropdown-cell" // this applies the hover background etc.
                 >
-                  <div className="dropdown-item">
+                  <div className="dropdown-item ">
                     {item.icon}
                     {item.label}
                   </div>

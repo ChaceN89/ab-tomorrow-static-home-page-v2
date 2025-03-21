@@ -8,10 +8,13 @@
  * @author Chace Nielson
  * @created Mar 14, 2025
  * @updated Mar 17, 2025
+ * 
+ * 
+ * @notes
+ * this use to be used to shortd the nav bar lg:min-w-[calc(100%-14rem)]
  */
 
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import LinkItem from "./LinkItem";
 import NavDropdown from "./NavDropdown";
@@ -44,19 +47,19 @@ export default function NavBar() {
 
   return (
     <nav
-      className="fixed z-40 top-0 left-0 w-full lg:w-[calc(100%-14rem)] py-2 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10"
+      className="fixed z-40 top-0 left-0 min-w-full  py-2 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10"
       style={{
         backgroundColor: `rgba(31, 41, 55, ${isHomePage ? Math.min(0.75, 0.4 + scrollY / 1000) : 0.75})`
       }}
     >
       <div className="flex justify-between items-center page-width ">
         {/* Left Side: Logo & Navigation */}
-        <div className="flex justify-start items-center gap-0">
+        <div className="flex justify-between items-center">
           <LinkItem
             router="/"
             scrollTo="hero"
             disableActive
-            className=" text-white border-2 hover:cursor-pointer "
+            className=" text-white  hover:cursor-pointer "
           >
             <NavLogo />
           </LinkItem>
@@ -65,13 +68,13 @@ export default function NavBar() {
         </div>
 
         {/* Right Side: Navigation Links */}
-        <div className="flex justify-end items-center gap-0">
+        <div className="flex justify-end items-center">
           {scrollLinks.flatMap(({ label, scrollTo, disableActive }, index, arr) => [
             <LinkItem
               key={scrollTo}
               router="/"
               scrollTo={scrollTo}
-              className="nav-element-default nav-element-default-hover "
+              className="nav-element-default nav-element-default-hover"
               activeClassName="nav-element-active"
               // disableHover no longer needed!
             >

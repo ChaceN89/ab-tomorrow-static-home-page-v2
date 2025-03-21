@@ -23,9 +23,7 @@ export default function Layout() {
       <NavBar />
     
       <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-56 ">
-        <div className="flex-1">
           <Outlet />
-        </div>
         <Footer />
       </main>
     </div>

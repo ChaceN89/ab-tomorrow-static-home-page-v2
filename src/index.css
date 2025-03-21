@@ -63,15 +63,17 @@ body::-webkit-scrollbar {
 
 /* the padding in the x for all pages  */
 .page-width {
-  @apply px-10;
+  @apply px-2 xl:px-10;
 }
 
 
 
 /* Nav themes */
 @theme {
-  --spacing-nav: 0.625rem; /* 10px or Tailwind's 2.5 */
+  --spacing-nav: 0.625rem; 
 }
+
+
 
 /* Active link: bold + accent underline */
 .nav-element-active {
@@ -91,7 +93,7 @@ body::-webkit-scrollbar {
 
 /* Dropdown menu background styling */
 .dropdown-background {
-  @apply mt-2 overflow-hidden bg-primary border rounded-lg shadow-lg w-full lg:w-fit origin-top opacity-100;
+  @apply mt-2  bg-primary border rounded-lg shadow-lg w-full origin-top opacity-100;
 }
 
 /* Dropdown menu cell styling */
