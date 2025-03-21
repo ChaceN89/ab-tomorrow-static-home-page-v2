@@ -52,9 +52,10 @@ export default function NavBar() {
         backgroundColor: `rgba(31, 41, 55, ${isHomePage ? Math.min(0.75, 0.4 + scrollY / 1000) : 0.75})`
       }}
     >
-      <div className="flex justify-between items-center page-width ">
+      <div className="flex w-full flex-col items-start lg:flex-row justify-start lg:justify-between lg:items-center page-width">
+      
         {/* Left Side: Logo & Navigation */}
-        <div className="flex justify-between items-center">
+        <div className="flex items-center">
           <LinkItem
             router="/"
             scrollTo="hero"
@@ -68,15 +69,14 @@ export default function NavBar() {
         </div>
 
         {/* Right Side: Navigation Links */}
-        <div className="flex justify-end items-center">
-          {scrollLinks.flatMap(({ label, scrollTo, disableActive }, index, arr) => [
+        <div className="flex  items-center pt-2 lg:pt-0">
+          {scrollLinks.flatMap(({ label, scrollTo }, index, arr) => [
             <LinkItem
               key={scrollTo}
               router="/"
               scrollTo={scrollTo}
               className="nav-element-default nav-element-default-hover"
               activeClassName="nav-element-active"
-              // disableHover no longer needed!
             >
               {label}
             </LinkItem>,

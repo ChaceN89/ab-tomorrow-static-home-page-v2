@@ -66,7 +66,7 @@ export default function NavDropdown({ items, title, openToLeft = false }){
     return (
       mouseX < rect.left - boundaryValue ||
       mouseX > rect.right + boundaryValue ||
-      mouseY < rect.top - boundaryValue ||
+      mouseY < rect.top - 10 ||
       mouseY > rect.bottom + boundaryValue
     );
   };
@@ -101,6 +101,7 @@ export default function NavDropdown({ items, title, openToLeft = false }){
         <span className="relative z-10 flex items-center nav-element-default nav-element-default-hover">
           {title}
           <FaChevronRight
+            size={12}
             className={`transition-transform duration-400 ${isOpen ? "rotate-90 translate-y-0.5" : "rotate-0"}`}
           />
         </span>
