@@ -2,7 +2,7 @@ import React from 'react';
 
 import EnergyTomorrowLogo from '../../assets/tool-logos/energy-tomorrow-logo.png';
 import SimulatorLogo from '../../assets/site-logos/logo-lg.png';
-import WildlifeTomorrowLogo from '../../assets/tool-logos/energy-tomorrow-logo.png';
+import WildlifeTomorrowLogo from '../../assets/tool-logos/wildlife-tomorrow-logo.png';
 
 export default function InteractiveTools() {
   return (
