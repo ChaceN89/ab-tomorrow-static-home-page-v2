@@ -17,17 +17,15 @@ import LinkItem from "./LinkItem";
 import NavDropdown from "./NavDropdown";
 import NavLogo from "./NavLogo";
 
-import { FaVideo, FaGlobe, FaBolt, FaPaw, FaBook, FaHandshake, FaEnvelope } from "react-icons/fa";
+// Nav data
+import {toolsDropDown, learnMoreDropDown, scrollLinks} from "../../data/navData";
 
+// Icons 
+import { BsHexagonHalf } from "react-icons/bs";
 
-const userDropdownItems = [
-  { label: "Videos", icon: <FaVideo />, href: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
-  { label: "Simulator", icon: <FaGlobe />, href: "https://www.simulator.albertatomorrow.ca" },
-  { label: "Energy Tomorrow", icon: <FaBolt />, href: "https://www.simulator.albertatomorrow.ca" },
-  { label: "Wildlife Tomorrow", icon: <FaPaw />, href: "https://www.simulator.albertatomorrow.ca" },
-  { label: "Lesson Plans", icon: <FaBook />, href: "https://www.simulator.albertatomorrow.ca/#/lesson-plans" },
-];
-
+const HexSeparator = () => (
+  <BsHexagonHalf className="text-accent-alt w-2 h-2 opacity-70" />
+);
 
 export default function NavBar() {
   const [scrollY, setScrollY] = useState(0);
@@ -45,32 +43,45 @@ export default function NavBar() {
   const opacity = isHomePage ? Math.min(0.9, 0.4 + scrollY / 1000) : 0.9;
 
   return (
-    <motion.nav
-      initial={{ opacity: isHomePage ? 0.4 : 0.9 }}
-      animate={{ opacity }}
-      transition={{ duration: 0.2 }}
-      className="fixed z-40 top-0 left-0 w-full lg:w-[calc(100%-14rem)] bg-gray-800 text-white p-4 shadow-md"
+    <nav
+      className="fixed z-40 top-0 left-0 w-full lg:w-[calc(100%-14rem)] pt-1.5 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10"
+      style={{
+        backgroundColor: `rgba(31, 41, 55, ${isHomePage ? Math.min(0.75, 0.4 + scrollY / 1000) : 0.75})`
+      }}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center page-width ">
         {/* Left Side: Logo & Navigation */}
-        <div className="flex justify-start items-center gap-2">
-          <LinkItem router={"/"} scroll={'hero'}><NavLogo/></LinkItem>
-          <NavDropdown title={"Tools"} items={userDropdownItems} />
+        <div className="flex justify-start items-center gap-1.5">
+          <LinkItem  router="/"
+            scrollTo={"hero"}
+            disableActive
+            disableHover
+          >
+            <NavLogo/>
+          </LinkItem>
+          <HexSeparator/>
+          <NavDropdown title={toolsDropDown.title} items={toolsDropDown.list} />
         </div>
 
         {/* Right Side: Navigation Links */}
-        <div className="flex justify-end items-center gap-2">
-          <LinkItem router={"/"} scroll={"hero"}>Home</LinkItem>
-          <LinkItem router={"/"} scroll={"intro"}>Intro</LinkItem>
-          <LinkItem router={"/"} scroll={"tools"}>Tools</LinkItem>
-          <LinkItem router={"/"} scroll={"education"}>Education</LinkItem>
-          <LinkItem router={"/"} scroll={"about"}>About</LinkItem>
-          <LinkItem router={"/FAQs"}>FAQs</LinkItem>
-          <LinkItem router={"/Partners"}>Partners</LinkItem>
-          <LinkItem router={"/Contact"}>Contact</LinkItem>
-          <LinkItem router={"/Events"}>Events</LinkItem>
+        <div className="flex justify-end items-center gap-1.5">
+          {scrollLinks.flatMap(({ label, scrollTo, disableActive }, index, arr) => [
+            <LinkItem
+              key={scrollTo}
+              router="/"
+              scrollTo={scrollTo}
+              disableActive={disableActive}
+            >
+              {label}
+            </LinkItem>,
+            index < arr.length - 1 ? <HexSeparator key={`sep-${scrollTo}`} /> : null
+          ])}
+          <HexSeparator/>
+          <NavDropdown title={learnMoreDropDown.title} items={learnMoreDropDown.list} openToLeft={true} />
+          <HexSeparator/>
+          <div className=' bg-green-500 hover:bg-green-800 rounded-lg hover:cursor-pointer'>Donate</div>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }

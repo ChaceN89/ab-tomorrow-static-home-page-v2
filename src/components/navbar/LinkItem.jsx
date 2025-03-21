@@ -1,7 +1,7 @@
 /**
  * @file LinkItem.jsx
  * @module LinkItem
- * @desc A reusable navigation link component that supports react-scroll, react-router, and external links.
+ * @desc A reusable navigation link component that supports react-scroll, react-router, and href links.
  *
  * @see {@link https://reactrouter.com/en/main | React Router Documentation}
  * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
@@ -15,40 +15,43 @@ import React from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
-export default function LinkItem({ external, scroll, router, children }) {
+export default function LinkItem({ href, scrollTo, router, children, disableActive = false, disableHover=false }) {
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
-  // Active styles
-  const activeClass = "text-accent font-semibold border-b-2 border-accent"; // Underline effect for active links
-  const defaultClass = "text-white hover:text-accent cursor-pointer transition-all duration-200";
+  const defaultClass = `
+    nav-element-default
+    ${disableHover ? "" : " nav-element-default-hover"}
+  `;
+
+  
 
   // Function to handle both navigation and scrolling
   const handleClick = (e) => {
     e.preventDefault();
 
-    if (scroll) {
+    if (scrollTo) {
       if (isHomePage) {
-        // If already on the home page, scroll immediately
-        scroller.scrollTo(scroll, {
+        // If already on the home page, scrollTo immediately
+        scroller.scrollTo(scrollTo, {
           smooth: true,
           duration: 600,
           offset: -120, // Adjust based on navbar height
         });
       } else {
-        // Navigate to home first, then scroll after navigation completes
+        // Navigate to home first, then scrollTo after navigation completes
         navigate("/");
 
         // Wait for navigation to complete and the DOM to fully render before scrolling
         const observer = new MutationObserver(() => {
-          const targetElement = document.getElementById(scroll);
+          const targetElement = document.getElementById(scrollTo);
           if (targetElement) {
             observer.disconnect(); // Stop observing once the element exists
 
-            // Ensure scroll happens after DOM layout calculations
+            // Ensure scrollTo happens after DOM layout calculations
             setTimeout(() => {
-              scroller.scrollTo(scroll, {
+              scroller.scrollTo(scrollTo, {
                 smooth: true,
                 duration: 1000,
                 offset: -70, // Adjust based on navbar height
@@ -68,9 +71,9 @@ export default function LinkItem({ external, scroll, router, children }) {
   return (
     <div className="relative">
       {/* External Link */}
-      {external && (
+      {href && (
         <a
-          href={external}
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
           className={`${defaultClass} block`}
@@ -79,15 +82,15 @@ export default function LinkItem({ external, scroll, router, children }) {
         </a>
       )}
 
-      {/* Scroll Link (Works on Home Page, Uses react-scroll Active State) */}
-      {scroll && isHomePage && (
+      {/* Scroll Link (Works on Home Page, Uses react-scrollTo Active State) */}
+      {scrollTo && isHomePage && (
         <ScrollLink
-          to={scroll}
+          to={scrollTo}
           smooth={true}
           duration={1000}
           spy={true}
           offset={-70} // Adjust based on navbar height
-          activeClass={activeClass} // This adds styling when section is active
+          activeClass={!disableActive ? "nav-element-active" : ""} 
           className={`${defaultClass} block`}
         >
           {children}
@@ -95,17 +98,19 @@ export default function LinkItem({ external, scroll, router, children }) {
       )}
 
       {/* Scroll Link (Navigates to Home First, Then Scrolls) */}
-      {scroll && !isHomePage && (
+      {scrollTo && !isHomePage && (
         <a href="/" onClick={handleClick} className={`${defaultClass} block`}>
           {children}
         </a>
       )}
 
       {/* Router Link (Uses Active Class for Current Route) */}
-      {router && !scroll && (
+      {router && !scrollTo && (
         <NavLink
           to={router}
-          className={({ isActive }) => `${defaultClass} ${isActive ? activeClass : ""}`}
+          className={({ isActive }) =>
+            `${defaultClass} ${isActive && !disableActive ? "nav-element-active" : ""}`
+          }
         >
           {children}
         </NavLink>

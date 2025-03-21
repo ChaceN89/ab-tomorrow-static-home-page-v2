@@ -14,33 +14,54 @@
  *
  * @author Chace Nielson
  * @created 2025-01-10
- * @updated 2025-01-11
+ * @updated 2025-03-17
  */
 
 import React, { useState, useRef, useEffect } from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
+import LinkItem from "./LinkItem";
+import { motion, AnimatePresence } from "framer-motion";
 
 
-const NavDropdown = ({ items, title }) => {
-  const [isOpen, setIsOpen] = useState(false); // Tracks dropdown open/close state
-  const btnRef = useRef(null); // Ref for the toggle button
-  const dropRef = useRef(null); // Ref for the dropdown menu
-  const boundaryValue = 100; // Distance to detect if the mouse is out of bounds
+export default function NavDropdown({ items, title, openToLeft = false }){
 
-  /**
-   * Toggles the dropdown menu open or closed.
-   */
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
+  const dropdownVariants = {
+    hidden: {
+      height: 0,
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut"
+      }
+    },
+    visible: {
+      height: "auto",
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: "easeInOut"
+      }
+    },
+    exit: {
+      height: 0,
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut"
+      }
+    }
   };
+  
+  
 
-  /**
-   * Checks if the mouse pointer is outside the bounding rectangle of an element.
-   * @param {DOMRect} rect - The bounding rectangle of the element.
-   * @param {number} mouseX - The current mouse X-coordinate.
-   * @param {number} mouseY - The current mouse Y-coordinate.
-   * @returns {boolean} True if the mouse is outside the boundary, false otherwise.
-   */
+  // References 
+  const [isOpen, setIsOpen] = useState(false);
+  const btnRef = useRef(null);
+  const dropRef = useRef(null);
+  const boundaryValue = 100;
+
+  const toggleDropdown = () => setIsOpen((prev) => !prev);
+
   const isMouseOutOfBounds = (rect, mouseX, mouseY) => {
     return (
       mouseX < rect.left - boundaryValue ||
@@ -50,11 +71,6 @@ const NavDropdown = ({ items, title }) => {
     );
   };
 
-  /**
-   * Handles mouse movement to close the dropdown if the mouse leaves the 
-   * button and dropdown menu boundaries.
-   * @param {MouseEvent} event - The mousemove event.
-   */
   const handleMouseLeave = (event) => {
     const btnRect = btnRef.current?.getBoundingClientRect();
     const dropRect = dropRef.current?.getBoundingClientRect();
@@ -65,7 +81,6 @@ const NavDropdown = ({ items, title }) => {
     }
   };
 
-  // Attach or remove the mousemove event listener based on dropdown state
   useEffect(() => {
     if (isOpen) {
       document.addEventListener("mousemove", handleMouseLeave);
@@ -77,58 +92,54 @@ const NavDropdown = ({ items, title }) => {
 
   return (
     <div className="relative w-full lg:w-auto">
-      {/* Dropdown toggle button */}
+      {/* Toggle Button */}
       <button
         ref={btnRef}
         onClick={toggleDropdown}
         className="nav-button-1 w-full flex gap-0.5 items-center"
       >
-        <span className="relative z-10 flex gap-1 items-center hover:text-accent hover:cursor-pointer">
-          {title} <FaChevronDown />
+        <span className="relative z-10 flex items-center nav-element-default nav-element-default-hover">
+          {title}
+          <FaChevronRight
+            className={`transition-transform duration-400 ${isOpen ? "rotate-90 translate-y-0.5" : "rotate-0"}`}
+          />
         </span>
       </button>
 
-      {/* Dropdown menu */}
+      {/* Dropdown List */}
       {isOpen && (
-        <div
-          ref={dropRef}
-          className="absolute left-0 bg-white dark:bg-secondary border rounded-lg shadow-lg w-full lg:w-fit"
-        >
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`dropdown-cell ${
-                index === 0 ? "rounded-t-lg" : ""
-              } ${index === items.length - 1 ? "rounded-b-lg" : ""}`}
-            >
-              {item.logoutAction ? (
-                // Logout action item
-                <a
-                  href="#"
-                  onClick={item.action ? item.action : null}
-                  className="dropdown-item"
-                >
-                  {item.icon}
-                  {item.label}
-                </a>
-              ) : (
-                // External Navigation link item
-                <a
+        <AnimatePresence mode="watch">
+          <motion.div
+            ref={dropRef}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={dropdownVariants}
+            className={`absolute ${openToLeft ? "right-0" : "left-0"} mt-2 overflow-hidden bg-primary dark:bg-secondary border rounded-lg shadow-lg w-full lg:w-fit origin-top opacity-100`}
+          >
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className={`dropdown-cell ${
+                  index === 0 ? "rounded-t-lg" : ""
+                } ${index === items.length - 1 ? "rounded-b-lg" : ""}`}
+              >
+                <LinkItem
                   href={item.href}
-                  className="dropdown-item"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  router={item.router}
+                  scrollTo={item.scrollTo}
+                  disableActive
+                  disableHover
                 >
-                  {item.icon}
-                  {item.label}
-                </a>
-              )}
-            </div>
-          ))}
-        </div>
+                  <div className="dropdown-item flex items-center gap-2">
+                    {item.icon} {item.label}
+                  </div>
+                </LinkItem>
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );
 };
-
-export default NavDropdown;
