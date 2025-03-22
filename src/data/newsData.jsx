@@ -35,11 +35,11 @@ export const newsItems = [
   //   description: "Join our live webinar on conservation strategies!",
   //   link: "https://www.simulator.albertatomorrow.ca/events",
   // },
-  // {
-  //   icon: <FaFeather className="text-green-600 text-2xl" />, // Feather icon representing Indigenous heritage
-  //   title: "ALL NEW Indigenous Voices Module",
-  //   description:
-  //     'Featuring Province-wide Map Overlays, “Stoney Stories” videos in both languages, and land use planning using Stoney Nakoda lands and indicators!',
-  //   link: "https://www.simulator.albertatomorrow.ca/indigenous-voices",
-  // },
+  {
+    icon: <FaFeather className="text-green-600 text-2xl" />, // Feather icon representing Indigenous heritage
+    title: "ALL NEW Indigenous Voices Module",
+    description:
+      'Featuring Province-wide Map Overlays, “Stoney Stories” videos in both languages, and land use planning using Stoney Nakoda lands and indicators!',
+    link: "https://www.simulator.albertatomorrow.ca/indigenous-voices",
+  },
 ];
