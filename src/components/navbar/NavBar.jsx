@@ -7,11 +7,11 @@
  *
  * @author Chace Nielson
  * @created Mar 14, 2025
- * @updated Mar 17, 2025
+ * @updated Mar 21, 2025
  * 
  * 
  * @notes
- * this use to be used to shortd the nav bar lg:min-w-[calc(100%-14rem)]
+ * Is responsive
  */
 
 import React, { useState, useEffect } from "react";
@@ -22,7 +22,7 @@ import NavLogo from "./NavLogo";
 import DonateButton from "./DonateButton";
 
 // Nav data
-import {toolsDropDown, learnMoreDropDown, scrollLinks, donateInfo} from "../../data/navData";
+import {toolsDropDown, learnMoreDropDown, scrollLinks} from "../../data/navData";
 
 // Icons 
 import { BsHexagonHalf } from "react-icons/bs";
@@ -52,7 +52,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className="fixed z-40 top-0 left-0 min-w-full py-2 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10 2xl:min-w-[calc(100%-14rem)]"
+      className="fixed z-40 top-0 left-0 min-w-full py-2 backdrop-blur-md bg-gray-200/20 shadow-lg border-b border-white/10 2xl:min-w-[calc(100%-14rem)]"
       style={{
         backgroundColor: `rgba(31, 41, 55, ${isHomePage ? Math.min(0.75, 0.4 + scrollY / 1000) : 0.75})`
       }}
@@ -111,7 +111,7 @@ export default function NavBar() {
           </button>
 
       </div>
-      <MobileMenu isOpen={isMobileMenuOpen}/>
+      <MobileMenu setIsOpen={setIsMobileMenuOpen} isOpen={isMobileMenuOpen}/>
     </nav>
   );
 }

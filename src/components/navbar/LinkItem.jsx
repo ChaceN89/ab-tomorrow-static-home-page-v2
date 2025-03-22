@@ -64,7 +64,7 @@ export default function LinkItem({
   };
 
   return (
-    <div className="relative">
+    <div className="relative hover:cursor-pointer">
       {/* External Link */}
       {href && (
         <a

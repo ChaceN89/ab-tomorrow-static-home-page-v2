@@ -14,7 +14,7 @@
  *
  * @author Chace Nielson
  * @created 2025-01-10
- * @updated 2025-03-17
+ * @updated 2025-03-21
  */
 
 import React, { useState, useRef, useEffect } from "react";
@@ -25,10 +25,6 @@ import { dropdownVariants } from "../../data/navData";
 
 
 export default function NavDropdown({ items, title, openToLeft = false }){
-
-
-  
-  
 
   // References 
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +74,7 @@ export default function NavDropdown({ items, title, openToLeft = false }){
           {title}
           <FaChevronRight
             size={12}
-            className={`transition-transform duration-400 ${isOpen ? "rotate-90 translate-y-0.5" : "rotate-0"}`}
+            className={`transition-transform duration-400 ${isOpen ? "rotate-90 translate-0.5" : "rotate-0"}`}
           />
         </span>
       </button>

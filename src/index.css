@@ -63,7 +63,7 @@ body::-webkit-scrollbar {
 
 /* the padding in the x for all pages  */
 .page-width {
-  @apply px-2 xl:px-14 2xl:px-20;
+  @apply px-2.5 xl:px-14 2xl:px-20;
 }
 
 
