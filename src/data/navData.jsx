@@ -1,9 +1,17 @@
-/*
+/**
+ * @file navData.jsx
+ * @module navData
+ * @desc Nav Data.
+ *
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ *
+ * @author Chace Nielson
+ * @created Mar 21, 2025
+ * @updated Mar 21, 2025
+ * 
+ */
 
-*/
-
-
-import { FaVideo, FaGlobe, FaBolt, FaPaw, FaBook, FaUserAlt, FaRegAddressCard, FaLandmark, FaDoorOpen, FaBookOpen,  } from "react-icons/fa";
+import { FaVideo, FaGlobe, FaBolt, FaBook, FaBookOpen } from "react-icons/fa";
 import { GiFlatPawPrint } from "react-icons/gi";
 
 import { FaQuestionCircle } from "react-icons/fa";     // FAQs
@@ -13,10 +21,8 @@ import { FaCalendarAlt } from "react-icons/fa";        // Events
 import { FaEnvelope } from "react-icons/fa";           // Contact
 
 import { FaHome, FaInfoCircle, FaWrench, FaGraduationCap, FaUser } from "react-icons/fa";
-import { FaQuestion } from "react-icons/fa";
 
-
-
+// for drops downs and nav bar mobile verison 
 export const dropdownVariants = {
   hidden: {
     height: 0,
@@ -44,13 +50,13 @@ export const dropdownVariants = {
   }
 };
 
-
+// the donate button infoamtion 
 export const donateInfo = {
   title: "Donate",
   href: "https://www.canadahelps.org/en/dn/60256?v2=true"
 }
 
-
+//all the links that scroll on the home page
 export const scrollLinks = [
   { label: "Home", scrollTo: "hero", icon: <FaHome /> },
   { label: "Intro", scrollTo: "intro", icon: <FaBookOpen /> },
@@ -59,17 +65,19 @@ export const scrollLinks = [
   { label: "About", scrollTo: "about", icon: <FaInfoCircle /> },
 ];
 
+// the tools drop down to external links
 export const toolsDropDown = {
   title: "Tools",
   list:[
     {label: "Land Use Simulator", icon: <FaGlobe />, href: "https://www.simulator.albertatomorrow.ca" },
-    {label: "Energy Tomorrow", icon: <FaBolt />, href: "https://www.simulator.albertatomorrow.ca" },
+    {label: "Energy Tomorrow", icon: <FaBolt />, href: "https://www.youtube.com/watch?v=Uca8En3ZHH0" },
     {label: "Wildlife Tomorrow", icon: <GiFlatPawPrint />, href: "https://www.simulator.albertatomorrow.ca" },
     {label: "Videos", icon: <FaVideo />, href: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
     {label: "Lesson Plans", icon: <FaBook />, href: "https://www.simulator.albertatomorrow.ca/#/lesson-plans" },
   ]
 }
 
+// the learn more drop down to other pages
 export const learnMoreDropDown = {
   title: "Learn More",
   list:[
