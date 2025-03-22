@@ -21,7 +21,7 @@ import NavDropdown from "./NavDropdown";
 import NavLogo from "./NavLogo";
 
 // Nav data
-import {toolsDropDown, learnMoreDropDown, scrollLinks} from "../../data/navData";
+import {toolsDropDown, learnMoreDropDown, scrollLinks, donateInfo} from "../../data/navData";
 
 // Icons 
 import { BsHexagonHalf } from "react-icons/bs";
@@ -47,12 +47,12 @@ export default function NavBar() {
 
   return (
     <nav
-      className="fixed z-40 top-0 left-0 min-w-full  py-2 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10"
+      className="fixed z-40 top-0 left-0 min-w-full py-2 backdrop-blur-md bg-gray-800/60 shadow-lg border-b border-white/10 xl:min-w-[calc(100%-14rem)]"
       style={{
         backgroundColor: `rgba(31, 41, 55, ${isHomePage ? Math.min(0.75, 0.4 + scrollY / 1000) : 0.75})`
       }}
     >
-      <div className="flex w-full flex-col items-start lg:flex-row justify-start lg:justify-between lg:items-center page-width">
+      <div className="flex w-full flex-col  lg:flex-row justify-start lg:justify-between items-center page-width">
       
         {/* Left Side: Logo & Navigation */}
         <div className="flex items-center">
@@ -65,11 +65,11 @@ export default function NavBar() {
             <NavLogo />
           </LinkItem>
           <HexSeparator/>
-          <NavDropdown title={toolsDropDown.title} items={toolsDropDown.list} />
+          <NavDropdown title={toolsDropDown.title} items={toolsDropDown.list} />   
         </div>
 
         {/* Right Side: Navigation Links */}
-        <div className="flex  items-center pt-2 lg:pt-0">
+        <div className="flex  items-center ">
           {scrollLinks.flatMap(({ label, scrollTo }, index, arr) => [
             <LinkItem
               key={scrollTo}
@@ -86,10 +86,10 @@ export default function NavBar() {
           <NavDropdown title={learnMoreDropDown.title} items={learnMoreDropDown.list} openToLeft={true} />
           <HexSeparator/>
           <LinkItem
-            href="https://www.canadahelps.org/en/dn/60256?v2=true"
+            href={donateInfo.href}
             className="ml-nav p-3 py-1.5 rounded-lg bg-primary hover:bg-primary-alt text-white font-semibold transition"
           >
-            Donate
+            {donateInfo.tite}
           </LinkItem>        
         </div>
       </div>

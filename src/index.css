@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
 
 /* Dropdown menu background styling */
 .dropdown-background {
-  @apply mt-2 overflow-hidden bg-primary border rounded-lg shadow-lg w-fit origin-top opacity-100 z-50;
+  @apply mt-2 overflow-hidden bg-primary border-2 border-secondary-alt shadow-secondary rounded-lg shadow-lg w-fit origin-top opacity-100 z-50;
 }
 
 /* Dropdown menu cell styling */

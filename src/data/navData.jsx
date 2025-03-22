@@ -14,6 +14,12 @@ import { FaEnvelope } from "react-icons/fa";           // Contact
 
 
 
+export const donateInfo = {
+  tite: "Donate",
+  href: "https://www.canadahelps.org/en/dn/60256?v2=true"
+}
+
+
 export const scrollLinks = [
   { label: "Home", scrollTo: "hero" },
   { label: "Intro", scrollTo: "intro" },
