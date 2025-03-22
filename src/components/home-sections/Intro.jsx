@@ -14,7 +14,7 @@ export default function Intro() {
         <div className='flex items-center'>
 
           <img src={logo} alt="Alberta Tomorrow Logo" className="mx-auto w-48 h-48 mb-6" />
-          <h2 className="text-2xl lg:text-4xl font-bold text-accent uppercase leading-snug">
+          <h2 className="text-2xl lg:text-4xl font-bold text-accent uppercase leading-snug overflow-hidden">
             Welcome to Alberta Tomorrow
           </h2>
         </div>

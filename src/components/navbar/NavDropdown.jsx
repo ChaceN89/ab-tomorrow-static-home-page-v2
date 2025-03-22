@@ -21,36 +21,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import LinkItem from "./LinkItem";
 import { motion, AnimatePresence } from "framer-motion";
+import { dropdownVariants } from "../../data/navData";
 
 
 export default function NavDropdown({ items, title, openToLeft = false }){
 
-  const dropdownVariants = {
-    hidden: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    },
-    visible: {
-      height: "auto",
-      opacity: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeInOut"
-      }
-    },
-    exit: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    }
-  };
+
   
   
 
@@ -58,7 +34,7 @@ export default function NavDropdown({ items, title, openToLeft = false }){
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef(null);
   const dropRef = useRef(null);
-  const boundaryValue = 100;
+  const boundaryValue = 60;
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 

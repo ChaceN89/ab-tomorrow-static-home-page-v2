@@ -5,7 +5,7 @@ import { keyFeatures, additionalResources, courseCurriculumConnections } from '.
 
 export default function TeacherTools() {
   return (
-    <div id='intro' className="bg-primary py-16 px-6 lg:px-20">
+    <div id='intro' className="bg-primary py-16 px-6 lg:px-20 overflow-hidden">
       <div className='flex'>
       <HexList title={"Key features"} hexList={keyFeatures} />
       <div className='space-y-6'> 

@@ -3,7 +3,7 @@
 */
 
 
-import { FaVideo, FaGlobe, FaBolt, FaPaw, FaBook,  } from "react-icons/fa";
+import { FaVideo, FaGlobe, FaBolt, FaPaw, FaBook, FaUserAlt, FaRegAddressCard, FaLandmark, FaDoorOpen, FaBookOpen,  } from "react-icons/fa";
 import { GiFlatPawPrint } from "react-icons/gi";
 
 import { FaQuestionCircle } from "react-icons/fa";     // FAQs
@@ -12,29 +12,60 @@ import { FaHandshake } from "react-icons/fa";          // Partners
 import { FaCalendarAlt } from "react-icons/fa";        // Events
 import { FaEnvelope } from "react-icons/fa";           // Contact
 
+import { FaHome, FaInfoCircle, FaWrench, FaGraduationCap, FaUser } from "react-icons/fa";
+import { FaQuestion } from "react-icons/fa";
+
+
+
+export const dropdownVariants = {
+  hidden: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut"
+    }
+  },
+  visible: {
+    height: "auto",
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut"
+    }
+  },
+  exit: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut"
+    }
+  }
+};
 
 
 export const donateInfo = {
-  tite: "Donate",
+  title: "Donate",
   href: "https://www.canadahelps.org/en/dn/60256?v2=true"
 }
 
 
 export const scrollLinks = [
-  { label: "Home", scrollTo: "hero" },
-  { label: "Intro", scrollTo: "intro" },
-  { label: "Tools", scrollTo: "tools" },
-  { label: "Education", scrollTo: "education" },
-  { label: "About", scrollTo: "about" }
+  { label: "Home", scrollTo: "hero", icon: <FaHome /> },
+  { label: "Intro", scrollTo: "intro", icon: <FaBookOpen /> },
+  { label: "Tool Overview", scrollTo: "tools", icon: <FaWrench /> },
+  { label: "Education", scrollTo: "education", icon: <FaGraduationCap /> },
+  { label: "About", scrollTo: "about", icon: <FaInfoCircle /> },
 ];
 
 export const toolsDropDown = {
   title: "Tools",
   list:[
-    {label: "Videos", icon: <FaVideo />, href: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
     {label: "Land Use Simulator", icon: <FaGlobe />, href: "https://www.simulator.albertatomorrow.ca" },
     {label: "Energy Tomorrow", icon: <FaBolt />, href: "https://www.simulator.albertatomorrow.ca" },
     {label: "Wildlife Tomorrow", icon: <GiFlatPawPrint />, href: "https://www.simulator.albertatomorrow.ca" },
+    {label: "Videos", icon: <FaVideo />, href: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
     {label: "Lesson Plans", icon: <FaBook />, href: "https://www.simulator.albertatomorrow.ca/#/lesson-plans" },
   ]
 }

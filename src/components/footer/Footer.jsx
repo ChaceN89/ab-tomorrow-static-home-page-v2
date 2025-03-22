@@ -6,7 +6,7 @@ import enviromentalPartner from '../../assets/external-logos/1ftp-EnvironmentalP
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-secondary-alt text-white">
+    <footer className="w-full bg-secondary-alt text-white overflow-hidden">
       {/* Footer Main Section */}
       <div className=" px-6 lg:px-16 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">

@@ -12,13 +12,12 @@ import { Outlet } from "react-router-dom";
 
 import NavBar from "../navbar/NavBar";
 import Footer from "../footer/Footer";
-import PartnerBanner from "../partners/PartnerBanner";
 import ScrollProgress from "../ui-utils/ScrollProgress";
 
 export default function Layout() {
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen min-w-56">
       <ScrollProgress/>
       <NavBar />
     

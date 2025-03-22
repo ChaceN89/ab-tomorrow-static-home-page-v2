@@ -50,7 +50,7 @@ export default function LinkItem({
               scroller.scrollTo(scrollTo, {
                 smooth: true,
                 duration: 1000,
-                offset: -70,
+                offset: -50,
               });
             }, 300);
           }
@@ -84,7 +84,7 @@ export default function LinkItem({
           smooth={true}
           duration={1000}
           spy={true}
-          offset={-60}
+          offset={-50}
           activeClass={!disableActive ? activeClassName : ""}
           className={className}
         >
