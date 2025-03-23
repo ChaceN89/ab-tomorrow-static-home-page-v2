@@ -224,5 +224,5 @@ export const mentors = getSponsorsByCategory(category.MENTORS);
 export const ambassadors = getSponsorsByCategory(category.AMBASSADORS);
 export const supporters = getSponsorsByCategory(category.SUPPORTERS);
 export const pastSponsors = getSponsorsByCategory(category.PAST_SPONSORS);
-export const bannerSponsors = getSponsorsByCategory(category.BANNER);
-export const randomOrderBannerSponsors = bannerSponsors.sort(() => Math.random() - 0.5);
+export const bannerPartners = getSponsorsByCategory(category.BANNER);
+export const shuffledPartners = bannerPartners.sort(() => Math.random() - 0.5);

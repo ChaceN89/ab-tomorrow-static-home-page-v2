@@ -13,6 +13,10 @@
   @apply h-16 object-contain;
 }
 
+.partner-banner-vertical li img {
+  @apply h-24 object-contain flex justify-center w-full;
+}
+
 
 
 /* Shared item style */
