@@ -10,16 +10,6 @@
   bottom-0 w-full text-center p-2 shadow-md  bg-gray-300;
 }
 
-.partner-list {
-  @apply flex items-center lg:flex-col space-y-0 lg:space-y-4 space-x-4 lg:space-x-0 overflow-x-auto lg:overflow-visible;
-  scroll-snap-type: x mandatory;
-}
-
-/* Ensure smooth horizontal scrolling */
-.partner-list::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for WebKit browsers */
-}
-
 .partner-banner > ul{
   @apply space-y-4 p-2 flex lg:flex-col flex-row justify-center items-center lg:space-y-4 space-x-2 overflow-auto;
 }
