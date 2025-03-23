@@ -44,6 +44,7 @@ const AppRoutes = memo(lazy(() => import("./components/routing/AppRoutes"))); //
 
 
 export default function App() {
+
   return (
     <ErrorBoundary>
       <Suspense fallback={<SplashScreen />}>

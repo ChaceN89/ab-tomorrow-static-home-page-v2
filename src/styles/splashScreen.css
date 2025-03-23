@@ -1,0 +1,38 @@
+/* 
+ * Filename: splashScreen.css
+ * Author: Chace Nielson
+ * Created: March 23rd
+ * Updated: March 23rd
+ * 
+ * Description:
+ * This stylesheet contains the styles and layout rules for the splash screen
+ * Mainly vanilla CSS with a few Tailwind classes for layout and spacing
+ */
+@import "tailwindcss";
+@import "../index.css";
+ 
+ 
+/* Custom Animation for Pulsing Dots */
+@keyframes dotAnimation {
+  0% {
+    content: ".";
+  }
+  25% {
+    content: "..";
+  }
+  50% {
+    content: "...";
+  }
+  75% {
+    content: "....";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+/* Apply animation to the dots */
+.dots::after {
+  content: ".";
+  animation: dotAnimation 1.5s infinite steps(1, end);
+}

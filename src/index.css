@@ -1,44 +1,46 @@
-@import "tailwindcss";
-/* No dark mode - constant color scheme */
-
-
-
-/* Tailwind 4 https://tailwindcss.com/blog/tailwindcss-v4*/
-
 /**
-New in tailwind 4
+ * Filename: index.css
+ * Author: Chace Nielson
+ * Created: March 23rd
+ * Updated: March 23rd
+ * 
+ * Description:
+ * This stylesheet cotains global/base styles for the website. It includes
+ * definitions for the primary and secondary color schemes, as well as
+ * utility classes for spacing, text alignment, and other common styles.
+ * 
+ * Notes
+ *    - This file is imported by all other stylesheets in the project
+ *    - It is used to define global styles and variables that are shared across
+ *    Tailwind 4 https://tailwindcss.com/blog/tailwindcss-v4
+ */
 
-Color rendering functions
-  color-mix() -> mix two colors
-  @property -> By default, CSS does not animate colors defined as CSS variables. The @property rule fixes this by making them animatable.
-  oklch() -> more vivid and accurate colors (Tailwind v4.0 moves from sRGB to OKLCH)
-
-utilities
-
-*/
-
+@import "tailwindcss";
 
 html, body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 11 */
+  @apply bg-primary text-white; /* set background color and a default text color */
 }
 
+/* No Scroll bar */
 html::-webkit-scrollbar, 
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
+/* No scroll for individual elements */
 .scroll-element {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 11 */
 }
-
 .scroll-element::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
-/* ✅ Base Colors */
+/* ✅ Base Colors and global styles */
 @theme {
+  
   /* ✅ Primary Colors - dulled */
   --color-primary: oklch(0.60 0.20 203.64); /* less saturated, slightly darker */
   --color-primary-alt: oklch(0.45 0.15 204.42);
@@ -56,69 +58,11 @@ body::-webkit-scrollbar {
   /* ✅ Background Colors */
   --color-background: #FFFFFF; 
   --color-background-dark: #000000; 
+
 }
 
-
-
-
-/* the padding in the x for all pages  */
-.page-width {
-  @apply px-2.5 xl:px-14 2xl:px-20;
-}
-
-
-/* Nav themes */
+/* nav bar spacing */
 @theme {
+  /* Spacing for nav components */
   --spacing-nav: 0.4rem; 
 }
-
-
-/* Active link: bold + accent underline */
-.nav-element-active {
-  @apply border-b-2 border-accent duration-600;
-}
-
-/* Base style: white text, padding, rounded corners */
-.nav-element-default {
-  @apply text-white rounded-md transition-all hover:cursor-pointer px-nav py-1;
-}
-
-/* Hover only: black text + frosted background */
-.nav-element-default-hover {
-  @apply hover:text-black hover:bg-white/50 duration-200;
-}
-
-
-/* Dropdown menu background styling */
-.dropdown-background {
-  @apply mt-2 overflow-hidden bg-secondary border-2 border-secondary-alt shadow-secondary rounded-lg shadow-lg w-fit origin-top opacity-100 z-50;
-}
-
-/* Dropdown menu cell styling */
-.dropdown-cell {
-  @apply block  hover:bg-gray-200 
-         cursor-pointer w-full text-white hover:text-secondary;
-}
-
-/* Content inside dropdown item */
-.dropdown-item {
-  @apply w-full text-left flex gap-2 items-center whitespace-nowrap text-inherit px-2 py-2;
-}
-
-
-
-/* dynamic changing  */
-/*
-@theme {
-  --color-start: oklch(0.8 0.2 240); 
-  --color-end: oklch(0.8 0.2 60); 
-  --tw-bg-color: var(--color-start); 
-}
-@layer utilities {
-  .bg-dynamic {
-    background-color: var(--tw-bg-color);
-    transition: background-color 0s ease-in-out;
-  }
-}
-
-*/

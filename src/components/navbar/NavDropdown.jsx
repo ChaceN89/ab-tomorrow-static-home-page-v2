@@ -88,12 +88,12 @@ export default function NavDropdown({ items, title, openToLeft = false }){
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className={`absolute ${openToLeft ? "right-0" : "left-0"} dropdown-background `}
+            className={`absolute ${openToLeft ? "right-0" : "left-0"} nav-dropdown-background `}
             >
             {items.map((item, index) => (
               <div
                 key={index}
-                className={`dropdown-cell ${
+                className={`nav-dropdown-cell ${
                   index === 0 ? "rounded-t-lg" : ""
                 } ${index === items.length - 1 ? "rounded-b-lg" : ""}`}
               >
@@ -102,9 +102,9 @@ export default function NavDropdown({ items, title, openToLeft = false }){
                   router={item.router}
                   scrollTo={item.scrollTo}
                   disableActive // no active styles needed in dropdown
-                  className="dropdown-cell" // this applies the hover background etc.
+                  className="nav-dropdown-cell" // this applies the hover background etc.
                 >
-                  <div className="dropdown-item ">
+                  <div className="nav-dropdown-item ">
                     {item.icon}
                     {item.label}
                   </div>

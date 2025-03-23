@@ -1,49 +1,5 @@
 @import "tailwindcss";
-
-
-.outlet-background {
-  @apply bg-gradient-to-b from-gray-100 to-gray-400;
-}
-
-.section{
-  @apply container mx-auto p-4 h-full w-full;
-}
-
-
-.drop-shadow {
-  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.5));
-}
-
-/* Custom Animation for Pulsing Dots */
-@keyframes dotAnimation {
-  0% {
-    content: ".";
-  }
-  25% {
-    content: "..";
-  }
-  50% {
-    content: "...";
-  }
-  75% {
-    content: "....";
-  }
-  100% {
-    content: ".";
-  }
-}
-
-/* Apply animation to the dots */
-.loading-text .dots::after {
-  content: ".";
-  animation: dotAnimation 1.5s infinite steps(1, end);
-}
-
-.btn-blue{
-  @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md
-}
-
-
+@import "../index.css";
 
 .partner-banner{
   @apply fixed 
