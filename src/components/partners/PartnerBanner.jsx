@@ -15,23 +15,22 @@ import ToolTip from '../ui-utils/ToolTip';
 
 function PartnerList() {
   return (
-    <ul>
-       {shuffledPartners.map((partner, index) => (
-      <li key={index}>
-        <a href={partner.link} target="_blank" rel="noopener noreferrer">
-          <img src={`partners/${partner.logo}`} alt={partner.name} />
-          <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20 my-1.5"></div>
-        </a>
-      </li>
-    ))}
+    <ul className="partner-scroll-list">
+      {shuffledPartners.concat(shuffledPartners).map((partner, index) => (
+        <li key={index}>
+          <a href={partner.link} target="_blank" rel="noopener noreferrer">
+            <img src={`partners/${partner.logo}`} alt={partner.name} />
+            <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20 my-1.5" />
+          </a>
+        </li>
+      ))}
     </ul>
   );
 }
 
 
-
+// Export two lists with different styles based on screen size
 export default function PartnerBanner() {
-
   return (
     <>
       {/* Desktop Version */}
