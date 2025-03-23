@@ -9,21 +9,42 @@
  */
 
 import React from "react";
-import { bannerSponsors } from "../../data/partnerData";
+import { randomOrderBannerSponsors } from "../../data/partnerData";
+import ToolTip from '../ui-utils/ToolTip';
 
 export default function PartnerBanner() {
+
+
+
+
   return (
-    <div className="partner-banner scroll-element">
-      <ul className="mt-14">
-        {bannerSponsors.map((partner, index) => (
-          <li key={index}>
-            <a href={partner.link} target="_blank" rel="noopener noreferrer">
-              <img src={`partners/${partner.logo}`} alt={partner.name} />
-              <div className="w-full h-[0.5px] bg-black opacity-50 my-1.5"></div>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+    {/* Desktop Version */}
+<div className="hidden lg:block partner-banner-vertical scroll-element">
+  <ul>
+    {randomOrderBannerSponsors.map((partner, index) => (
+      <li key={index}>
+        <a href={partner.link} target="_blank" rel="noopener noreferrer">
+          <img src={`partners/${partner.logo}`} alt={partner.name} />
+          <div className="w-full h-[0.5px] bg-black opacity-50 my-1.5"></div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+{/* Mobile Version */}
+<div className="lg:hidden partner-banner-horizontal scroll-element">
+  <ul>
+    {randomOrderBannerSponsors.map((partner, index) => (
+      <li key={index}>
+        <a href={partner.link} target="_blank" rel="noopener noreferrer">
+          <img src={`partners/${partner.logo}`} alt={partner.name} />
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+</>
   );
 }

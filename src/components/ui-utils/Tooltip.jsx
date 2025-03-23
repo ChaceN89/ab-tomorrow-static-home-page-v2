@@ -101,7 +101,7 @@ const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
 
   return (
     <div
-      className="relative"
+      className=" z-50"
       onMouseEnter={(event) => {
         setHovered(true);
         handleMouseMove(event); // Initial position calculation
