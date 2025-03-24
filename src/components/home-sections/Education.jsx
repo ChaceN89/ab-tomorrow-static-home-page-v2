@@ -14,7 +14,7 @@ import parallaxBg from '../../assets/ui-elements/parallax-1.jpg';
 
 export default function Education() {
   return (
-    <BackgroundWrapper background={parallaxBg} backgroundSm={parallaxBg} className="h-full py-16">
+    // <BackgroundWrapper background={parallaxBg} backgroundSm={parallaxBg} className="h-full py-16">
       <div className="relative z-10 flex justify-center items-center h-full text-center ">
       <div className="py-16 px-6 lg:px-20  text-center ">
       {/* Title & Description */}
@@ -70,7 +70,7 @@ export default function Education() {
     </div>
   
       </div>
-    </BackgroundWrapper>
+    // </BackgroundWrapper>
   )
 
 
