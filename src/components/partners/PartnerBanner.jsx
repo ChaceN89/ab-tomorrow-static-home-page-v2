@@ -19,7 +19,7 @@ function PartnerList() {
       {shuffledPartners.concat(shuffledPartners).map((partner, index) => (
         <li key={index}>
           <a href={partner.link} target="_blank" rel="noopener noreferrer">
-            <img src={`partners/${partner.logo}`} alt={partner.name} />
+            <img className="drop-shadow" src={`partners/${partner.logo}`} alt={partner.name} />
             <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20 my-1.5" />
           </a>
         </li>
