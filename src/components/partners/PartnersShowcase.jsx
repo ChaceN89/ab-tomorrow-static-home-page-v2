@@ -19,7 +19,8 @@ export default function PartnerShowcase({ partners, title, showDescriptions = fa
                 <img
                   src={`/partners/${partner.logo}`}
                   alt={partner.name}
-                  className="w-48 h-48 object-contain drop-shadow"
+                  className={`w-48 h-48 object-contain "  ${partner.className && partner.className} `}
+
                 />
               ) : (
                 <div className="w-48 h-48 flex items-center justify-center bg-gray-200 text-gray-600 text-sm">

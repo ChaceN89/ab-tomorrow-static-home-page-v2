@@ -26,8 +26,15 @@
   @apply container mx-auto p-4 h-full w-full;
 }
 
-.drop-shadow {
-  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.5));
+.partner-shadow {
+  filter: drop-shadow(0.8px 0px 0px black);
+  /* filter: grayscale(1) brightness(0); */
+  /* @apply mix-blend-difference; */
+
+}
+
+.award-shadow{
+  filter: drop-shadow(0.5px 0.5px 5px yellow);
 }
 
 

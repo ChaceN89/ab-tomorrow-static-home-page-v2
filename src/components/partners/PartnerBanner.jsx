@@ -18,11 +18,12 @@ function PartnerList() {
     <ul className="partner-scroll-list">
       {shuffledPartners.concat(shuffledPartners).concat(shuffledPartners).map((partner, index) => (
         <li key={index}>
-            <a href={partner.link} target="_blank" rel="noopener noreferrer">
+            <a href={partner.link} target="_blank" rel="noopener noreferrer" className="flex flex-row lg:flex-col gap-2">
               <ToolTip key={index} text={"Partner: " + partner.name}>
-                <img className="drop-shadow" src={`partners/${partner.logo}`} alt={partner.name} />
+                <img className={partner.className && partner.className} src={`partners/${partner.logo}`} alt={partner.name} />
               </ToolTip>
-              <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20 mt-1" />
+              <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20" />
+              <div className="block lg:hidden w-[0.5px] h-full bg-black opacity-20 ml-5" />
             </a>
           </li>
       ))}

@@ -67,6 +67,7 @@ const sponsors = [
     description: "The Bow River Basin Council collaboratively works to nurture, share, and protect the waters of the Bow River Basin. Together, through science and inclusion, we promote new solutions and strategies for a healthy watershed.",
   },
   {
+    className:'partner-shadow',
     name: "Integral Ecology Group",
     logo: "integral-ecology-group.png",
     link: "http://www.integralecologygroup.com/",

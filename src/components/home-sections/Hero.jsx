@@ -1,29 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
+// background
 import heroBanner from '../../assets/ui-elements/abtom-banner.jpg';
-import heroBannerSm from '../../assets/ui-elements/abtom-banner-sm.jpg';
+
+// Award logos
 import award1 from '../../assets/awards/28th-emerald-finalist-logo.png';
 import award2 from '../../assets/awards/30th-emerald-finalist-logo.png';
 import award3 from '../../assets/awards/31st-emerald-recipient-logo.png';
 
-
-import BackgroundWrapper from '../ui-utils/BackgroundWrapper';
 export default function Hero() {
-
-
   return (
-    <BackgroundWrapper background={heroBanner} backgroundSm={heroBannerSm}>
-      <div id="hero"
-        className="relative z-10 flex justify-center items-end h-full text-center text-white pb-24">
-        <div className="space-y-4">
-          <div className="flex justify-center items-end gap-32 drop-shadow-2xl">
-            <img src={award1} alt="Award 1" className="h-44" />
-            <img src={award2} alt="Award 2" className="h-44" />
-            <img src={award3} alt="Award 3" className="h-44" />
-          </div>
-          <a href="https://www.simulator.albertatomorrow.ca/" className="btn-blue">Launch Simulator</a>
+    <div
+      id="hero"
+      className={`
+        relative text-white flex justify-center items-end text-center
+        h-[80vh] lg:h-screen
+        bg-cover bg-no-repeat
+        bg-center lg:bg-[calc(50%-7rem)_center] 
+        lg:bg-fixed
+      `}
+      style={{ backgroundImage: `url(${heroBanner})` }}
+    >
+      <div className="relative z-10 pb-14 lg:pb-24 space-y-4">
+        <div className="flex justify-center items-end gap-4 sm:gap-10 lg:gap-32">
+          <img src={award1} alt="" className="h-28 sm:h-44 award-shadow" />
+          <img src={award2} alt="" className="h-28 sm:h-44 award-shadow" />
+          <img src={award3} alt="" className="h-28 sm:h-44 award-shadow" />
         </div>
+        <a href="https://www.simulator.albertatomorrow.ca/" className="btn-blue">Launch Simulator</a>
       </div>
-    </BackgroundWrapper>
-  )
-
+    </div>
+  );
 }
