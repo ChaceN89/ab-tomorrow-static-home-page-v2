@@ -27,18 +27,15 @@
 }
 
 .partner-shadow {
-  filter: drop-shadow(0.8px 0px 0px black);
-  /* filter: grayscale(1) brightness(0); */
-  /* @apply mix-blend-difference; */
+  /* filter: drop-shadow(0.8px 0px 0px black); */
+  @apply mix-blend-difference;
+
 
 }
 
-.award-shadow{
-  filter: drop-shadow(0.5px 0.5px 5px yellow);
+.award-shadow {
+  filter: drop-shadow(1px 1px 1px black);
 }
-
-
-
 
 
 
