@@ -10,7 +10,7 @@
 
 import React from "react";
 import { shuffledPartners } from "../../data/partnerData";
-import ToolTip from '../ui-utils/ToolTip';
+import ToolTip from '../ui-utils/Tooltip';
 
 
 function PartnerList() {
