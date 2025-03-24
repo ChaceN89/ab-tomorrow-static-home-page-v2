@@ -16,13 +16,15 @@ import ToolTip from '../ui-utils/ToolTip';
 function PartnerList() {
   return (
     <ul className="partner-scroll-list">
-      {shuffledPartners.concat(shuffledPartners).map((partner, index) => (
+      {shuffledPartners.concat(shuffledPartners).concat(shuffledPartners).map((partner, index) => (
         <li key={index}>
-          <a href={partner.link} target="_blank" rel="noopener noreferrer">
-            <img className="drop-shadow" src={`partners/${partner.logo}`} alt={partner.name} />
-            <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20 my-1.5" />
-          </a>
-        </li>
+            <a href={partner.link} target="_blank" rel="noopener noreferrer">
+              <ToolTip key={index} text={"Partner: " + partner.name}>
+                <img className="drop-shadow" src={`partners/${partner.logo}`} alt={partner.name} />
+              </ToolTip>
+              <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20 mt-1" />
+            </a>
+          </li>
       ))}
     </ul>
   );

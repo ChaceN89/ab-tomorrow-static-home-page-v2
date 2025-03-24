@@ -37,7 +37,7 @@
  *   return (
  *     <div className="App">
  *       // Other components
- *       <Tooltip text="This is a tooltip">
+ *       <Tooltip text="This is a tooltip" duration={2000}> 
  *         <button>Hover over me</button>
  *       </Tooltip>
  *     </div>
@@ -49,7 +49,7 @@
  * @author Chace Nielson
  * @since 2.1
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated March 24, 2025
  */
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -69,8 +69,8 @@ const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
 
     const tooltipRect = tooltipRef.current?.getBoundingClientRect() || { width: 0, height: 0 };
     let newStyle = {
-      left: event.clientX + 15, // Offset tooltip by 10px
-      top: event.clientY - 25,
+      left: event.clientX, 
+      top: event.clientY ,
       visibility: showTooltip ? 'visible' : 'hidden', // Set visibility based on showTooltip
     };
 
@@ -101,19 +101,25 @@ const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
 
   return (
     <div
-      className=" z-50"
+
       onMouseEnter={(event) => {
         setHovered(true);
         handleMouseMove(event); // Initial position calculation
       }}
       onMouseLeave={() => setHovered(false)}
       onMouseMove={handleMouseMove}
+
     >
       {children}
       {createPortal(
         <div
           ref={tooltipRef}
-          className={`fixed p-1 text-sm text-secondary bg-frosted-glass border rounded-lg w-fit whitespace-nowrap ${className}`}
+          className={`fixed inline-block p-2 px-3
+            bg-secondary border-2 border-secondary-alt rounded-lg 
+            max-w-52  text-center text-sm text-white
+            transition-opacity duration-300 ${showTooltip ? 'opacity-100' : 'opacity-0'}
+            ${className}`
+          }
           style={{ ...tooltipStyle, zIndex: 9999 }}
         >
           {text}

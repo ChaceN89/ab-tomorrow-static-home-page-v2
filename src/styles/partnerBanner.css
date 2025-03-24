@@ -10,15 +10,15 @@
 
 /* images in the vertical */
 .partner-banner-vertical li img {
-  @apply h-24 object-contain w-full;
+  @apply h-28 object-contain w-full;
 }
 
 
 .partner-banner-horizontal {
-  @apply fixed bottom-0 w-full p-2 bg-gray-300 z-30 shadow-md border-t-2 border-black overflow-hidden h-24 justify-center flex flex-col lg:hidden ;
+  @apply fixed bottom-0 w-full p-4 h-28 bg-gray-300 z-30 shadow-md border-t-2 border-black overflow-hidden h-24 justify-center flex flex-col lg:hidden ;
 }
 .partner-banner-horizontal li img {
-  @apply h-16 object-contain;
+  @apply h-18 object-contain;
 }
 
 
@@ -37,7 +37,7 @@
 .partner-banner-horizontal ul {
   display: flex;
   gap: 2rem;
-  animation: scroll-horizontal 70s linear infinite;
+  animation: scroll-horizontal 120s linear infinite;
   width: max-content;
 }
 
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  animation: scroll-vertical 70s linear infinite;
+  animation: scroll-vertical 120s linear infinite;
 }
 
 @keyframes scroll-vertical {
