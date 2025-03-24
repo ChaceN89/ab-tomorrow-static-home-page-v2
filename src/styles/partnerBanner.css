@@ -15,13 +15,13 @@
 
 
 .partner-banner-horizontal {
-  @apply fixed bottom-0 w-full p-2 h-24 bg-gray-300 z-30 shadow-md border-t-2 border-black overflow-hidden justify-center flex flex-col lg:hidden ;
+  @apply fixed bottom-0 w-full h-14 sm:h-24 bg-gray-300 z-30 shadow-md border-t-2 border-black overflow-hidden justify-center flex flex-col lg:hidden ;
 }
 .partner-banner-horizontal ul a {
   @apply h-full;
 }
 .partner-banner-horizontal li img {
-  @apply h-20 min-w-24 object-contain;
+  @apply h-12 sm:h-20 min-w-24 object-contain;
 }
 
 

@@ -15,7 +15,7 @@ import ToolTip from '../ui-utils/Tooltip';
 
 function PartnerList() {
   return (
-    <ul className="partner-scroll-list">
+    <ul >
       {shuffledPartners.concat(shuffledPartners).concat(shuffledPartners).map((partner, index) => (
         <li key={index}>
             <a href={partner.link} target="_blank" rel="noopener noreferrer" className="flex flex-row lg:flex-col gap-2">
