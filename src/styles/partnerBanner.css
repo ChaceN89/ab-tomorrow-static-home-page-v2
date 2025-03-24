@@ -2,7 +2,6 @@
 @import "../index.css";
 
 
-
 /* Vertical banner on right side */
 .partner-banner-vertical {
   @apply fixed right-0 top-0 w-56 h-full p-4 bg-gray-300 z-30 shadow-md border-l-2 border-black overflow-hidden;
@@ -13,7 +12,7 @@
   @apply h-28 object-contain w-full;
 }
 
-
+/* Horizontal  */
 .partner-banner-horizontal {
   @apply fixed bottom-0 w-full h-14 sm:h-24 bg-gray-300 z-30 shadow-md border-t-2 border-black overflow-hidden justify-center flex flex-col lg:hidden ;
 }

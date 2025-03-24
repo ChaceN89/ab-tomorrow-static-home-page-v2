@@ -26,11 +26,11 @@
   @apply container mx-auto p-4 h-full w-full;
 }
 
+/* Specific Partners can havethis to ve more visible */
 .partner-shadow {
   /* filter: drop-shadow(0.8px 0px 0px black); */
   @apply mix-blend-difference;
-
-
+  
 }
 
 .award-shadow {

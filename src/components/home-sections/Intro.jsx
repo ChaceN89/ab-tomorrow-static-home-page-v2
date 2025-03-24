@@ -4,6 +4,11 @@ import simHistoric from '../../assets/simulator-screenshots/sim-8-new-historic.j
 import simClimate from '../../assets/simulator-screenshots/sim-7-new-climate-planning.jpg';
 
 export default function Intro() {
+
+
+
+
+
   return (
     <div
       id='intro'
