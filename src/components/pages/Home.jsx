@@ -16,26 +16,26 @@ export default function Home() {
       <section id='hero'>
         <Hero/>
       </section>
-      <section id='intro'>
+      {/* <section id='intro'>
         <Intro/>
         <Separator bgColor='bg-primary-alt'/>
         <CallToAction/>
-      </section>
-      <section id='tools'>
+      </section> */}
+      {/* <section id='tools'>
         <InteractiveTools/>
         <Separator bgColor='bg-secondary-alt'/>
-      </section>
-      <section id='education'>
+      </section> */}
+      {/* <section id='education'>
         <Education/>
         <Separator bgColor='bg-primary-alt'/>
         <TeacherTools/>
         <Separator bgColor='bg-primary-alt'/>
-      </section>
-      <section id='about'>
+      </section> */}
+      {/* <section id='about'>
         <About/>
         <Separator bgColor='bg-accent-alt'/>
         <GetInvolved/>
-      </section>
+      </section> */}
     </div>
   )
 }

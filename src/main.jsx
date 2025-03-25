@@ -13,6 +13,7 @@ import { createRoot } from 'react-dom/client'
 
 // Import global styles from index and other style sheets
 import './index.css'
+import './styles/buttons.css';
 import './styles/layout.css';
 import './styles/nav.css';
 import './styles/partnerBanner.css';

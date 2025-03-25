@@ -45,11 +45,15 @@ body::-webkit-scrollbar {
   --color-primary: oklch(0.60 0.20 203.64); /* less saturated, slightly darker */
   --color-primary-alt: oklch(0.45 0.15 204.42);
 
-  --color-primary-alt-transparent: color-mix(in oklab, var(--color-primary-alt) 80%, transparent);
+  --color-primary-alt-transparent: color-mix(in oklab, var(--color-primary-alt) 90%, transparent);
 
   /* ✅ Secondary Colors */
   --color-secondary: #2A2A2A; 
   --color-secondary-alt: #111111;
+
+  /* ✅ Tertiary Colors */
+  --color-tertiary: #00ffb8;
+  --color-tertiary-alt: #13ce9a;
 
   /* ✅ Accent Colors - dulled */
   --color-accent: oklch(0.75 0.10 90);  /* dull gold */

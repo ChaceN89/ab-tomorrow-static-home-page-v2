@@ -21,9 +21,11 @@ export default function Layout() {
       <ScrollProgress/>
       <NavBar />
     
-      <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-56 ">
-          <Outlet />
-        <Footer />
+      <main className="flex-1 overflow-auto relative flex flex-col pb-28 lg:pb-0 outlet-background lg:mr-56 min-h-[50vh]">
+        <Outlet />
+        <div className="mt-auto">
+          <Footer />
+        </div>
       </main>
     </div>
   );

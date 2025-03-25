@@ -20,7 +20,7 @@
   @apply h-full;
 }
 .partner-banner-horizontal li img {
-  @apply h-12 sm:h-20 min-w-24 object-contain;
+  @apply h-12 sm:h-20 min-w-18 object-contain;
 }
 
 
