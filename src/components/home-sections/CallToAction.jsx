@@ -47,7 +47,7 @@ export default function CallToAction() {
         </div>
 
         {/* Frosted Glass Content Card */}
-        <div className="bg-primary/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-xl p-8 w-full max-w-3xl space-y-6 large-shadow">
+        <div className="bg-primary/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-xl p-8 w-full max-w-3xl space-y-6 small-shadow">
           <h2 className="text-3xl lg:text-4xl font-bold uppercase text-white font-display ">
             Now set some goals and design a future for Alberta that you want to see!
           </h2>
