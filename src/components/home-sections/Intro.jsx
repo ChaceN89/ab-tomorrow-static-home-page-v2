@@ -5,33 +5,28 @@ import simClimate from '../../assets/simulator-screenshots/sim-7-new-climate-pla
 
 export default function Intro() {
 
-
-
-
-
-  return (
-    <div
-      id='intro'
-      className="bg-primary py-16 px-6 lg:px-20"
-    >
-      {/* Logo and Title */}
-      <div className="max-w-4xl mx-auto text-center">
-        <div className='flex items-center'>
-
-          <img src={logo} alt="Alberta Tomorrow Logo" className="mx-auto w-48 h-48 mb-6" />
-          <h2 className="text-2xl lg:text-4xl font-bold text-accent uppercase leading-snug overflow-hidden">
+  return(
+    <div className='bg-primary'>
+      <div className='section'>
+        <div className='flex items-center justify-center gap-1'>
+          <div>          
+            <img src={logo} alt="Alberta Tomorrow Logo" className=" h-40" />
+          </div>
+          <h2 className="text-4xl font-bold text-accent uppercase ">
             Welcome to Alberta Tomorrow
           </h2>
         </div>
-        <p className="mt-6  text-start text-lg text-gray-200 leading-relaxed">
-          UNPRECEDENTED GROWTH IN ALBERTA HAS CREATED A VIBRANT ECONOMY, BUT IT HAS ALSO PLACED A TREMENDOUS STRAIN ON THE FOREST, GRASSLAND AND RIVERS WHICH HELP TO SUSTAIN THAT GROWTH.
+
+        <div className=''>
+        <p className="mt-6 text-start text-lg text-gray-200 leading-relaxed animate-fade-in-up">
+        UNPRECEDENTED GROWTH IN ALBERTA HAS CREATED A VIBRANT ECONOMY, BUT IT HAS ALSO PLACED A TREMENDOUS STRAIN ON THE FOREST, GRASSLAND AND RIVERS WHICH HELP TO SUSTAIN THAT GROWTH.
         </p>
         <p className="mt-6  text-start text-lg text-gray-200 leading-relaxed">
           The Alberta Tomorrow simulator is an educational tool that helps you to understand the process of sustainable planning to balance land-uses such as agriculture, oil and gas, and forestry with ecological integrity. By looking at past and present landscape imagery, you will be able to see changes that have taken place in the past. You can also collect, geotag, and save water sampling data, images, video, and other observations.
         </p>
-      </div>
+        </div>
 
-      {/* Video Section */}
+      </div>
       <div className="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="relative">
           <iframe
@@ -68,6 +63,9 @@ export default function Intro() {
           <p className="text-center text-gray-100 mt-2 text-sm">Climate Planning Simulation</p>
         </div>
       </div>
+      
     </div>
-  );
+  )
+
+
 }

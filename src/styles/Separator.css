@@ -1,0 +1,26 @@
+.hex-grid {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.hex-row {
+  display: flex;
+  gap: 25px; /* spacing between hexes in same row */
+  margin-top: -24px; /* vertical overlap */
+}
+
+.hex-row-offset {
+  margin-left: 40px; /* half of hex width + gap to offset */
+}
+
+.hexagon {
+  width: 55px;
+  height: 48px;
+  clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%,
+    75% 100%, 25% 100%,
+    0% 50%
+  );
+}

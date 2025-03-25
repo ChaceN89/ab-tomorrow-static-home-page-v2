@@ -19,13 +19,14 @@ export default function Hero() {
     <BackgroundWrapper 
       background={heroBanner} 
       backgroundSm={heroBannerSm} 
-      className=" text-white flex justify-center items-end text-center h-[90vh] lg:h-screen overflow-hidden"
+      className=" text-white flex justify-center items-end text-center h-[90svh] lg:h-screen overflow-hidden"
     >
       <div className="relative z-10 pb-14 lg:pb-24 space-y-4 overflow-hidden  fade-in">
         <div className="flex justify-center items-center gap-3 sm:gap-12 md:gap-20 lg:gap-32 ">
-          <img src={award1} alt="" className="h-28 sm:h-44 award-shadow" />
-          <img src={award2} alt="" className="h-28 sm:h-44" />
-          <img src={award3} alt="" className="h-28 sm:h-44" />
+          <a href="https://emeraldfoundation.ca/emeraldawards/" target="_blank" ><img src={award1} alt="28th-emerald-finalist" className="h-28 sm:h-44 award-shadow" /></a>
+          <a href="https://emeraldfoundation.ca/emeraldawards/" target="_blank" ><img src={award2} alt="30th-emerald-finalist" className="h-28 sm:h-44 award-shadow" /></a>
+          <a href="https://emeraldfoundation.ca/emeraldawards/" target="_blank" ><img src={award3} alt="31st-emerald-recipient" className="h-28 sm:h-44 award-shadow" /></a>
+    
         </div>
         <HexButton link="https://www.simulator.albertatomorrow.ca/" name="Launch Simulator" />
       </div>

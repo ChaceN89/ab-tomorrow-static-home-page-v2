@@ -17,6 +17,7 @@ import './styles/buttons.css';
 import './styles/layout.css';
 import './styles/nav.css';
 import './styles/partnerBanner.css';
+import './styles/Separator.css';
 import './styles/splashScreen.css';
 
 // Main App JSX component

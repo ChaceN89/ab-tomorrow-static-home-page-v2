@@ -1,7 +1,33 @@
-import React from 'react'
+/**
+ * @file Separator.jsx
+ * @module Separator
+ * @desc A hexagonal grid separator component for between component
+ *
+ * @author Chace Nielson
+ * @created Mar 24, 2025
+ * @updated Mar 24, 2025
+ */
 
-export default function Separator({bgColor="bg-primary"}) {
+import React from 'react';
+
+export default function Separator({ rows = 3, cols = 20 }) {
   return (
-    <div className={`h-6 ${bgColor}`}/>
-  )
+    <div className="relative  o">
+      <div className="absolute inset-0 z-0 flex flex-col hex-grid">
+        {Array.from({ length: rows }).map((_, rowIndex) => (
+          <div
+            className={` hex-row ${rowIndex % 2 !== 0 ? 'hex-row-offset' : ''}`}
+            key={`row-${rowIndex}`}
+          >
+            {Array.from({ length: cols }).map((_, colIndex) => (
+              <div
+                className="hexagon bg-primary-alt"
+                key={`hex-${rowIndex}-${colIndex}`}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

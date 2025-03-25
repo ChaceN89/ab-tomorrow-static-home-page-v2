@@ -16,11 +16,11 @@ export default function Home() {
       <section id='hero'>
         <Hero/>
       </section>
-      {/* <section id='intro'>
+      <section id='intro'>
+        <Separator bgColor='bg-primary'/>
         <Intro/>
-        <Separator bgColor='bg-primary-alt'/>
-        <CallToAction/>
-      </section> */}
+        {/* <CallToAction/> */}
+      </section>
       {/* <section id='tools'>
         <InteractiveTools/>
         <Separator bgColor='bg-secondary-alt'/>
