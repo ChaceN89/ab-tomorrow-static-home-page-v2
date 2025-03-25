@@ -25,8 +25,8 @@ export default function MediaFrame({
   className = 'h-64',      // tailwind height for media box
 }) {
   return (
-    <div className="w-full max-w-2xl mx-auto text-center space-y-2">
-      {title && <h3 className="text-xl font-semibold text-white  ">{title}</h3>}
+    <div className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit">
+      {title && <h3 className="text-xl font-semibold   ">{title}</h3>}
 
       <div className={`rounded-lg shadow-lg overflow-hidden ${className}`}>
         {type === 'video' ? (
@@ -60,7 +60,7 @@ export default function MediaFrame({
           </>
         )}
       </div>
-      {description && <p className=" text-left text-gray-100">{description}</p>}
+      {description && <p className=" text-left ">{description}</p>}
     </div>
   )
 }

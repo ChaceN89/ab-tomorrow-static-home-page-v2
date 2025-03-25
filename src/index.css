@@ -27,7 +27,7 @@ html, body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 11 */
   
-  @apply bg-primary text-white font-main-body; /* apply background, text color, and default font */
+  @apply bg-primary text-black font-main-body; /* apply background, text color, and default font */
 }
 
 /* All headers are titled with the display title */

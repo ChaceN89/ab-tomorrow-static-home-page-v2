@@ -42,6 +42,11 @@
 .large-shadow {
   filter: drop-shadow(4px 6px 2px black);  
 }
+
+.large-shadow-hover:hover {
+  filter: drop-shadow(8px 12px 2px black);
+}
+
 .small-shadow {
   filter: drop-shadow(2px 2px 1px black);  
 }
