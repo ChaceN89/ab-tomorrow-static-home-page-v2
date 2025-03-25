@@ -19,20 +19,20 @@
 
 
 @theme {
-  --font-display: "Satoshi", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-title-display: "Satoshi", sans-serif;
+  --font-main-body: "Inter", sans-serif;
 }
 
 html, body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 11 */
   
-  @apply bg-primary text-white font-body; /* apply background, text color, and default font */
+  @apply bg-primary text-white font-main-body; /* apply background, text color, and default font */
 }
 
 /* All headers are titled with the display title */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-display ;
+  @apply font-title-display;
 }
 
 /* No Scroll bar */

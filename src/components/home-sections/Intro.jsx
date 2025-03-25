@@ -28,7 +28,7 @@ export default function Intro() {
           {introData.description}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-6 md:mt-12 small-shadow">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 mt-6 md:mt-12 small-shadow sm:px-12 lg:px-2 2xl:px-20">
           {introData.media.map((item, index) => (
             <MediaFrame
               key={index}

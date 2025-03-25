@@ -53,7 +53,7 @@ export default function Home() {
         <Intro/>
         <HexSeparator rows={4} parentClass='h-8 bg-primary' hexClass="bg-secondary-alt opacity-40"/>
         <CallToAction/>
-        <HexSeparator bottom hexClass='bg-secondary opacity-60'/>
+        {/* <HexSeparator bottom hexClass='bg-secondary opacity-60'/> */}
       </section>
       {/* <section id='tools'>
         <InteractiveTools/>
