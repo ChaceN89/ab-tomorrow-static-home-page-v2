@@ -1,77 +1,48 @@
-import React from 'react';
+/**
+ * @file InteractiveTools.jsx
+ * @module InteractiveTools
+ * @desc Showcases the three core educational tools using logos, descriptions, and links. Includes support for tools still in development.
+ *
+ * @author Chace Nielson
+ * @created Mar 25, 2025
+ * @updated Mar 25, 2025
+ */
 
-import EnergyTomorrowLogo from '../../assets/tool-logos/energy-tomorrow-logo.png';
-import SimulatorLogo from '../../assets/site-logos/logo-lg.png';
-import WildlifeTomorrowLogo from '../../assets/tool-logos/wildlife-tomorrow-logo.png';
+import React from 'react';
+import { interactiveToolsData } from '../../data/interactiveToolsData';
+import HexButton from '../ui-utils/HexButton';
 
 export default function InteractiveTools() {
   return (
-    <section  id="tools"
-    className="bg-secondary text-white py-16 px-6 lg:px-20">
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Section Title */}
-        <h2 className="text-3xl lg:text-4xl font-bold uppercase mb-8">
+    <section className="bg-secondary text-white py-16 px-6 lg:px-20">
+      <div className="max-w-6xl mx-auto text-center space-y-6 relative large-shadow">
+        <h2 className="text-3xl lg:text-4xl font-bold uppercase font-display">
           Explore Our Interactive Tools
         </h2>
-        <p className="text-lg text-gray-200 max-w-3xl mx-auto">
-          Use our powerful educational tools to explore land use, energy sustainability, and wildlife conservation in Alberta.
+        <p className="text-lg text-gray-200 max-w-3xl mx-auto font-body">
+          Use our powerful <span className='text-accent'>educational tools</span> to explore land use, energy sustainability, and wildlife conservation in Alberta.
         </p>
       </div>
 
-      {/* Tools Grid */}
-      <div className="mt-12 grid gap-8 md:grid-cols-3 text-center">
-        
-        {/* Land Use Simulator */}
-        <div className="bg-primary-alt rounded-lg shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src={SimulatorLogo} alt="Land Use Simulator" className="w-32 h-32 mb-4" />
-          <h3 className="text-2xl font-semibold">Land Use Simulator</h3>
-          <p className="mt-2 text-gray-200">
-            Design Alberta’s future by balancing economic growth with environmental sustainability.
-          </p>
-          <a 
-            href="https://www.simulator.albertatomorrow.ca"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-blue mt-4"
+      <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3 text-center">
+        {interactiveToolsData.map((tool, index) => (
+          <div
+            key={index}
+            className="bg-primary/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg p-6 flex flex-col items-center transition hover:scale-[1.03] small-shadow"
           >
-            Try the Simulator
-          </a>
-        </div>
+            <img src={tool.icon} alt={tool.name} className="w-28 h-28 object-contain mb-4" />
+            <h3 className="text-2xl font-semibold font-display text-white">{tool.name}</h3>
+            <p className="my-2 text-gray-300 font-body">{tool.description}</p>
 
-        {/* Energy Tomorrow */}
-        <div className="bg-primary-alt rounded-lg shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src={EnergyTomorrowLogo} alt="Energy Tomorrow" className="w-32 h-32 mb-4" />
-          <h3 className="text-2xl font-semibold">Energy Tomorrow</h3>
-          <p className="mt-2 text-gray-200">
-            Learn how energy production impacts Alberta’s economy and environment.
-          </p>
-          <a 
-            href="https://www.simulator.albertatomorrow.ca"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-blue mt-4"
-          >
-            Learn More
-          </a>
-        </div>
-
-        {/* Wildlife Tomorrow */}
-        <div className="bg-primary-alt rounded-lg shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition">
-          <img src={WildlifeTomorrowLogo} alt="Wildlife Tomorrow" className="w-32 h-32 mb-4" />
-          <h3 className="text-2xl font-semibold">Wildlife Tomorrow</h3>
-          <p className="mt-2 text-gray-200">
-            Explore conservation efforts and the impact of land use on Alberta’s wildlife.
-          </p>
-          <a 
-            href="https://www.simulator.albertatomorrow.ca"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-blue mt-4"
-          >
-            Explore Wildlife
-          </a>
-        </div>
-
+            <div className="my-auto">
+              {tool.inDevelopment ? (
+                <span className="text-gray-400 italic">Coming Soon</span>
+              ) : (
+                <HexButton link={tool.link} name={tool.buttonText || 'Learn More'} />
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

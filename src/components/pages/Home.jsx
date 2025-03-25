@@ -55,10 +55,10 @@ export default function Home() {
         <CallToAction/>
         {/* <HexSeparator bottom hexClass='bg-secondary opacity-60'/> */}
       </section>
-      {/* <section id='tools'>
+      <section id='tools' className='overflow-hidden'>
+        <HexSeparator rows={100} hexClass='bg-accent-alt opacity-20'/>
         <InteractiveTools/>
-        <Separator bgColor='bg-secondary-alt'/>
-      </section> */}
+      </section>
       {/* <section id='education'>
         <Education/>
         <Separator bgColor='bg-primary-alt'/>
