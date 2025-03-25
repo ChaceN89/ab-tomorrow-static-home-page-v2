@@ -64,7 +64,7 @@ export default function CallToAction() {
             <div className="w-px bg-accent-alt opacity-50" />
 
             {/* Quote Text */}
-            <blockquote className="text-base text-accent-alt italic space-y-2">
+            <blockquote className="text-base text-accent-alt italic space-y-2 text-start">
               <p>
                 "Alberta Tomorrow gives my students real life exposure to real life decisions... all at their fingertips. Thank you for enriching my students' learning environment."
               </p>
