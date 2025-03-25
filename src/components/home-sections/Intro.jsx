@@ -6,16 +6,16 @@ import simClimate from '../../assets/simulator-screenshots/sim-7-new-climate-pla
 export default function Intro() {
 
   return(
-    <div className='bg-primary'>
-      <div className='section'>
-        <div className='flex items-center justify-center gap-1'>
-          <div>          
-            <img src={logo} alt="Alberta Tomorrow Logo" className=" h-40" />
-          </div>
-          <h2 className="text-4xl font-bold text-accent uppercase ">
-            Welcome to Alberta Tomorrow
-          </h2>
-        </div>
+<div className="relative z-10">
+  <div className="section relative z-20">
+    <div className="flex items-center justify-center gap-1 relative z-30">
+      <div>          
+        <img src={logo} alt="Alberta Tomorrow Logo" className="h-40" />
+      </div>
+      <h2 className="text-4xl font-bold text-accent uppercase">
+        Welcome to Alberta Tomorrow
+      </h2>
+    </div>
 
         <div className=''>
         <p className="mt-6 text-start text-lg text-gray-200 leading-relaxed animate-fade-in-up">

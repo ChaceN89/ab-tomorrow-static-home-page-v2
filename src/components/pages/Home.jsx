@@ -8,18 +8,18 @@ import TeacherTools from '../home-sections/TeacherTools'
 import About from '../home-sections/About'
 import GetInvolved from '../home-sections/GetInvolved'
 
-import Separator from '../ui-utils/Separator'
+import HexSeparator from '../ui-utils/HexSeparator'
 
 export default function Home() {
   return (
-    <div >
+    <div className='overflow-x-hidden'>
       <section id='hero'>
         <Hero/>
       </section>
-      <section id='intro'>
-        <Separator bgColor='bg-primary'/>
+      <section id='intro' className='bg-primary' >
+        <HexSeparator bgColor='bg-primary'/>
         <Intro/>
-        {/* <CallToAction/> */}
+        <CallToAction/>
       </section>
       {/* <section id='tools'>
         <InteractiveTools/>

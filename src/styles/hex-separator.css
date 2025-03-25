@@ -1,13 +1,14 @@
 .hex-grid {
   position: absolute;
-  top: 0;
-  left:0;
-  transform: translateX(-50%); /* center it */
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%); /* X and Y center */
   display: flex;
   flex-direction: column;
   z-index: 0;
-  width: max-content; /* allows grid to extend naturally */
-  pointer-events: none; /* makes sure this background is not interactive */
+  width: max-content; /* allow natural overflow */
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hex-row {
@@ -23,8 +24,8 @@
 .hexagon {
   width: 55px;
   height: 48px;
-  background: black;
-  opacity: 0.2;
+  /* background: var(--color-primary-alt); */
+  opacity: 0.8;
   clip-path: polygon(
     25% 0%, 75% 0%,
     100% 50%,
@@ -32,3 +33,4 @@
     0% 50%
   );
 }
+
