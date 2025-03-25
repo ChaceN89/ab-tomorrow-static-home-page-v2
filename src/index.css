@@ -2,7 +2,7 @@
  * Filename: index.css
  * Author: Chace Nielson
  * Created: March 23rd
- * Updated: March 23rd
+ * Updated: March 25th
  * 
  * Description:
  * This stylesheet cotains global/base styles for the website. It includes
@@ -17,10 +17,22 @@
 
 @import "tailwindcss";
 
+
+@theme {
+  --font-display: "Satoshi", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
 html, body {
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 11 */
-  @apply bg-primary text-white; /* set background color and a default text color */
+  -ms-overflow-style: none; /* IE 11 */
+  
+  @apply bg-primary text-white font-body; /* apply background, text color, and default font */
+}
+
+/* All headers are titled with the display title */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display ;
 }
 
 /* No Scroll bar */
@@ -70,3 +82,4 @@ body::-webkit-scrollbar {
   /* Spacing for nav components */
   --spacing-nav: 0.4rem; 
 }
+

@@ -14,10 +14,11 @@ import { createRoot } from 'react-dom/client'
 // Import global styles from index and other style sheets
 import './index.css'
 import './styles/buttons.css';
+import './styles/hex-badge.css';
+import './styles/hex-separator.css';
 import './styles/layout.css';
 import './styles/nav.css';
 import './styles/partnerBanner.css';
-import './styles/hex-separator.css';
 import './styles/splashScreen.css';
 
 // Main App JSX component

@@ -49,18 +49,11 @@ export default function Home() {
         <Hero/>
       </section>
       <section id='intro' className='overflow-hidden' >
-        <HexSeparator   />
+        <HexSeparator rows={13} hexClass="bg-secondary-alt opacity-40"/>
         <Intro/>
-        <div className='bg-accent-alt h-[600px]'>
-          Section 
-        </div>
-        <HexSeparator bottom />
-        <div className='bg-secondary h-40'>
-          Section  2
-        </div>
+        <HexSeparator rows={4} parentClass='h-8 bg-primary' hexClass="bg-secondary-alt opacity-40"/>
         <CallToAction/>
-        <HexSeparator hexClass='bg-secondary-alt opacity-70'  bottom />
-        {/* <HexSeparator bottom /> */}
+        <HexSeparator bottom hexClass='bg-secondary opacity-60'/>
       </section>
       {/* <section id='tools'>
         <InteractiveTools/>

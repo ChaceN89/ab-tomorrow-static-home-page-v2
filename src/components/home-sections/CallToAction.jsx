@@ -4,16 +4,15 @@ import background from '../../assets/ui-elements/parallax-2.jpg';
 import backgroundSm from '../../assets/ui-elements/parallax-2-sm.jpg'; // Use a lower-res version
 import quote from '../../assets/ui-elements/quote.png'; // Use a lower-res version
 import BackgroundWrapper from '../ui-utils/BackgroundWrapper';
+import HexButton from '../ui-utils/HexButton';
 
 export default function CallToAction() {
 
 
-
-
   
   return (
-    <BackgroundWrapper background={background} backgroundSm={backgroundSm} className=" py-32">
-      <div className="relative z-10 flex justify-center items-center h-full text-center text-white drop-shadow">
+    <BackgroundWrapper background={background} backgroundSm={backgroundSm} fixed className=" py-32  z-0 relative">
+      <div className="relative z-30 flex justify-center items-center h-full text-center text-white drop-shadow">
         <div>
           <img src={alberta} alt="" />
         </div>
@@ -37,17 +36,10 @@ export default function CallToAction() {
             </blockquote>
           </div>
 
+                  <HexButton link="https://www.simulator.albertatomorrow.ca/" name="Launch Simulator" />
+          
 
-          <div className="mt-4">
-            <a 
-              href="https://www.albertatomorrow.ca/simulator" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-blue inline-block"
-            >
-              Launch Simulator
-            </a>
-          </div>
+    
         </div>
       </div>
      </BackgroundWrapper>

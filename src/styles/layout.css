@@ -17,13 +17,14 @@
   @apply px-2.5 xl:px-14 2xl:px-20;
 }
 
-
+/* background for pages */
 .outlet-background {
   @apply bg-gradient-to-b from-gray-100 to-gray-400;
 }
 
-.section{
-  @apply container mx-auto p-4 h-full w-full ;
+.home-section{
+  @apply container mx-auto p-6 2xl:px-20 h-full w-full relative; 
+  /* relative is required to be in front of the HexSeparator */
 }
 
 /* Specific Partners can havethis to ve more visible */
@@ -36,6 +37,13 @@
 /* For the award on hero to make it more visible  */
 .award-shadow {
   filter: drop-shadow(1px 1px 1px black);  
+}
+
+.large-shadow {
+  filter: drop-shadow(4px 6px 2px black);  
+}
+.small-shadow {
+  filter: drop-shadow(2px 2px 1px black);  
 }
 
 @keyframes fadeIn {
