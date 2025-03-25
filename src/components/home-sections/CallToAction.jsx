@@ -12,7 +12,7 @@ export default function CallToAction() {
 
   
   return (
-    // <BackgroundWrapper background={background} backgroundSm={backgroundSm} className="h-20 py-32">
+    <BackgroundWrapper background={background} backgroundSm={backgroundSm} className=" py-32">
       <div className="relative z-10 flex justify-center items-center h-full text-center text-white drop-shadow">
         <div>
           <img src={alberta} alt="" />
@@ -50,6 +50,6 @@ export default function CallToAction() {
           </div>
         </div>
       </div>
-    // </BackgroundWrapper>
+     </BackgroundWrapper>
   );
 }

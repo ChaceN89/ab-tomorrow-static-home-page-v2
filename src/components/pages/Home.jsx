@@ -44,21 +44,23 @@ import HexSeparator from '../ui-utils/HexSeparator'
 
 export default function Home() {
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-hidden '>
       <section id='hero'>
         <Hero/>
       </section>
-      <section id='intro' className='' >
-        <div className='bg-secondary'>
-
+      <section id='intro' className='overflow-hidden' >
+        <HexSeparator   />
         <Intro/>
+        <div className='bg-accent-alt h-[600px]'>
+          Section 
         </div>
-
-        <HexSeparator bgColor='bg-secondary' hexColor='bg-secondary' />
-        <div className='bg-pink-400'>
-
+        <HexSeparator bottom />
+        <div className='bg-secondary h-40'>
+          Section  2
+        </div>
         <CallToAction/>
-        </div>
+        <HexSeparator hexClass='bg-secondary-alt opacity-70'  bottom />
+        {/* <HexSeparator bottom /> */}
       </section>
       {/* <section id='tools'>
         <InteractiveTools/>

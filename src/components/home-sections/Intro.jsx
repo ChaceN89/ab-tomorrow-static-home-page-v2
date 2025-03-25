@@ -6,7 +6,7 @@ import simClimate from '../../assets/simulator-screenshots/sim-7-new-climate-pla
 export default function Intro() {
 
   return(
-    <div className="z-30">
+    <div className="z-30 bg-primary py-10">
       <div className="section z-30">
         <div className="flex items-center justify-center gap-1 relative">
           <div>          
