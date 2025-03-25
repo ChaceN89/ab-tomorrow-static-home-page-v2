@@ -11,7 +11,15 @@
 import React from 'react';
 
 // Separator.jsx
-export default function HexSeparator({ rows = 11, cols = 80, bgColor = 'bg-primary', height = 'h-10', hexColor = 'bg-primary-alt', topMargin = 'mt-0', overFlow=false }) {
+export default function HexSeparator({ 
+  rows = 3, 
+  cols = 80, 
+  bgColor = 'bg-primary', 
+  height = 'h-11', 
+  hexColor = 'bg-primary-alt', 
+  topMargin = 'mt-0', 
+  opacity = 'opacity-100'
+}) {
 
 
   return (
@@ -26,7 +34,7 @@ export default function HexSeparator({ rows = 11, cols = 80, bgColor = 'bg-prima
           >
             {Array.from({ length: cols }).map((_, colIndex) => (
               <div
-                className={`hexagon ${hexColor}`}
+                className={`hexagon ${hexColor} ${opacity}`}
                 key={`hex-${rowIndex}-${colIndex}`}
               />
             ))}

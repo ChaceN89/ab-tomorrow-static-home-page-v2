@@ -24,8 +24,6 @@
 .hexagon {
   width: 55px;
   height: 48px;
-  /* background: var(--color-primary-alt); */
-  opacity: 0.8;
   clip-path: polygon(
     25% 0%, 75% 0%,
     100% 50%,
@@ -33,4 +31,3 @@
     0% 50%
   );
 }
-

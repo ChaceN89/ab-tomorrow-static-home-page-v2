@@ -1,3 +1,23 @@
+/**
+ * @file Hero.jsx
+ * @module Home/Hero
+ * @desc The top section of the Alberta Tomorrow homepage featuring a parallax background,
+ *       award logos, and a call-to-action button.
+ *
+ * @author Chace Nielson
+ * @created Mar 24, 2025
+ * @updated Mar 24, 2025
+ *
+ * @features
+ * - Responsive parallax-style hero background using `BackgroundWrapper`
+ * - Display of Emerald Award badges with external links
+ * - Launch Simulator call-to-action using a custom `HexButton`
+ *
+ * @dependencies
+ * - BackgroundWrapper.jsx
+ * - HexButton.jsx
+ * - Static assets: award images and hero banners
+ */
 import React from 'react';
 
 // background
@@ -13,8 +33,6 @@ import HexButton from '../ui-utils/HexButton';
 
 export default function Hero() {
 
-
-
   return(
     <BackgroundWrapper 
       background={heroBanner} 
@@ -26,11 +44,9 @@ export default function Hero() {
           <a href="https://emeraldfoundation.ca/emeraldawards/" target="_blank" ><img src={award1} alt="28th-emerald-finalist" className="h-28 sm:h-44 award-shadow" /></a>
           <a href="https://emeraldfoundation.ca/emeraldawards/" target="_blank" ><img src={award2} alt="30th-emerald-finalist" className="h-28 sm:h-44 award-shadow" /></a>
           <a href="https://emeraldfoundation.ca/emeraldawards/" target="_blank" ><img src={award3} alt="31st-emerald-recipient" className="h-28 sm:h-44 award-shadow" /></a>
-    
         </div>
         <HexButton link="https://www.simulator.albertatomorrow.ca/" name="Launch Simulator" />
       </div>
     </BackgroundWrapper>
   )
-
 }
