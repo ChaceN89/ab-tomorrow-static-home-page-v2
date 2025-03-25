@@ -1,22 +1,30 @@
 .hex-grid {
+  position: absolute;
+  top: 0;
+  left:0;
+  transform: translateX(-50%); /* center it */
   display: flex;
   flex-direction: column;
-  z-index: 999;
+  z-index: 0;
+  width: max-content; /* allows grid to extend naturally */
+  pointer-events: none; /* makes sure this background is not interactive */
 }
 
 .hex-row {
   display: flex;
-  gap: 25px; /* spacing between hexes in same row */
-  margin-top: -24px; /* vertical overlap */
+  gap: 25px;
+  margin-top: -25px;
 }
 
 .hex-row-offset {
-  margin-left: 40px; /* half of hex width + gap to offset */
+  margin-left: 40px; /* stagger the row */
 }
 
 .hexagon {
   width: 55px;
   height: 48px;
+  background: black;
+  opacity: 0.2;
   clip-path: polygon(
     25% 0%, 75% 0%,
     100% 50%,

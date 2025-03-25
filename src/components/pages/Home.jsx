@@ -12,7 +12,7 @@ import Separator from '../ui-utils/Separator'
 
 export default function Home() {
   return (
-    <div className='relative'>
+    <div >
       <section id='hero'>
         <Hero/>
       </section>
