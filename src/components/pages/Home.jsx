@@ -54,7 +54,7 @@ export default function Home() {
         <Intro/>
         </div>
 
-        <HexSeparator bgColor='bg-secondary' hexColor='bg-primary-alt' />
+        <HexSeparator bgColor='bg-secondary' hexColor='bg-secondary' />
         <div className='bg-pink-400'>
 
         <CallToAction/>

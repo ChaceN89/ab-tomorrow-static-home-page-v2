@@ -15,7 +15,7 @@ export default function HexSeparator({
   rows = 3, 
   cols = 80, 
   bgColor = 'bg-primary', 
-  height = 'h-11', 
+  height = 'h-5', 
   hexColor = 'bg-primary-alt', 
   topMargin = 'mt-0', 
   opacity = 'opacity-100'

@@ -13,17 +13,17 @@
 
 .hex-row {
   display: flex;
-  gap: 25px;
-  margin-top: -25px;
+  gap: 19px;
+  margin-top: -18.5px;
 }
 
 .hex-row-offset {
-  margin-left: 40px; /* stagger the row */
+  margin-left: 30px; /* half width + half gap */
 }
 
 .hexagon {
-  width: 55px;
-  height: 48px;
+  width: 41px;
+  height: 36px;
   clip-path: polygon(
     25% 0%, 75% 0%,
     100% 50%,
