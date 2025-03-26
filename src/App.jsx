@@ -28,7 +28,6 @@
  * @updated Mar 16, 2025 by Chace Nielson
  *
  */
-
 import React, { Suspense, lazy, memo} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 

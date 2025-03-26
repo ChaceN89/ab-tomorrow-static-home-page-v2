@@ -84,23 +84,20 @@ function MobileMenu({setIsOpen, isOpen }) {
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className="w-full overflow-hidden "
+            className="w-full overflow-hidden"
           >
             {/* Sticky Top Divider */}
-            <hr className="border-white border-1 rounded-4xl mt-4  sticky top-0 z-10" />
+            <hr className="border-white border-1 rounded-4xl mt-4 sticky top-0 z-10" />
             <div className="absolute sm:hidden bottom-2 right-2 text-secondary"><RiScrollToBottomLine size={24} /></div>
             <div onClick={() => setIsOpen(false)} className="fixed bg-black/40 z-0 h-screen w-full p-4"/>
 
 
             {/* Scrollable Content */}
-            <div className='overflow-hidden'>
-
-            <div className="p-4 max-h-[40svh] overflow-y-auto scroll-element relative grid sm:grid-cols-2 gap-y-4">
+            <div className="p-4 max-h-[50svh] overflow-y-auto scroll-element relative grid sm:grid-cols-2 gap-y-4">
               <MobileMenuSection title="Navigation" items={scrollLinks} />
               <MobileMenuSection title={toolsDropDown.title} items={toolsDropDown.list} />  
               <MobileMenuSection title={learnMoreDropDown.title} items={learnMoreDropDown.list} isRouter />
               <div className='py-4'><DonateButton /></div>
-            </div>
             </div>
           </motion.div>
         )}
