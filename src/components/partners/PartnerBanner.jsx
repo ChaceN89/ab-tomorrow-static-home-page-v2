@@ -5,7 +5,7 @@
  *
  * @author Chace Nielson
  * @created Mar 14, 2025
- * @updated Mar 14, 2025
+ * @updated Mar 25, 2025
  */
 
 import React from "react";
@@ -19,8 +19,8 @@ function PartnerList() {
       {shuffledPartners.concat(shuffledPartners).concat(shuffledPartners).map((partner, index) => (
         <li key={index}>
             <a href={partner.link} target="_blank" rel="noopener noreferrer" className="flex flex-row lg:flex-col gap-2">
-              <ToolTip key={index} text={"Partner: " + partner.name}>
-                <img className={partner.className && partner.className} src={`partners/${partner.logo}`} alt={partner.name} />
+              <ToolTip key={index} text={"Partner: " + partner.name} openDuration={300}>
+                <img className={partner.className} src={`partners/${partner.logo}`} alt={partner.name} />
               </ToolTip>
               <div className="hidden lg:block w-full h-[0.5px] bg-black opacity-20" />
               <div className="block lg:hidden w-[0.5px] h-full bg-black opacity-20 ml-5" />

@@ -17,18 +17,18 @@ export default function Intro() {
   return (
     <div className="bg-primary ">
       <div className="home-section">
-        <div className="pt-5 md:pt-0 flex flex-col-reverse md:flex-row items-center justify-center gap-4">
-          <img src={logo} alt="Alberta Tomorrow Logo" className="h-32 w-32 md:h-40 md:w-40 object-contain large-shadow" />
+        <div className="pt-5 md:pt-1 flex flex-col-reverse md:flex-row items-center justify-center gap-4">
+          <img src={logo} alt="Alberta Tomorrow Logo" className="h-40 w-40 object-contain large-shadow" />
           <h2 className="text-4xl font-bold text-tertiary uppercase text-center large-shadow title-font">
             {introData.title}
           </h2>
         </div>
 
-        <div className="text-center text-black mt-6 md:mt-12 space-y-4  text-lg">
+        <div className="text-center text-black mt-6 md:mt-16 space-y-4  text-lg">
           {introData.description}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-12 mt-6 md:mt-12  sm:px-12 lg:px-2 2xl:px-20 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-12 my-6 md:my-12  sm:px-12 lg:px-2 2xl:px-20 ">
           {introData.media.map((item, index) => (
             <MediaFrame
               key={index}

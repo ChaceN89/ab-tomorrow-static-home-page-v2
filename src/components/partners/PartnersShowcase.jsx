@@ -19,7 +19,7 @@ export default function PartnerShowcase({ partners, title, showDescriptions = fa
                 <img
                   src={`/partners/${partner.logo}`}
                   alt={partner.name}
-                  className={`w-48 h-48 object-contain "  ${partner.className && partner.className} `}
+                  className={`w-48 h-48 object-contain  ${partner.className } `}
 
                 />
               ) : (

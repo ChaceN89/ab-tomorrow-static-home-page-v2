@@ -2,6 +2,12 @@
 @import "../index.css";
 
 
+/* Specific Partners can havethis to ve more visible */
+.partner-shadow {
+  @apply mix-blend-difference;
+  /* doens't work for everything */
+}
+
 /* Vertical banner on right side */
 .partner-banner-vertical {
   @apply fixed right-0 top-0 w-56 h-full p-4 bg-gray-300 z-30 shadow-md border-l-2 border-black overflow-hidden;

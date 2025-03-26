@@ -20,7 +20,7 @@ import { FaHandshake } from "react-icons/fa";          // Partners
 import { FaCalendarAlt } from "react-icons/fa";        // Events
 import { FaEnvelope } from "react-icons/fa";           // Contact
 
-import { FaHome, FaInfoCircle, FaWrench, FaGraduationCap, FaUser } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaWrench, FaGraduationCap } from "react-icons/fa";
 
 // for drops downs and nav bar mobile verison 
 export const dropdownVariants = {
@@ -36,7 +36,7 @@ export const dropdownVariants = {
     height: "auto",
     opacity: 1,
     transition: {
-      duration: 0.4,
+      duration: 4,
       ease: "easeInOut"
     }
   },

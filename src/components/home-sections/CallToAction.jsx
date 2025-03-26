@@ -38,9 +38,9 @@ export default function CallToAction() {
       background={background}
       backgroundSm={backgroundSm}
       fixed
-      className="py-10 z-0 relative"
+      className="py-24 z-0 relative"
     >
-      <div className="relative z-30 flex flex-col lg:flex-row gap-10 justify-center items-center  text-center text-white px-4">
+      <div className="relative z-30 flex flex-col lg:flex-row gap-10 justify-center items-center  text-center text-white px-10">
         {/* Side Image (hidden on mobile) */}
         <div className="hidden lg:flex  justify-center items-center">
           <img className="max-h-96 object-fill" src={alberta} alt="Alberta" />
@@ -49,7 +49,7 @@ export default function CallToAction() {
         {/* Frosted Glass Content Card */}
         <div className="bg-primary/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-xl p-8 w-full max-w-3xl space-y-6 small-shadow">
           <h2 className="text-3xl lg:text-4xl font-bold uppercase text-white font-display ">
-            Now set some goals and design a future for Alberta that you want to see!
+            Now set some goals and design a better future!
           </h2>
           <p className="text-lg text-gray-200 font-body">
             Take control and shape Alberta’s future using the Alberta Tomorrow simulator.
@@ -64,7 +64,7 @@ export default function CallToAction() {
             <div className="w-px bg-accent-alt opacity-50" />
 
             {/* Quote Text */}
-            <blockquote className="text-base text-accent-alt italic space-y-2 text-start">
+            <blockquote className="text-sm text-accent-alt italic space-y-2 text-start">
               <p>
                 "Alberta Tomorrow gives my students real life exposure to real life decisions... all at their fingertips. Thank you for enriching my students' learning environment."
               </p>

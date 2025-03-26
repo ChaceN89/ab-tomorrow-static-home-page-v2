@@ -30,7 +30,7 @@
  *
  * @author Chace Nielson
  * @created Mar 24, 2025
- * @updated Mar 24, 2025
+ * @updated Mar 25, 2025
  */
 import React, { useState, useEffect } from 'react';
 
@@ -47,6 +47,7 @@ export default function BackgroundWrapper({ background, backgroundSm, children, 
   }, [background]);
 
   // check if the screen is large enough to apply fixed positioning
+  const allowFixed = window.innerWidth >= 640; // sm breakpoint
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   // Check screen size on mount and resize
@@ -58,7 +59,7 @@ export default function BackgroundWrapper({ background, backgroundSm, children, 
   }, []);
 
   // Set background attachment and position based on fixed prop and screen size - specific to this app is the calc(50% - 7rem) center related to width of the partner banner
-  const backgroundAttachment = fixed ? 'fixed' : 'scroll';
+  const backgroundAttachment = fixed && allowFixed ? 'fixed' : 'scroll';
   const backgroundPosition = isLargeScreen && fixed ? 'calc(50% - 7rem) center' : 'center';
 
   // Base background styles
@@ -71,10 +72,10 @@ export default function BackgroundWrapper({ background, backgroundSm, children, 
   };
 
   return (
-    <div className={`${className} relative`}>
+    <div className={`${className} relative bg-accent-alt `}>
       {/* Blurry low-res background */}
       <div
-        className="absolute inset-0 filter blur-md scale-105 transition-opacity duration-1500"
+        className="absolute inset-0 filter blur-md scale-105 transition-opacity duration-1200"
         style={{
           ...baseBackgroundStyle,
           backgroundImage: `url(${backgroundSm})`,
@@ -84,7 +85,7 @@ export default function BackgroundWrapper({ background, backgroundSm, children, 
 
       {/* Sharp high-res background */}
       <div
-        className="absolute inset-0 transition-opacity duration-1500"
+        className="absolute inset-0 transition-opacity duration-1200"
         style={{
           ...baseBackgroundStyle,
           backgroundImage: `url(${background})`,

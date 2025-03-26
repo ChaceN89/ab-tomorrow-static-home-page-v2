@@ -7,7 +7,7 @@
  *
  * @author Chace Nielson
  * @created Mar 21, 2025
- * @updated Mar 21, 2025
+ * @updated Mar 25, 2025
  * 
  * @notes
  * - Prevents body scroll while open
@@ -33,7 +33,7 @@ function MobileMenuSection({ title, items, isRouter }) {
   return (
     <div className="">
       <div className="text-accent text-sm uppercase tracking-wider mb-2">{title}</div>
-      <ul className="space-y-2">
+      <ul className="space-y-4 sm:space-y-2">
         {items.map((item, index) => (
           <li key={index}>
             <LinkItem
@@ -84,7 +84,7 @@ function MobileMenu({setIsOpen, isOpen }) {
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className="w-full overflow-hidden"
+            className="w-full overflow-hidden "
           >
             {/* Sticky Top Divider */}
             <hr className="border-white border-1 rounded-4xl mt-4  sticky top-0 z-10" />
@@ -93,11 +93,14 @@ function MobileMenu({setIsOpen, isOpen }) {
 
 
             {/* Scrollable Content */}
-            <div className="p-4 max-h-[26rem] overflow-y-auto scroll-element relative grid sm:grid-cols-2 gap-y-4">
+            <div className='overflow-hidden'>
+
+            <div className="p-4 max-h-[40svh] overflow-y-auto scroll-element relative grid sm:grid-cols-2 gap-y-4">
               <MobileMenuSection title="Navigation" items={scrollLinks} />
               <MobileMenuSection title={toolsDropDown.title} items={toolsDropDown.list} />  
               <MobileMenuSection title={learnMoreDropDown.title} items={learnMoreDropDown.list} isRouter />
               <div className='py-4'><DonateButton /></div>
+            </div>
             </div>
           </motion.div>
         )}

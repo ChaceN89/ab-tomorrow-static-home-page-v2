@@ -27,12 +27,6 @@
   /* relative is required to be in front of the HexSeparator */
 }
 
-/* Specific Partners can havethis to ve more visible */
-.partner-shadow {
-  /* filter: drop-shadow(0.8px 0px 0px black); */
-  @apply mix-blend-difference;
-  
-}
 
 /* For the award on hero to make it more visible  */
 .award-shadow {
@@ -64,8 +58,8 @@
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.5s;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.8s;
 }
 
 
