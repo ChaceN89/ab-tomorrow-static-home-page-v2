@@ -7,7 +7,7 @@ const videoLinks = [
   "https://www.youtube.com/embed/YOUR_VIDEO_ID_3",
 ];
 
-import WaterRangerKit from '../education/WaterRangerKit';
+import WaterRangerKit from './WaterRangerKit';
 import BackgroundWrapper from '@/components/layout/BackgroundWrapper';
 import parallaxBg from '@/assets/ui-elements/parallax-1.jpg';
 

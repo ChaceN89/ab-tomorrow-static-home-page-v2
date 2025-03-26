@@ -31,14 +31,16 @@
  * - All unused sections are commented out for now, but should be included in the final build.
  */
 import React from 'react'
-import Hero from '../home-page/sections/Hero'
-import Intro from '../home-page/sections/Intro'
-import CallToAction from '../home-page/sections/CallToAction'
-import InteractiveTools from '../home-page/sections/InteractiveTools'
-import Education from '../home-page/sections/Education'
-import TeacherTools from '../home-page/sections/TeacherTools'
-import About from '../home-page/sections/About'
-import GetInvolved from '../home-page/sections/GetInvolved'
+import Hero from '@/components/home-page/Hero'
+import Intro from '@/components/home-page/Intro'
+import CallToAction from '@/components/home-page/CallToAction'
+import InteractiveTools from '@/components/home-page/InteractiveTools'
+
+
+// import Education from '../home-page/sections/Education'
+// import TeacherTools from '../home-page/sections/TeacherTools'
+// import About from '../home-page/sections/About'
+// import GetInvolved from '../home-page/sections/GetInvolved'
 // import Hero from '../home-sections/Hero'
 // import Intro from '../home-sections/Intro'
 // import CallToAction from '../home-sections/CallToAction'

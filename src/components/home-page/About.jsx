@@ -1,6 +1,6 @@
 import React from 'react'
 import { applicationList } from '../../../data/aboutData'
-import HexList from '../TeacherTools/HexList'
+import HexList from '../teacherTools/HexList'
 
 export default function About() {
   return (
