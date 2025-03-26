@@ -1,6 +1,6 @@
 import React from 'react';
-import BCTomorrowLogo from '../../../assets/tool-logos/bc-tomorrow-logo.png'; // Ensure correct paths
-import CanadaTomorrowLogo from '../../../assets/tool-logos/canada-tomorrow-logo.png';
+import BCTomorrowLogo from '@/assets/tool-logos/bc-tomorrow-logo.png'; // Ensure correct paths
+import CanadaTomorrowLogo from '@/assets/tool-logos/canada-tomorrow-logo.png';
 
 export default function GetInvolved() {
   return (

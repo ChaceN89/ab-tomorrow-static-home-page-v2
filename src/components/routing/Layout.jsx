@@ -12,7 +12,7 @@ import { Outlet } from "react-router-dom";
 
 import NavBar from "../navbar/NavBar";
 import Footer from "../footer/Footer";
-import ScrollProgress from "../ui-utils/ScrollProgress";
+import ScrollProgress from "../layout/ScrollProgress";
 
 export default function Layout() {
 

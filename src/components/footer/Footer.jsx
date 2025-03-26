@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaPinterest } from "react-icons/fa";
 
-import truEarhLogo from '../../assets/external-logos/tru-earth-logo.png';
-import enviromentalPartner from '../../assets/external-logos/1ftp-EnvironmentalPartner-horizontal-FullColor.png';
+import truEarhLogo from '@/assets/external-logos/tru-earth-logo.png';
+import enviromentalPartner from '@/assets/external-logos/1ftp-EnvironmentalPartner-horizontal-FullColor.png';
 
 export default function Footer() {
   return (

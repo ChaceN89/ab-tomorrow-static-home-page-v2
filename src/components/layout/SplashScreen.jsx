@@ -9,9 +9,9 @@
  */
 
 import React from 'react';
-import splash from '../../assets/site-logos/splash.png';
+import splash from '@/assets/site-logos/splash.png';
 import { FiAlertCircle } from "react-icons/fi"; // Import error icon from react-icons
-import HexSeparator from './HexSeparator';
+import HexSeparator from '../common/HexSeparator';
 
 
 export default function SplashScreen({ errorMsg = false, errorText = null, errorLocation = null }) {

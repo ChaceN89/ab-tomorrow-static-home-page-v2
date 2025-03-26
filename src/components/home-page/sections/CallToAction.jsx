@@ -23,14 +23,14 @@
 import React from 'react';
 
 // UI Assets
-import background from '../../../assets/ui-elements/parallax-2.jpg';
-import backgroundSm from '../../../assets/ui-elements/parallax-2-sm.jpg';
-import quote from '../../../assets/ui-elements/quote.png';
-import alberta from '../../../assets/ui-elements/state-of-landscape.png';
+import background from '@/assets/ui-elements/parallax-2.jpg';
+import backgroundSm from '@/assets/ui-elements/parallax-2-sm.jpg';
+import quote from '@/assets/ui-elements/quote.png';
+import alberta from '@/assets/ui-elements/state-of-landscape.png';
 
 //components
-import BackgroundWrapper from '../../ui-utils/BackgroundWrapper';
-import HexButton from '../../ui-utils/HexButton';
+import BackgroundWrapper from '@/components/layout/BackgroundWrapper';
+import HexButton from '@/components/common/HexButton';
 
 export default function CallToAction() {
   return (

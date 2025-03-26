@@ -9,8 +9,8 @@
  */
 
 import React from 'react';
-import { interactiveToolsData } from '../../../data/interactiveToolsData';
-import HexButton from '../../ui-utils/HexButton';
+import { interactiveToolsData } from '@/data/interactiveToolsData';
+import HexButton from '@/components/common/HexButton';
 
 export default function InteractiveTools() {
   return (

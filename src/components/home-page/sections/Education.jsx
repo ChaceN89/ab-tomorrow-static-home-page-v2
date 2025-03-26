@@ -8,8 +8,8 @@ const videoLinks = [
 ];
 
 import WaterRangerKit from '../education/WaterRangerKit';
-import BackgroundWrapper from '../../ui-utils/BackgroundWrapper';
-import parallaxBg from '../../../assets/ui-elements/parallax-1.jpg';
+import BackgroundWrapper from '@/components/layout/BackgroundWrapper';
+import parallaxBg from '@/assets/ui-elements/parallax-1.jpg';
 
 
 export default function Education() {

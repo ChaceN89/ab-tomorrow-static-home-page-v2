@@ -43,8 +43,8 @@ import Events from '../pages/Events';
 import BoardOfDirectors from '../pages/BoardOfDirectors';
 import PartnersPage from '../pages/PartnersPage';
 import NotFound from '../pages/NotFound';
-import ScrollToTop from "../utils/ScrollToTop";
-import NewsPopup from "../utils/NewsPopup";
+import ScrollToTop from "../layout/ScrollToTop";
+import NewsPopup from "../media/NewsPopup";
 
 export default function AppRoutes() {
   const location = useLocation();

@@ -48,7 +48,7 @@ import GetInvolved from '../home-page/sections/GetInvolved'
 // import About from '../home-sections/About'
 // import GetInvolved from '../home-sections/GetInvolved'
 
-import HexSeparator from '../ui-utils/HexSeparator'
+import HexSeparator from '../common/HexSeparator'
 
 export default function Home() {
   return (
