@@ -58,13 +58,13 @@ export default function CallToAction() {
           {/* Quote */}
           <div className="flex items-start gap-2 mt-6 max-w-2xl px-4">
             {/* Quote Icon */}
-            <img src={quote} alt="Quote Icon" className="w-8 h-8 shrink-0 mt-1" />
+            <img src={quote} alt="Quote Icon" className=" shrink-0 mt-1" />
 
             {/* Vertical Line */}
             <div className="w-px bg-accent-alt opacity-50" />
 
             {/* Quote Text */}
-            <blockquote className="text-sm text-accent-alt italic space-y-2 text-start">
+            <blockquote className="text-xs sm:text-sm text-accent-alt italic space-y-2 text-start">
               <p>
                 "Alberta Tomorrow gives my students real life exposure to real life decisions... all at their fingertips. Thank you for enriching my students' learning environment."
               </p>

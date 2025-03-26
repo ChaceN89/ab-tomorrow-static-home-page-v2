@@ -72,14 +72,13 @@ export default function Home() {
       </section>
       <section id='education'>
         <Education/>
-        <HexSeparator bottom rows={3} hexClass='bg-primary-alt '/>
+        <HexSeparator bottom rows={2} hexClass='bg-primary-alt '/>
         {/* <Separator bgColor='bg-primary-alt'/>
         <TeacherTools/>
         <Separator bgColor='bg-primary-alt'/> */}
       </section>
       {/* <section id='about'>
         <About/>
-        <Separator bgColor='bg-accent-alt'/>
         <GetInvolved/>
       </section> */}
     </div>

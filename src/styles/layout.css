@@ -44,6 +44,15 @@
   filter: drop-shadow(2px 2px 1px black);  
 }
 
+/* Grid for tools and eduction videos - 3 items */
+.grid-section{
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8
+}
+
+.grid-section > :last-child {
+  @apply md:col-span-2 xl:col-span-1 md:w-1/2 xl:w-full;
+}
+
 
 /* fade in animation  */
 @keyframes fadeIn {
