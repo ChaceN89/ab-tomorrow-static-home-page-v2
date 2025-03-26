@@ -9,9 +9,9 @@
  */
 
 import React from 'react';
-import logo from '../../assets/site-logos/logo-lg.png';
-import MediaFrame from '../ui-utils/MediaFrame';
-import { introData } from '../../data/introData';
+import logo from '../../../assets/site-logos/logo-lg.png';
+import MediaFrame from '../../ui-utils/MediaFrame';
+import { introData } from '../../../data/introData';
 
 export default function Intro() {
   return (

@@ -21,15 +21,17 @@
 import React from 'react';
 
 // background
-import heroBanner from '../../assets/ui-elements/abtom-banner.jpg';
-import heroBannerSm from '../../assets/ui-elements/abtom-banner-sm.jpg';
+import heroBanner from '../../../assets/ui-elements/abtom-banner.jpg';
+import heroBannerSm from '../../../assets/ui-elements/abtom-banner-sm.jpg';
 
 // Award logos
-import award1 from '../../assets/awards/28th-emerald-finalist-logo.png';
-import award2 from '../../assets/awards/30th-emerald-finalist-logo.png';
-import award3 from '../../assets/awards/31st-emerald-recipient-logo.png';
-import BackgroundWrapper from '../ui-utils/BackgroundWrapper';
-import HexButton from '../ui-utils/HexButton';
+import award1 from '../../../assets/awards/28th-emerald-finalist-logo.png';
+import award2 from '../../../assets/awards/30th-emerald-finalist-logo.png';
+import award3 from '../../../assets/awards/31st-emerald-recipient-logo.png';
+
+// components
+import BackgroundWrapper from '../../ui-utils/BackgroundWrapper';
+import HexButton from '../../ui-utils/HexButton';
 
 export default function Hero() {
 

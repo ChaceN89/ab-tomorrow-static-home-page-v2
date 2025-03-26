@@ -1,5 +1,5 @@
 import React from 'react'
-import waterRangers from '../../assets/ui-elements/water-rangers-kit.jpg';
+import waterRangers from '../../../assets/ui-elements/water-rangers-kit.jpg';
 
 
 export default function WaterRangerKit() {

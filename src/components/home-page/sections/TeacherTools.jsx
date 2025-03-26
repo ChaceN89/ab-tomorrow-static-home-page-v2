@@ -1,7 +1,7 @@
 import React from 'react';
 import HexList from '../TeacherTools/HexList';
 import CurriculumCards from '../TeacherTools/CurriculumCards';
-import { keyFeatures, additionalResources, courseCurriculumConnections } from '../../data/teacherToolsData';
+import { keyFeatures, additionalResources, courseCurriculumConnections } from '../../../data/teacherToolsData';
 
 export default function TeacherTools() {
   return (
