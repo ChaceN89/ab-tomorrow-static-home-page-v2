@@ -35,6 +35,7 @@ import Hero from '@/components/home-page/Hero'
 import Intro from '@/components/home-page/Intro'
 import CallToAction from '@/components/home-page/CallToAction'
 import InteractiveTools from '@/components/home-page/InteractiveTools'
+import Education from '@/components/home-page/education/Education'
 
 
 // import Education from '../home-page/sections/Education'
@@ -69,12 +70,13 @@ export default function Home() {
         <HexSeparator rows={100} hexClass='bg-accent-alt opacity-20'/>
         <InteractiveTools/>
       </section>
-      {/* <section id='education'>
+      <section id='education'>
         <Education/>
-        <Separator bgColor='bg-primary-alt'/>
+        <HexSeparator bottom rows={3} hexClass='bg-primary-alt '/>
+        {/* <Separator bgColor='bg-primary-alt'/>
         <TeacherTools/>
-        <Separator bgColor='bg-primary-alt'/>
-      </section> */}
+        <Separator bgColor='bg-primary-alt'/> */}
+      </section>
       {/* <section id='about'>
         <About/>
         <Separator bgColor='bg-accent-alt'/>

@@ -21,7 +21,7 @@ import React from 'react'
 
 export default function HexButton({ children = "Launch Simulator", link }) {
   return (
-    <div className='large-shadow large-shadow-hover'>
+    <div className='hex-button-container bg-tertiary'>
       <a className="hex-button-wrapper font-semibold" href={link} target="_blank">
         {children}
       </a>

@@ -11,6 +11,16 @@
   --hexagon-height: 60px;
 }
 
+.hex-button-container {
+  filter: drop-shadow(4px 6px 1.5px black);
+  transition: transform 0.2s ease-in, filter 0.2s ease-in;
+}
+
+.hex-button-container:hover {
+  transform: translate(-2px, -2.2px);
+  filter: drop-shadow(8px 12px 2px black);
+}
+
 .hex-button-wrapper {
   display: inline-block;
   position: relative;
@@ -23,7 +33,6 @@
 
   line-height: var(--hexagon-height);
   cursor: pointer;
-  transition: transform 0.3s ease;
   clip-path: polygon(
     10% 0%, 90% 0%,
     100% 50%, 90% 100%,
@@ -31,15 +40,20 @@
   );
   z-index: 1;
 
+  transition: transform 0.2s ease-in, filter 0.2s ease-in;
+
+
 }
 
 .hex-button-wrapper:hover {
   background: linear-gradient(90deg, var(--color-tertiary), var(--color-tertiary-alt));
   color: black;
+
 }
 
 .hex-button-wrapper::before,
 .hex-button-wrapper::after {
+  
   content: '';
   position: absolute;
   top: 0;

@@ -17,7 +17,7 @@ export default function Intro() {
   return (
     <div className="bg-primary ">
       <div className="home-section">
-        <div className="pt-5 md:pt-1 flex flex-col-reverse md:flex-row items-center justify-center gap-4">
+        <div className="pt-5 md:pt-0 flex flex-col-reverse md:flex-row items-center justify-center gap-4">
           <img src={logo} alt="Alberta Tomorrow Logo" className="h-40 w-40 object-contain large-shadow" />
           <h2 className="text-4xl font-bold text-tertiary uppercase text-center large-shadow title-font">
             {introData.title}

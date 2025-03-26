@@ -22,13 +22,16 @@
   @apply bg-gradient-to-b from-gray-100 to-gray-400;
 }
 
+
 .home-section{
-  @apply container mx-auto p-6 2xl:px-20 h-full w-full relative; 
-  /* relative is required to be in front of the HexSeparator */
+  @apply  container mx-auto p-6 2xl:px-20 h-full w-full relative ;
 }
 
+.home-y-padding{
+  @apply py-16;
+}
 
-/* For the award on hero to make it more visible  */
+/* Series of shadows used for many sections  */
 .award-shadow {
   filter: drop-shadow(1px 1px 1px black);  
 }
@@ -37,14 +40,12 @@
   filter: drop-shadow(4px 6px 2px black);  
 }
 
-.large-shadow-hover:hover {
-  filter: drop-shadow(8px 12px 2px black);
-}
-
 .small-shadow {
   filter: drop-shadow(2px 2px 1px black);  
 }
 
+
+/* fade in animation  */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -61,10 +62,3 @@
   animation: fadeIn 1.5s ease-out forwards;
   animation-delay: 0.8s;
 }
-
-
-
-
-
-
-

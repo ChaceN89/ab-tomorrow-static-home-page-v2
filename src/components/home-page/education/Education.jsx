@@ -2,34 +2,70 @@ import React from 'react';
 
 // YouTube Video IDs (Replace these with actual video IDs)
 const videoLinks = [
-  "https://www.youtube.com/embed/YOUR_VIDEO_ID_1",
-  "https://www.youtube.com/embed/YOUR_VIDEO_ID_2",
-  "https://www.youtube.com/embed/YOUR_VIDEO_ID_3",
+  "https://www.youtube.com/embed/YOUR_VIDEO_ID_1", // https://www.youtube.com/watch?v=7RmwsUh1-0E
+  "https://www.youtube.com/embed/YOUR_VIDEO_ID_2", //https://www.youtube.com/watch?v=XcK-MNL1zCg
+  "https://www.youtube.com/embed/YOUR_VIDEO_ID_3", //https://www.youtube.com/watch?v=kJ6Pu5uByQM
 ];
 
-import WaterRangerKit from './WaterRangerKit';
-import BackgroundWrapper from '@/components/layout/BackgroundWrapper';
 import parallaxBg from '@/assets/ui-elements/parallax-1.jpg';
 
+import BackgroundWrapper from '@/components/layout/BackgroundWrapper';
+import SectionHeader from '@/components/common/SectionHeader';
+import MediaFrame from '@/components/media/MediaFrame';
+import HexButton from '@/components/common/HexButton';
+
+import WaterRangerKit from './WaterRangerKit';
+
+import { eductionData } from '@/data/educationData';
 
 export default function Education() {
+  return(
+    <BackgroundWrapper background={parallaxBg} backgroundSm={null} fixed >
+      <div className='home-section home-y-padding'>
+        <SectionHeader
+          title={eductionData.title}
+          description={eductionData.description}
+        />
+
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-12 my-6 md:my-12  sm:px-12 lg:px-2 2xl:px-20 '>
+          {eductionData.media.map((item, index) => (
+            <MediaFrame
+              key={index}
+              type={item.type}
+              src={item.src}
+              alt={item.alt}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
+        </div>
+
+        <div className="mt-12 flex justify-center gap-6"> 
+
+        <HexButton link={"https://docs.google.com/forms/d/e/1FAIpQLSd24ENj4C_M9MsQvCLp9LEZv42EP3Ydz-k1SsV-6gRP7E_1Qg/viewform"}>
+          Sign Up for Virtual & In-Class Visits
+        </HexButton>
+        </div>
+
+
+
+
+      </div>
+    </BackgroundWrapper>
+  )
+
+
+
   return (
     // <BackgroundWrapper background={parallaxBg} backgroundSm={parallaxBg} className="h-full py-16">
       <div className="relative z-10 flex justify-center items-center h-full text-center ">
       <div className="py-16 px-6 lg:px-20  text-center ">
       {/* Title & Description */}
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-bold uppercase leading-snug">
-          Add Excitement To Your Classroom With Free Lesson Plans and Online Tools
-        </h2>
-        <p className="mt-4 text-lg text-gray-700">
-          Alberta Tomorrow is a FREE educational tool that has been developed for use with K-12 and university curricula.
-        </p>
-      </div>
+
 
       {/* YouTube Videos */}
       <div className="mt-12 flex justify-center gap-6">
-        {videoLinks.map((link, index) => (
+        {/* {videoLinks.map((link, index) => (
           <div key={index} className="w-full md:w-1/3">
             <iframe
               className="w-full h-64 rounded-lg shadow-lg"
@@ -38,7 +74,7 @@ export default function Education() {
               allowFullScreen
             ></iframe>
           </div>
-        ))}
+        ))} */}
       </div>
 
       {/* YouTube Channel Link */}

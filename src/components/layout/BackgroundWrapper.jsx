@@ -72,16 +72,18 @@ export default function BackgroundWrapper({ background, backgroundSm, children, 
   };
 
   return (
-    <div className={`${className} relative bg-accent-alt `}>
+    <div className={`${className} relative `}>
       {/* Blurry low-res background */}
-      <div
-        className="absolute inset-0 filter blur-md scale-105 transition-opacity duration-1200"
-        style={{
-          ...baseBackgroundStyle,
-          backgroundImage: `url(${backgroundSm})`,
-          opacity: loaded ? 0 : 1
-        }}
-      />
+      {backgroundSm && (
+        <div
+          className="absolute inset-0 filter blur-md scale-105 transition-opacity duration-1200"
+          style={{
+            ...baseBackgroundStyle,
+            backgroundImage: `url(${backgroundSm})`,
+            opacity: loaded ? 0 : 1
+          }}
+        />
+      )}
 
       {/* Sharp high-res background */}
       <div

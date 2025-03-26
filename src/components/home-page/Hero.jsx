@@ -39,7 +39,7 @@ export default function Hero() {
     <BackgroundWrapper 
       background={heroBanner} 
       backgroundSm={heroBannerSm} 
-      className="text-white flex justify-center items-end text-center h-[94svh] sm:h-[90vh] lg:h-screen overflow-hidden"
+      className="text-white flex justify-center items-end text-center h-[94svh] sm:h-[90vh] lg:h-screen overflow-hidden bg-accent-alt "
     >
     <div className="relative z-10 h-full flex flex-col justify-end items-center space-y-4 pb-8 sm:pb-10 fade-in">
       <div className="flex justify-center items-center gap-3 sm:gap-12 md:gap-20 lg:gap-32">
