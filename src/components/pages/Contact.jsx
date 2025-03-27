@@ -1,10 +1,12 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaPinterest } from "react-icons/fa";
 import SiteLogo from '../../assets/site-logos/logo-lg.png';
+import PageTitle from '../routing/PageTitle';
 
 export default function Contact() {
   return (
     <div className="section mt-20 flex flex-col items-center text-center text-gray-800">
+      <PageTitle title="Contact Us" />
       
       {/* Site Logo */}
       <img src={SiteLogo} alt="Alberta Tomorrow Logo" className="w-36 mb-6" />

@@ -11,10 +11,12 @@
 import React from 'react'
 import { boardOfDirectors } from '../../data/boardOfDirectorsData'
 import MemberCard from '../page-components/MemberCard'
+import PageTitle from '../routing/PageTitle'
 
 export default function BoardOfDirectors() {
   return (
     <section className='px-6 max-w-7xl mx-auto mt-20'>
+      <PageTitle title='Board of Directors'/>
       <h1 className='text-4xl font-semibold text-center mb-12'>Board of Directors</h1>
       <p className="text-center text-lg text-gray-700 mb-10">
         Meet the individuals guiding Alberta Tomorrow’s mission for sustainable land-use planning.

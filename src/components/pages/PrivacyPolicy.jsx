@@ -12,10 +12,12 @@ import React from "react";
 import PolicyHeader from "../page-components/policies/PolicyHeader";
 import PolicySection from "../page-components/policies/PolicySection";
 import PolicyText from "../page-components/policies/PolicyText";
+import PageTitle from "../routing/PageTitle";
 
 export default function PrivacyPolicy() {
   return (
     <div className="section mt-20">
+      <PageTitle title="Privacy Policy" />
       <div className="container mx-auto max-w-4xl p-6">
         <PolicyHeader
           title="Privacy Policy"

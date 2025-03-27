@@ -13,6 +13,10 @@
 @import "../index.css";
 
 
+.page{
+  @apply py-20;
+}
+
 .page-width {
   @apply px-2.5 xl:px-14 2xl:px-20;
 }

@@ -44,10 +44,12 @@ import GetInvolved from '@/components/home-page/GetInvolved'
 
 
 import HexSeparator from '../common/HexSeparator'
+import PageTitle from '../routing/PageTitle'
 
 export default function Home() {
   return (
     <div className='overflow-hidden '>
+      <PageTitle title='Home'/>
       <section id='hero'>
         <Hero/>
       </section>

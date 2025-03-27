@@ -13,8 +13,16 @@ import PolicyHeader from "../page-components/policies/PolicyHeader";
 import PolicySection from "../page-components/policies/PolicySection";
 import PolicySubSection from "../page-components/policies/PolicySubSection";
 import PolicyText from "../page-components/policies/PolicyText";
+import PageTitle from "../routing/PageTitle";
 
 export default function TermsOfUse() {
+
+  return(<div className="">
+    <PageTitle title="Terms of Use"/>
+
+  </div>)
+
+
   return (
     <div className="section mt-20">
       <div className="container mx-auto max-w-4xl p-6">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { eventData } from '../../data/eventData';
 import EventCard from '../page-components/EventCard';
+import PageTitle from '../routing/PageTitle';
 
 export default function Events() {
   const currentDate = new Date(); // Get today's date
@@ -30,6 +31,7 @@ export default function Events() {
 
   return (
     <div className="section mt-20">
+      <PageTitle title="Webinars" />
       {/* Future Events Section */}
       {futureEvents.length > 0 && (
         <div className="future-events mb-8">
