@@ -25,16 +25,16 @@ export default function MediaFrame({
   className = 'h-64',      // tailwind height for media box
 }) {
   return (
-    <div className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit large-shadow">
+    <div className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit ">
       {title && <h3 className="text-xl font-semibold   ">{title}</h3>}
 
-      <div className={`rounded-lg shadow-lg overflow-hidden ${className}`}>
+      <div className={`rounded-lg shadow-lg overflow-hidden large-shadow ${className}`}>
         {type === 'video' ? (
           <iframe
             src={`https://www.youtube.com/embed/${src}`}
             title={alt}
             allowFullScreen
-            className="w-full h-full"
+            className="w-full h-full "
           />
         ) : (
           <>
@@ -60,7 +60,7 @@ export default function MediaFrame({
           </>
         )}
       </div>
-      {description && <div className=" text-left ">{description}</div>}
+      {description && <div className=" text-left pt-1.5 ">{description}</div>}
     </div>
   )
 }

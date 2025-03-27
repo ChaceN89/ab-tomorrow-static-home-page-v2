@@ -13,7 +13,7 @@ import simClimate from '../assets/simulator-screenshots/sim-7-new-climate-planni
 
 // To bold text within a paragraph for this data
 function BoldText({ children }) {
-  return <span className="font-semibold text-tertiary">{children}</span>;
+  return <span className="text-tertiary">{children}</span>;
 }
 
 
@@ -22,8 +22,7 @@ export const introData = {
   description: (
     <>
       <p>
-        Alberta’s rapid growth has built a strong economy — but it’s also placed pressure on the 
-        <BoldText> forests, grasslands, and rivers</BoldText> that sustain it.
+        Alberta’s rapid growth has built a strong economy — but it’s also placed pressure on the <BoldText> forests, grasslands, and rivers</BoldText> that sustain it.
       </p>
       <p>
         <BoldText>Alberta Tomorrow</BoldText> is an interactive <BoldText>educational simulator</BoldText> that helps you explore sustainable land-use planning. Compare past and present landscapes, create your own development plans, and analyze the impact of agriculture, oil and gas, forestry, and more. You can even geotag photos, videos, and water data as part of your learning journey.

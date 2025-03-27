@@ -10,8 +10,7 @@
  * @updated Mar 21, 2025
  * 
  */
-
-import { FaVideo, FaGlobe, FaBolt, FaBook, FaBookOpen } from "react-icons/fa";
+import { FaVideo, FaBolt, FaBookOpen,FaUserPlus, FaMapMarkedAlt, FaClipboardList  } from "react-icons/fa";
 import { GiFlatPawPrint } from "react-icons/gi";
 
 import { FaQuestionCircle } from "react-icons/fa";     // FAQs
@@ -53,8 +52,16 @@ export const dropdownVariants = {
 // the donate button infoamtion 
 export const donateInfo = {
   title: "Donate",
+  altTitle: "Make A Donation",
   href: "https://www.canadahelps.org/en/dn/60256?v2=true"
 }
+
+export const extraPages =[
+  {label: "Sign Up", icon: <FaUserPlus />, href: "https://www.simulator.albertatomorrow.ca/" },
+  { label: "Privacy Policy", icon: <FaEnvelope />, router: "/Privacy-Policy" },
+  { label: "Terms of Use", icon: <FaEnvelope />, router: "/Terms-of-Use" },
+]
+
 
 //all the links that scroll on the home page
 export const scrollLinks = [
@@ -69,11 +76,11 @@ export const scrollLinks = [
 export const toolsDropDown = {
   title: "Tools",
   list:[
-    {label: "Land Use Simulator", icon: <FaGlobe />, href: "https://www.simulator.albertatomorrow.ca" },
+    {label: "Land Use Simulator", icon: <FaMapMarkedAlt />, href: "https://www.simulator.albertatomorrow.ca" },
     {label: "Energy Tomorrow", icon: <FaBolt />, href: "https://www.youtube.com/watch?v=Uca8En3ZHH0" },
     {label: "Wildlife Tomorrow", icon: <GiFlatPawPrint />, href: "https://www.simulator.albertatomorrow.ca" },
     {label: "Videos", icon: <FaVideo />, href: "https://www.simulator.albertatomorrow.ca/#/dashboard/videos" },
-    {label: "Lesson Plans", icon: <FaBook />, href: "https://www.simulator.albertatomorrow.ca/#/lesson-plans" },
+    {label: "Lesson Plans", icon: <FaClipboardList />, href: "https://www.simulator.albertatomorrow.ca/#/lesson-plans" },
   ]
 }
 

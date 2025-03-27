@@ -44,20 +44,20 @@ export default function About() {
             The Alberta Tomorrow program is overseen by the Alberta Tomorrow Foundation, a registered charity in Canada. The Foundation's Board of Directors includes representatives from the education, non-profit, government, and industry sectors.
           </p>
 
-          <div className="mt-4">
+          <div className="mt-4 flex justify-center">
             <HexButton asLink link="/board-of-directors">
               Meet the Board of Directors
             </HexButton>
           </div>
         </div>
 
-        <div className="space-y-2 mt-8">
-          <h3 className="text-2xl font-semibold text-secondary-alt">Mission</h3>
+        <div className="space-y-2 mt-2">
+          <h3 className="text-2xl font-semibold text-secondary-alt">Mission:</h3>
           <p className="text-lg">
             To deliver a platform that empowers youth to design and sustain a future for our shared ecosystem.
           </p>
 
-          <h3 className="text-2xl font-semibold text-secondary-alt mt-4">Vision</h3>
+          <h3 className="text-2xl font-semibold text-secondary-alt mt-4">Vision:</h3>
           <p className="text-lg">
             An informed society actively fostering sustainable futures.
           </p>
