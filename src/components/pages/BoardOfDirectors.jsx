@@ -21,25 +21,12 @@ export default function BoardOfDirectors() {
       <PageTitle title='Board of Directors'/>
       <div className='page'>
         <PageHeader title='Board of Directors' subtitle="Meet the individuals guiding Alberta Tomorrow’s mission for sustainable land-use planning." />
-
-
-        the Board
+        <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 justify-center'>
+          {boardOfDirectors.map((member, index) => (
+            <MemberCard key={index} member={member} />
+          ))}
+        </div>
       </div>
     </div>
-  )
-
-  return (
-    <section className='px-6 max-w-7xl mx-auto mt-20'>
-      <PageTitle title='Board of Directors'/>
-      <h1 className='text-4xl font-semibold text-center mb-12'>Board of Directors</h1>
-      <p className="text-center text-lg text-gray-700 mb-10">
-        Meet the individuals guiding Alberta Tomorrow’s mission for sustainable land-use planning.
-      </p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center'>
-        {boardOfDirectors.map((member, index) => (
-          <MemberCard key={index} member={member} />
-        ))}
-      </div>
-    </section>
   )
 }
