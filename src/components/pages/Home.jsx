@@ -54,9 +54,8 @@ export default function Home() {
       <section id='intro' className='overflow-hidden' >
         <HexSeparator rows={13} hexClass="bg-secondary-alt opacity-40"/>
         <Intro/>
-        <HexSeparator rows={4} parentClass='h-8 bg-primary' hexClass="bg-secondary-alt opacity-40"/>
+        <HexSeparator bottom rows={4} parentClass='h-8 bg-primary' hexClass="bg-secondary-alt opacity-40"/>
         <CallToAction/>
-        {/* <HexSeparator bottom hexClass='bg-secondary opacity-60'/> */}
       </section>
       <section id='tools' className='overflow-hidden'>
         <HexSeparator randomColors rows={100} hexClass='bg-accent-alt opacity-5'/>
@@ -71,7 +70,8 @@ export default function Home() {
       <section id='about' className='overflow-hidden'>
         <About/>
         <div className='overflow-hidden'>
-          <HexSeparator  rows={100} hexClass='bg-primary-alt opacity-25  '/>
+          <HexSeparator randomColors rows={100} hexClass='bg-primary-alt opacity-5 '/>
+          <HexSeparator bottom rows={2} hexClass='bg-accent '/>
           <GetInvolved/>
         </div>
       </section>

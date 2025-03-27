@@ -10,11 +10,11 @@ export default function About() {
   const keyFeatures = [
     {
       icon: <FaFlask />,
-      text: "Peer reviewed by qualified scientists",
+      text: <p><span className='font-semibold'>Peer</span> reviewed by qualified scientists</p>
     },
     {
       icon: <FaHandshake />,
-      text: "Endorsed by environmentally focused non-profit organizations, industry and government",
+      text: <p><span className='font-semibold'>Endorsed</span> by environmentally focused non-profit organizations, industry and government</p>
     },
     {
       icon: <FaChalkboardTeacher />,

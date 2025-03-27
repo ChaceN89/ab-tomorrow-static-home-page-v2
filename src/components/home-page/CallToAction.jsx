@@ -27,6 +27,7 @@ import background from '@/assets/ui-elements/parallax-2.jpg';
 import backgroundSm from '@/assets/ui-elements/parallax-2-sm.jpg';
 import quote from '@/assets/ui-elements/quote.png';
 import alberta from '@/assets/ui-elements/state-of-landscape.png';
+import albertaWatersheds from '@/assets/ui-elements/albertaWatersheds.png';
 
 //components
 import BackgroundWrapper from '@/components/layout/BackgroundWrapper';
@@ -43,7 +44,7 @@ export default function CallToAction() {
       <div className="relative z-30 flex flex-col lg:flex-row gap-10 justify-center items-center  text-center text-white px-10">
         {/* Side Image (hidden on mobile) */}
         <div className="hidden lg:flex  justify-center items-center">
-          <img className="max-h-96 object-fill" src={alberta} alt="Alberta" />
+          <img className="max-h-96 object-fill" src={albertaWatersheds} alt="Alberta" />
         </div>
 
         {/* Frosted Glass Content Card */}

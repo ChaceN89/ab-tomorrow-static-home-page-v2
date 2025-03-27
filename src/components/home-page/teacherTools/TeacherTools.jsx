@@ -33,7 +33,7 @@ export default function TeacherTools() {
             />
             <NumberedHexList
               featuresList = {teacherResources}
-              title ="Teacher Features"
+              title ="Teacher Dashboard"
             />
           </div>
           <NumberedHexList

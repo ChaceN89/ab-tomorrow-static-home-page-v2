@@ -43,7 +43,7 @@ import Events from '../pages/Events';
 import BoardOfDirectors from '../pages/BoardOfDirectors';
 import PartnersPage from '../pages/PartnersPage';
 import NotFound from '../pages/NotFound';
-import ScrollToTop from "../layout/ScrollToTop";
+import ScrollRestoration from "../layout/ScrollRestoration";
 import NewsPopup from "../media/NewsPopup";
 
 export default function AppRoutes() {
@@ -53,7 +53,7 @@ export default function AppRoutes() {
     <div className="min-w-44 overflow-x-hidden bg-primary">
       {/* Partner Banner stays in place throughout routing */}
       <PartnerBanner />
-      <ScrollToTop/>
+      <ScrollRestoration/>
       <NewsPopup/>
       
       {/* AnimatePresence enables animations for route transitions */}
