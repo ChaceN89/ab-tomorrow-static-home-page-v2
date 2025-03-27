@@ -21,12 +21,6 @@ import {
   FaTree,
 } from 'react-icons/fa';
 
-
-
-import { useState } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-
-
 // The key features
 export const keyFeatures = [
   {
@@ -75,7 +69,6 @@ export const keyFeatures = [
   }
 ];
 
-
 // for teachers
 export const teacherResources = [
   {
@@ -87,7 +80,6 @@ export const teacherResources = [
     text: "Control panel interface to manage your students and class observations",
   }
 ];
-
 
 // Course and Curriculum Connections
 export const curriculumConnections = [

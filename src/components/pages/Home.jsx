@@ -76,7 +76,7 @@ export default function Home() {
         <Education/>
         <HexSeparator bottom rows={2} hexClass='bg-primary-alt '/>
         <TeacherTools/>
-        <HexSeparator bottom rows={2} hexClass='bg-accent-alt opacity-80 '/>
+        <HexSeparator bottom rows={2} hexClass='bg-accent-alt '/>
       </section>
       <section id='about'>
 

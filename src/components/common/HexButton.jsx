@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created Mar 25, 2025
- * @updated Mar 26, 2025
+ * @updated Mar 27, 2025
  *
  * @features
  * - Hexagonal shape using clip-path
@@ -15,21 +15,24 @@
  * - Supports props for custom colors and hover states:
  *    - `color` and `hoverColor` (primary, secondary, accent, tertiary)
  *    - `textColor` and `hoverTextColor`
- * - Opens external links in a new tab
+ * - Opens external links in a new tab or uses internal router navigation
  *
  * @dependencies
  * - Tailwind utility classes
  * - Global styles from `hex-button.css`
+ * - `react-router-dom` for internal links
  */
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HexButton({ 
   children = "Launch Simulator", 
   link, 
   color = 'primary', 
   hoverColor = 'tertiary',
-  textColor='white',
-  hoverTextColor='black'
+  textColor = 'white',
+  hoverTextColor = 'black',
+  asLink = false // when true, uses internal routing (Link)
 }) {
   const wrapperStyle = {
     '--bg-start': `var(--color-${color})`,
@@ -40,16 +43,22 @@ export default function HexButton({
     '--hover-text-color': `var(--color-${hoverTextColor})`,
   };
 
+  const commonProps = {
+    className: 'hex-button-wrapper font-semibold min-w-44',
+    style: wrapperStyle,
+  };
+
   return (
-    <div className='hex-button-container max-w-2xl '>
-      <a 
-        className="hex-button-wrapper font-semibold min-w-44" 
-        href={link} 
-        target="_blank"
-        style={wrapperStyle}
-      >
-        {children}
-      </a>
+    <div className="hex-button-container max-w-2xl">
+      {asLink ? (
+        <Link to={link} {...commonProps}>
+          {children}
+        </Link>
+      ) : (
+        <a href={link} target="_blank" rel="noopener noreferrer" {...commonProps}>
+          {children}
+        </a>
+      )}
     </div>
   );
 }

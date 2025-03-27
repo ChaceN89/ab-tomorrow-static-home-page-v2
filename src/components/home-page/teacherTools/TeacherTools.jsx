@@ -18,10 +18,8 @@ export default function TeacherTools() {
     ),
   }));
       
-
   return(
     <section className="bg-primary">
-
       <div className='home-section home-y-padding space-y-8  '>
         <SectionHeader
           title={'Features and Curriculum Connections'}
@@ -44,28 +42,22 @@ export default function TeacherTools() {
           />
         </div>
 
-        <div className="space-y-6  bg-primary-alt/30 backdrop-blur-3xl rounded-xl p-6 mb-12">
-
+        <div className="space-y-6  bg-tertiary-alt/30 border border-accent-alt/30 backdrop-blur-3xl rounded-xl p-6 mb-8 max-w-3xl mx-auto">
           <div className="flex flex-col sm:flex-row justify-center gap-5 text-center">
-            <HexButton 
-              link="https://simulator.albertatomorrow.ca"
-            >
+            <HexButton link="https://simulator.albertatomorrow.ca">
               Sign Up
             </HexButton>
-
             <HexButton link="https://www.simulator.albertatomorrow.ca/#/lesson-plans">
               Lesson Plans
             </HexButton>
           </div>
 
           {/* Bottom Full-Width Button + Context */}
-          <div className="flex flex-col items-center justify-center text-center space-y-2 pt-6 ">
-            <p className="text-sm text-secondary">
-              For a full breakdown of the Alberta Program of Studies Connections and Suggested Activities:
+          <div className="flex flex-col items-center justify-center text-center space-y-2  ">
+            <p className="text-sm text-secondary max-w-2xl">
+              There are curriculum links to many other grades and subjects. New lesson plans and materials are continually under development. For a full breakdown of the Alberta Program of Studies Connections and Suggested Activities see the full curriculum guide.            
             </p>
-            <p className="text-sm text-secondary">
-              There are curriculum links to many other grades and subjects. New lesson plans and materials are continually under development.            </p>
-            <HexButton color="accent" link="https://drive.google.com/file/d/11vSSdwLW5-WPsmBgZje7sfwCij6UEUZG/view">
+            <HexButton textColor="black" color="accent" link="https://drive.google.com/file/d/11vSSdwLW5-WPsmBgZje7sfwCij6UEUZG/view">
               Full Curriculum Guide
             </HexButton>
           </div>
@@ -73,5 +65,4 @@ export default function TeacherTools() {
       </div>
     </section>
   )
-
 }
