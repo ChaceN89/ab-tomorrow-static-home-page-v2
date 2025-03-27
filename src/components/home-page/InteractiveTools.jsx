@@ -28,6 +28,7 @@ export default function InteractiveTools() {
         <div className="grid-section">
           {interactiveToolsData.map((tool, index) => (
             <ToolCard
+              key={tool.name || index} // ✅ Unique key (ideally use a unique property like `tool.id` or `tool.name`)
               index={index}
               tool={tool}
             />

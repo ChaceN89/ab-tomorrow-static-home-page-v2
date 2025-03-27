@@ -75,13 +75,13 @@ export default function Education() {
         </div>
 
         {/* Water Ranger testing kit */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 pb-6">
           <img
             src={eductionData.waterRangerKitImg}
             alt="Water Rangers Testing Kit"
             className="w-4/5 sm:w-2/3 md:w-1/3 max-w-[300px] rounded-lg shadow-lg"
           />
-          <div className="max-w-lg text-left  px-4 md:px-0">
+          <div className="max-w-lg text-left  px-4 md:px-0 ">
             <h3 className="text-2xl font-bold">{eductionData.waterRangerKitTitle}</h3>
             <p className="mt-2 opacity-80">{eductionData.waterRangerKitDescription}</p>
           </div>

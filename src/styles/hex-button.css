@@ -30,7 +30,7 @@
 /* Container controls movement and shadow */
 .hex-button-container {
   filter: drop-shadow(4px 6px 1.5px black);
-  transition: transform 0.2s ease-in, filter 0.2s ease-in;
+  transition: transform 0.1s ease-in, filter 0.1s ease-in;
   will-change: transform, filter;
 }
 

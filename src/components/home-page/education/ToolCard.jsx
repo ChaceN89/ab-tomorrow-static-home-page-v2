@@ -26,9 +26,12 @@ import HexButton from '@/components/common/HexButton'
 export default function ToolCard({tool, index}) {
 
   return(
-    <div className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit ">
+    <div 
+      key={index}
+      className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit"
+    >
       <div
-        key={index}
+        
         className="bg-primary/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg p-6 flex flex-col items-center transition hover:transform hover:translate-y-[-4px] small-shadow h-full"
       >
         <img src={tool.icon} alt={tool.name} className="w-28 h-28 object-contain mb-4" />

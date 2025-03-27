@@ -41,9 +41,9 @@ export default function HexButton({
   };
 
   return (
-    <div className='hex-button-container'>
+    <div className='hex-button-container max-w-2xl '>
       <a 
-        className="hex-button-wrapper font-semibold" 
+        className="hex-button-wrapper font-semibold min-w-44" 
         href={link} 
         target="_blank"
         style={wrapperStyle}

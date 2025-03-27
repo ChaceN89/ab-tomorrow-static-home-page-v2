@@ -28,7 +28,7 @@
 
 /* Multi-colored hexes */
 .hex1 { background-color: var(--color-primary-alt); animation-delay: 0s; }     /* Blue */
-.hex2 { background-color: var(--color-accent-alt); animation-delay: .2s; }     /* Blue */
+.hex2 { background-color: var(--color-accent-alt); animation-delay: 0.2s; }     /* Blue */
 .hex3 { background-color: var(--color-tertiary-alt); animation-delay: 0.4s; }     /* Blue */
 .hex4 { background-color: var(--color-accent); animation-delay: 0.6s; }     /* Blue */
 

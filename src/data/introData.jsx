@@ -46,12 +46,12 @@ export const introData = {
       src: "Q6-l7HymJTQ",
       title: "Planning for a Better Future",
       description: (
-        <div className="space-y-2">
+        <p className="space-y-2">
       
-          <p>
+          <span>
             It shows how agriculture, oil and gas, and forestry impact the environment over time, using <BoldText>real landscape imagery.</BoldText> Users can also collect and save water data, images, videos, and other field observations.
-          </p>
-        </div>
+          </span>
+        </p>
       ),
     },
     {

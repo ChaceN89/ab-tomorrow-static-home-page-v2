@@ -60,7 +60,7 @@ export default function MediaFrame({
           </>
         )}
       </div>
-      {description && <p className=" text-left ">{description}</p>}
+      {description && <div className=" text-left ">{description}</div>}
     </div>
   )
 }

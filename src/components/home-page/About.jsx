@@ -7,7 +7,7 @@ export default function About() {
     <div id='about' className='py-10 bg-accent'> 
   <h1>ABOUT ALBERTA TOMORROW
   </h1>
-      <p>Alberta Tomorrow was originally created in 2005 by Matthew Carlson and Dr. Brad Stelfox of the ALCES group. Since then, Alberta Tomorrow has been used extensively by teachers and students throughout Alberta.
+      <p>Alberta Tomorrow was originally created in 2005 by Matthew Carlson and Dr. Brad Stelfox of the ALCES group. Since then, Alberta Tomorrow has been used by teachers and students throughout Alberta, Canada, and beyond.
 
 </p>
       <p>

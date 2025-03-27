@@ -13,6 +13,7 @@ import { createRoot } from 'react-dom/client'
 
 // Import global styles from index and other style sheets
 import './index.css'
+import './styles/education.css';
 import './styles/hex-button.css';
 import './styles/hex-badge.css';
 import './styles/hex-separator.css';
