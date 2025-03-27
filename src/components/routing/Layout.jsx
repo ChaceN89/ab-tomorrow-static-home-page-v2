@@ -13,6 +13,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../navbar/NavBar";
 import Footer from "../footer/Footer";
 import ScrollProgress from "../layout/ScrollProgress";
+import HexSeparator from "../common/HexSeparator";
 
 export default function Layout() {
 
@@ -21,8 +22,11 @@ export default function Layout() {
       <ScrollProgress/>
       <NavBar />
     
-      <main className="flex-1 overflow-auto relative flex flex-col pb-14 sm:pb-24 lg:pb-0 outlet-background lg:mr-56 min-h-[50vh]">
-        <Outlet />
+      <main className="flex-1 relative flex flex-col pb-14 sm:pb-24 lg:pb-0 outlet-background lg:mr-56 min-h-[50vh] overflow-hidden">
+        <HexSeparator randomColors rows={10}   hexClass='bg-primary-alt opacity-10'/>
+        <div className="relative ">
+          <Outlet />
+        </div>
         <div className="mt-auto">
           <Footer />
         </div>

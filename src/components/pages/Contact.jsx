@@ -9,7 +9,8 @@ import PageTitle from '../routing/PageTitle';
 export default function Contact() {
 
   return (
-    <div className='page-width'>
+
+    <div className='page-width relative'>
       <PageTitle title='Contact Us'/>
       <div className='page'>
         <PageHeader

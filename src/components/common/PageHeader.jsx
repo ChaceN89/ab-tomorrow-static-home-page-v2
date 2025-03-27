@@ -20,7 +20,7 @@ import logo from '@/assets/site-logos/logo-lg.png';
 export default function PageHeader({ title, subtitle }) {
   return (
     <div className="py-10 text-left max-w-5xl">
-      <div className="flex flex-col sm:flex-row sm:items-end gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-end gap-4 white-shadow">
         <img
           src={logo}
           alt="Alberta Tomorrow Logo"
@@ -32,7 +32,7 @@ export default function PageHeader({ title, subtitle }) {
       </div>
       
       {subtitle && (
-        <p className="mt-4 text-lg md:text-xl text-muted opacity-80">{subtitle}</p>
+        <p className="mt-10 text-lg md:text-xl text-muted opacity-80">{subtitle}</p>
       )}
     </div>
   );

@@ -21,6 +21,9 @@ export default function BoardOfDirectors() {
       <PageTitle title='Board of Directors'/>
       <div className='page'>
         <PageHeader title='Board of Directors' subtitle="Meet the individuals guiding Alberta Tomorrow’s mission for sustainable land-use planning." />
+
+
+        the Board
       </div>
     </div>
   )

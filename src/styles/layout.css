@@ -14,7 +14,7 @@
 
 
 .page{
-  @apply py-12 px-2.5 xl:px-14 2xl:px-20;
+  @apply py-10 px-2.5 xl:px-14 2xl:px-20;
 }
 
 .page-width {
@@ -46,6 +46,10 @@
 
 .small-shadow {
   filter: drop-shadow(2px 2px 1px black);  
+}
+
+.white-shadow {
+  filter: drop-shadow(2px 2px 1px white);  
 }
 
 /* Grid for tools and eduction videos - 3 items */

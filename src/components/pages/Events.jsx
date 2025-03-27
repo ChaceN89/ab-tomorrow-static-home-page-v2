@@ -35,6 +35,7 @@ export default function Events() {
       <PageTitle title='Webinars'/>
       <div className='page'>
         <PageHeader title='Webinars' subtitle="Join us for our upcoming webinars and watch past events." />
+        Events
       </div>
     </div>
   )
