@@ -61,33 +61,4 @@ export default function Events() {
       </div>
     </div>
   )
-
-  return (
-    <div className="section mt-20">
-      <PageTitle title="Webinars" />
-      {/* Future Events Section */}
-      {futureEvents.length > 0 && (
-        <div className="future-events mb-8">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Future Events</h2>
-          <div className="event-list">
-            {futureEvents.map((event, index) => (
-              <EventCard key={index} event={event} />
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Past Events Section */}
-      {pastEvents.length > 0 && (
-        <div className="past-events">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Past Events</h2>
-          <div className="event-list">
-            {pastEvents.map((event, index) => (
-              <EventCard key={index} event={event} />
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
 }

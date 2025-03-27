@@ -11,6 +11,9 @@ export default function FAQs() {
       <PageTitle title='FAQs'/>
       <div className='page'>
         <PageHeader title='Frequently Asked Questions' subtitle="Find answers to common questions about Alberta Tomorrow." />
+        {faqData.map((faq, index) => (
+        <QuestionDropdown key={index} question={faq.question} answer={faq.answer} />
+      ))}
       </div>
     </div>
   )
