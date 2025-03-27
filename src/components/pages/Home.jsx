@@ -37,6 +37,7 @@ import CallToAction from '@/components/home-page/CallToAction'
 import InteractiveTools from '@/components/home-page/InteractiveTools'
 import Education from '@/components/home-page/education/Education'
 import TeacherTools from '../home-page/teacherTools/TeacherTools'
+import About from '@/components/home-page/About'
 
 
 // import Education from '../home-page/sections/Education'
@@ -75,11 +76,13 @@ export default function Home() {
         <Education/>
         <HexSeparator bottom rows={2} hexClass='bg-primary-alt '/>
         <TeacherTools/>
+        <HexSeparator bottom rows={2} hexClass='bg-accent-alt opacity-80 '/>
       </section>
-      {/* <section id='about'>
+      <section id='about'>
+
         <About/>
-        <GetInvolved/>
-      </section> */}
+        {/* <GetInvolved/> */}
+      </section>
     </div>
   )
 }
