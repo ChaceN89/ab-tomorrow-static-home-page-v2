@@ -19,6 +19,27 @@ export default function PartnersPage() {
       <PageTitle title="Our Partners" />
       <div className='page'>
         <PageHeader title='Our Partners' subtitle="We are grateful to the Alberta Tomorrow sponsors for making Alberta Tomorrow possible." />
+        <div className="mt-12 space-y-12">
+          <div className="flex flex-col 2xl:flex-row gap-8">
+            {/* Left Column */}
+            <PartnerShowcase title="Champions" partners={champions} showDescriptions />
+
+            {/* Vertical Divider */}
+            <div className="hidden lg:block border-l-2 border-black/20 mx-2" />
+
+            {/* Right Column */}
+            <PartnerShowcase title="Ambassadors" partners={ambassadors} showDescriptions />
+          </div>
+          {/* line */}
+          <div className="hidden lg:block border-b-2 border-black/20 mx-2" />
+
+          <PartnerShowcase title="Mentors" partners={mentors} />
+          <div className="hidden lg:block border-b-2 border-black/20 mx-2" />
+
+          <PartnerShowcase title="Supporters" partners={supporters} />
+          <div className="hidden lg:block border-b-2 border-black/20 mx-2" />
+          <PartnerShowcase title="Past Sponsors" partners={pastSponsors} />
+        </div>
       </div>
     </div>
   )
