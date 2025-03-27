@@ -71,7 +71,7 @@ export default function Home() {
       <section id='about' className='overflow-hidden'>
         <About/>
         <div className='overflow-hidden'>
-          <HexSeparator  rows={100} hexClass='bg-primary opacity-15 '/>
+          <HexSeparator  rows={100} hexClass='bg-primary-alt opacity-25  '/>
           <GetInvolved/>
         </div>
       </section>

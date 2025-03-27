@@ -25,7 +25,7 @@ export default function MediaFrame({
   className = 'h-64',      // tailwind height for media box
 }) {
   return (
-    <div className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit">
+    <div className="w-full max-w-2xl mx-auto text-center space-y-2 text-inherit large-shadow">
       {title && <h3 className="text-xl font-semibold   ">{title}</h3>}
 
       <div className={`rounded-lg shadow-lg overflow-hidden ${className}`}>

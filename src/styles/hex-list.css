@@ -42,8 +42,7 @@
   font-size: 1rem;
   font-weight: bold;
   font-variant-numeric: tabular-nums;
-  background-image: linear-gradient(to bottom, aquamarine, orangered);
-  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, var(--color-white), var(--color-accent));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
