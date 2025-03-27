@@ -40,6 +40,7 @@ export default function Intro() {
             />
           ))}
         </div>
+        <div className='h-5'></div>
       </div>
     </div>
   );

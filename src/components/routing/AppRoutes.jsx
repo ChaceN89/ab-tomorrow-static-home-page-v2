@@ -46,6 +46,9 @@ import NotFound from '../pages/NotFound';
 import ScrollRestoration from "../layout/ScrollRestoration";
 import NewsPopup from "../media/NewsPopup";
 
+
+import { useNavigationType } from "react-router-dom";
+
 export default function AppRoutes() {
   const location = useLocation();
 
@@ -78,15 +81,19 @@ export default function AppRoutes() {
 
 // PageTransition component for animating page transitions
 const PageTransition = ({ children }) => {
-  return (
-    <motion.div
-      key="page-transition"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      {children}
-    </motion.div>
-  );
+  
+  return (children);
+
+  // transition mess up the back/forward button scrolling mechanics 
+  // return (
+  //   <motion.div
+  //     key="page-transition"
+  //     initial={{ opacity: 0 }}
+  //     animate={{ opacity: 1 }}
+  //     exit={{ opacity: 0 }}
+  //     transition={{ duration: 0.3 }}
+  //   >
+  //     {children}
+  //   </motion.div>
+  // );
 };

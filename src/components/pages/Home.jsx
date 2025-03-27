@@ -53,6 +53,8 @@ export default function Home() {
       </section>
       <section id='intro' className='overflow-hidden' >
         <HexSeparator rows={13} hexClass="bg-secondary-alt opacity-40"/>
+        <HexSeparator randomColors rows={13} hexClass='bg-primary-alt opacity-5 '/>
+
         <Intro/>
         <HexSeparator bottom rows={4} parentClass='h-8 bg-primary' hexClass="bg-secondary-alt opacity-40"/>
         <CallToAction/>

@@ -34,7 +34,7 @@
  */
 import React, { useState, useEffect } from 'react';
 
-export default function BackgroundWrapper({ background, backgroundSm, children, className = "", fixed = false }) {
+export default function BackgroundWrapper({ background, backgroundSm, children, className = "", fixed = false, blur = false }) {
   
   // Load state for the background image (high-res)
   const [loaded, setLoaded] = useState(false);
@@ -68,7 +68,8 @@ export default function BackgroundWrapper({ background, backgroundSm, children, 
     backgroundSize: 'cover',
     backgroundPosition,
     backgroundRepeat: 'no-repeat',
-    zIndex: 0
+    zIndex: 0,
+    filter: blur ? 'blur(2px)' : 'none'
   };
 
   return (
