@@ -35,7 +35,29 @@ export default function Events() {
       <PageTitle title='Webinars'/>
       <div className='page'>
         <PageHeader title='Webinars' subtitle="Join us for our upcoming webinars and watch past events." />
-        Events
+        
+        {futureEvents.length > 0 && (
+          <div className="future-events mb-8">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Future Events</h2>
+            <div className="event-list">
+              {futureEvents.map((event, index) => (
+                <EventCard key={index} event={event} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Past Events Section */}
+        {pastEvents.length > 0 && (
+          <div className="past-events">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Past Events</h2>
+            <div className="event-list">
+              {pastEvents.map((event, index) => (
+                <EventCard key={index} event={event} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
