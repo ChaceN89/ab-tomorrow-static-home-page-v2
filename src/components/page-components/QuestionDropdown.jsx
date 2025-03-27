@@ -10,14 +10,14 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-export default function QuestionDropdown({ question, answer }) {
+export default function QuestionDropdown({ question, answer, maxW='4xl' }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-2">
+    <div className={`w-full max-w-${maxW} mx-auto py-2`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center w-full text-left cursor-pointer border border-gray-200 rounded-lg px-4 py-3 hover:bg-primary/20 transition"
+        className="flex justify-between items-center w-full text-left cursor-pointer border border-black/10 rounded-lg px-4 py-3 hover:bg-primary/20 transition"
         aria-expanded={isOpen}
       >
         <h4 className="text-lg font-semibold text-gray-800">{question}</h4>

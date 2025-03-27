@@ -22,19 +22,6 @@ export default function PrivacyPolicy() {
       <PageTitle title="Privacy Policy" />
       <div className='page'>
         <PageHeader title='Privacy Policy' subtitle="Effective date: June 9, 2020. Alberta Tomorrow is committed to maintaining the privacy of individuals and protecting personal information in its custody or control." />
-      </div>
-    </div>
-  )
-
-
-  return (
-    <div className="section mt-20">
-      <PageTitle title="Privacy Policy" />
-      <div className="container mx-auto max-w-4xl p-6">
-        <PolicyHeader
-          title="Privacy Policy"
-          intro="Effective date: June 9, 2020. Alberta Tomorrow is committed to maintaining the privacy of individuals and protecting personal information in its custody or control."
-        />
 
         <PolicySection title="Terminology" initiallyOpen>
           <PolicyText>
@@ -116,8 +103,7 @@ export default function PrivacyPolicy() {
           </PolicyText>
         </PolicySection>
 
-        <hr className="mt-6" />
       </div>
     </div>
-  );
+  )
 }

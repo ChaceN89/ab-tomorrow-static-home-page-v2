@@ -22,23 +22,16 @@ export default function TermsOfUse() {
     <div className='page-width '>
       <PageTitle title="Terms of Use" />
       <div className='page'>
-        <PageHeader title='Alberta Tomorrow Website Terms of Use License and Services Agreement' subtitle="APPLICATION: The provisions of this Agreement (the “Agreement”) apply to all access to or use of the Alberta Tomorrow Website and, where and as applicable, the Services (as defined below)." />
-      </div>
-    </div>
-  )
-
-
-  return (
-    <div className="section mt-20">
-      <div className="container mx-auto max-w-4xl p-6">
-        <PolicyHeader
-          title="Alberta Tomorrow Website Terms of Use License and Services Agreement"
-          intro={<><strong>APPLICATION:</strong> The provisions of this Agreement (the “Agreement”) apply to all access to or use of the Alberta Tomorrow Website and, where and as applicable, the Services (as defined below).</>}
-        />
-
+        <PageHeader title='Terms of Use' subtitle="Alberta Tomorrow Website Terms of Use License and Services Agreement" />
+        
+        <PolicyText>
+          <strong>APPLICATION:</strong> The provisions of this Agreement (the “Agreement”) apply to all access to or use of the Alberta Tomorrow Website and, where and as applicable, the Services (as defined below).
+        </PolicyText>
         <PolicyText>
           <strong>Please read this Agreement carefully.</strong> This Agreement restricts and limits your rights. You agree to transact and contract electronically. By accepting this Agreement, and/or by accessing or using the Alberta Tomorrow website and/or the Services and/or the Materials, you enter into a binding legal agreement and contract with the Alberta Tomorrow Foundation (“Alberta Tomorrow”), and you accept all the terms and conditions of this Agreement, as set out below.
         </PolicyText>
+
+        <div className="h-12"/>
 
         <PolicySection title="1. Governing Law and Enforcement">
           <PolicySubSection title="Governing Law, Jurisdiction, and Breach Remedies">
@@ -324,9 +317,7 @@ export default function TermsOfUse() {
             </PolicyText>
           </PolicySubSection>
         </PolicySection>
-
-        <hr className="mt-6" />
       </div>
     </div>
-  );
+  )
 }
