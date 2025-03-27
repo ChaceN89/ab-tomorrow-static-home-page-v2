@@ -38,20 +38,10 @@ import InteractiveTools from '@/components/home-page/InteractiveTools'
 import Education from '@/components/home-page/education/Education'
 import TeacherTools from '../home-page/teacherTools/TeacherTools'
 import About from '@/components/home-page/About'
+import GetInvolved from '@/components/home-page/GetInvolved'
 
 
-// import Education from '../home-page/sections/Education'
-// import TeacherTools from '../home-page/sections/TeacherTools'
-// import About from '../home-page/sections/About'
-// import GetInvolved from '../home-page/sections/GetInvolved'
-// import Hero from '../home-sections/Hero'
-// import Intro from '../home-sections/Intro'
-// import CallToAction from '../home-sections/CallToAction'
-// import InteractiveTools from '../home-sections/InteractiveTools'
-// import Education from '../home-sections/Education'
-// import TeacherTools from '../home-sections/TeacherTools'
-// import About from '../home-sections/About'
-// import GetInvolved from '../home-sections/GetInvolved'
+
 
 import HexSeparator from '../common/HexSeparator'
 
@@ -69,7 +59,7 @@ export default function Home() {
         {/* <HexSeparator bottom hexClass='bg-secondary opacity-60'/> */}
       </section>
       <section id='tools' className='overflow-hidden'>
-        <HexSeparator rows={100} hexClass='bg-accent-alt opacity-20'/>
+        <HexSeparator randomColors rows={100} hexClass='bg-accent-alt opacity-5'/>
         <InteractiveTools/>
       </section>
       <section id='education'>
@@ -78,10 +68,12 @@ export default function Home() {
         <TeacherTools/>
         <HexSeparator bottom rows={2} hexClass='bg-accent-alt '/>
       </section>
-      <section id='about'>
-
+      <section id='about' className='overflow-hidden'>
         <About/>
-        {/* <GetInvolved/> */}
+        <div className='overflow-hidden'>
+          <HexSeparator  rows={100} hexClass='bg-primary opacity-15 '/>
+          <GetInvolved/>
+        </div>
       </section>
     </div>
   )

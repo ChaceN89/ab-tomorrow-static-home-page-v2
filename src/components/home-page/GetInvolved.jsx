@@ -1,8 +1,26 @@
 import React from 'react';
 import BCTomorrowLogo from '@/assets/tool-logos/bc-tomorrow-logo.png'; // Ensure correct paths
 import CanadaTomorrowLogo from '@/assets/tool-logos/canada-tomorrow-logo.png';
+import SectionHeader from '../common/SectionHeader';
+import HexButton from '../common/HexButton';
 
 export default function GetInvolved() {
+  return(
+    <section className="bg-primary-alt">
+      <div className="home-section home-y-padding space-y-10 text-white">        
+        <SectionHeader
+          title="Be Part of Our Story"
+          description="Download our sponsorship package today to learn more about becoming a partner.."
+        />      
+        <HexButton link={"/pdfs/AlbertaTomorrowSponsorshipPackage.pdf "}>
+          Download Sponsorship Package
+        </HexButton>
+
+      </div>
+    </section>
+  )
+
+
   return (
     <div className="bg-primary text-white py-16 px-6 lg:px-20 text-center">
       {/* Main Call to Action */}

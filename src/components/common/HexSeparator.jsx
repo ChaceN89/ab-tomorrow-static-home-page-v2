@@ -38,7 +38,15 @@ export default function HexSeparator({
   parentClass = 'bg-primary h-0',
   hexClass = 'bg-primary-alt opacity-50',
   bottom = false,
+  randomColors = false 
 }) {
+
+  const colorClasses = ['bg-primary', 'bg-accent', 'bg-tertiary', 'bg-secondary'];
+
+  const getRandomColorClass = () => {
+    const randomIndex = Math.floor(Math.random() * colorClasses.length);
+    return colorClasses[randomIndex] + " "+ hexClass;
+  };
 
   return (
     <div className={`relative ${parentClass} `}>
@@ -51,7 +59,7 @@ export default function HexSeparator({
             {Array.from({ length: cols }).map((_, colIndex) => (
               <div
                 key={`hex-${rowIndex}-${colIndex}`}
-                className={`hexagon ${hexClass}`}
+                className={`hexagon ${randomColors ? getRandomColorClass() : hexClass}`}
               />
             ))}
           </div>
