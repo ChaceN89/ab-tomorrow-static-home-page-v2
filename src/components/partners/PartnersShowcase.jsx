@@ -11,11 +11,11 @@ export default function PartnerShowcase({ partners, title, showDescriptions = fa
         {partners.map((partner, index) => (
           <div
             key={index}
-            className={`${
+            className={
               showDescriptions
-                ? "flex flex-col md:flex-row items-center gap-6 max-w-4xl mx-auto py-6 px-2 hover:border rounded-4xl "
-                : "w-52 flex flex-col items-center  hover:opacity-60 transition"
-            } ${showDescriptions && index > 0 ? 'border-t border-black/20' : ''}`}
+              ? "flex flex-col md:flex-row items-center gap-6 max-w-4xl mx-auto py-6 px-2 border border-transparent border-b-black/20 hover:border-black/20 rounded-4xl "
+              : "w-52 flex flex-col items-center hover:opacity-60 transition"
+            }
           >
             {/* Logo */}
             <a
@@ -31,8 +31,8 @@ export default function PartnerShowcase({ partners, title, showDescriptions = fa
                   className={`w-full h-full object-contain ${partner.className || ""}`}
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-600 text-sm">
-                  No Image
+                <div className="w-full h-full flex items-center text-center justify-center  text-gray-600 text-sm">
+                  {partner.name || "No Logo"}
                 </div>
               )}
             </a>
