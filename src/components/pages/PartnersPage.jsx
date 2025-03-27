@@ -9,8 +9,20 @@ import {
 
 import PartnerShowcase from "../partners/PartnersShowcase";
 import PageTitle from "../routing/PageTitle";
+import PageHeader from "../common/PageHeader";
 
 export default function PartnersPage() {
+
+
+  return (
+    <div className='page-width '>
+      <PageTitle title="Our Partners" />
+      <div className='page'>
+        <PageHeader title='Our Partners' subtitle="We are grateful to the Alberta Tomorrow sponsors for making Alberta Tomorrow possible." />
+      </div>
+    </div>
+  )
+
   return (
     <section className="section py-12 mt-20">
       <PageTitle title="Our Partners" />

@@ -12,8 +12,19 @@ import React from 'react'
 import { boardOfDirectors } from '../../data/boardOfDirectorsData'
 import MemberCard from '../page-components/MemberCard'
 import PageTitle from '../routing/PageTitle'
+import PageHeader from '../common/PageHeader'
 
 export default function BoardOfDirectors() {
+
+  return (
+    <div className='page-width '>
+      <PageTitle title='Board of Directors'/>
+      <div className='page'>
+        <PageHeader title='Board of Directors' subtitle="Meet the individuals guiding Alberta Tomorrow’s mission for sustainable land-use planning." />
+      </div>
+    </div>
+  )
+
   return (
     <section className='px-6 max-w-7xl mx-auto mt-20'>
       <PageTitle title='Board of Directors'/>

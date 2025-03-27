@@ -2,6 +2,7 @@ import React from 'react';
 import { eventData } from '../../data/eventData';
 import EventCard from '../page-components/EventCard';
 import PageTitle from '../routing/PageTitle';
+import PageHeader from '../common/PageHeader';
 
 export default function Events() {
   const currentDate = new Date(); // Get today's date
@@ -28,6 +29,15 @@ export default function Events() {
       return eventDate && eventDate < currentDate; // If valid date and is in the past
     });
   });
+
+  return (
+    <div className='page-width'>
+      <PageTitle title='Webinars'/>
+      <div className='page'>
+        <PageHeader title='Webinars' subtitle="Join us for our upcoming webinars and watch past events." />
+      </div>
+    </div>
+  )
 
   return (
     <div className="section mt-20">

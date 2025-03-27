@@ -1,6 +1,6 @@
 import { scrollLinks, donateInfo, extraPages, toolsDropDown, learnMoreDropDown } from '@/data/navData';
 import SocialMediaIcons from './SocialMediaIcons';
-import FooterContact from './FooterContact';
+import ContactInfo from '../common/ContactInfo';
 import SupportUs from './SupportUs';
 import QuickLinks from './QuickLinks';
 import BreadCrumbLinks from './BreadCrumbLinks';
@@ -11,7 +11,8 @@ export default function Footer() {
       <div className="px-6 lg:px-16 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           <div>
-            <FooterContact />
+            <ContactInfo />
+            <div className='mt-4'/>
             <SocialMediaIcons />
           </div>
 

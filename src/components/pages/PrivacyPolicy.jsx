@@ -13,8 +13,20 @@ import PolicyHeader from "../page-components/policies/PolicyHeader";
 import PolicySection from "../page-components/policies/PolicySection";
 import PolicyText from "../page-components/policies/PolicyText";
 import PageTitle from "../routing/PageTitle";
+import PageHeader from "../common/PageHeader";
 
 export default function PrivacyPolicy() {
+
+  return (
+    <div className='page-width '>
+      <PageTitle title="Privacy Policy" />
+      <div className='page'>
+        <PageHeader title='Privacy Policy' subtitle="Effective date: June 9, 2020. Alberta Tomorrow is committed to maintaining the privacy of individuals and protecting personal information in its custody or control." />
+      </div>
+    </div>
+  )
+
+
   return (
     <div className="section mt-20">
       <PageTitle title="Privacy Policy" />

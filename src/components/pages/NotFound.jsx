@@ -3,6 +3,16 @@ import React from 'react';
 import PageTitle from '../routing/PageTitle';
 
 export default function NotFound() {
+
+
+    return (
+      <div className='page-width mt-20'>
+        <PageTitle title="404 - Page Not Found" />
+        <div className='page'>
+          Not Found
+        </div>
+      </div>
+    )
   return (
     <div className="p-10 text-center mt-20">
       <PageTitle title="404 - Page Not Found" />

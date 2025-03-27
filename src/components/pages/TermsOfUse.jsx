@@ -14,13 +14,18 @@ import PolicySection from "../page-components/policies/PolicySection";
 import PolicySubSection from "../page-components/policies/PolicySubSection";
 import PolicyText from "../page-components/policies/PolicyText";
 import PageTitle from "../routing/PageTitle";
+import PageHeader from "../common/PageHeader";
 
 export default function TermsOfUse() {
 
-  return(<div className="">
-    <PageTitle title="Terms of Use"/>
-
-  </div>)
+  return (
+    <div className='page-width '>
+      <PageTitle title="Terms of Use" />
+      <div className='page'>
+        <PageHeader title='Alberta Tomorrow Website Terms of Use License and Services Agreement' subtitle="APPLICATION: The provisions of this Agreement (the “Agreement”) apply to all access to or use of the Alberta Tomorrow Website and, where and as applicable, the Services (as defined below)." />
+      </div>
+    </div>
+  )
 
 
   return (
